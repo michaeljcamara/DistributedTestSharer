@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\pagenumbering{arabic}
+\linespread{1.5}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{titling}
+\setlength{\droptitle}{-1.5cm}
+
+\usepackage{fancyvrb}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage[section]{placeins}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\begin{document}
+
+\title{CMPSC 441 Final Project\\Distributed and Parallel Test Suite Execution}
+\author{Michael Camara\\Gary Miller\\Herbie Torrance\\Colton McCurdy\\\textit{Honor Code Pledge: This work is ours unless otherwise cited}}
+\date{3-28-16}
+\maketitle
+
+For the final project in CMPSC 441, we plan on implementing a distributed and parallel system for test suite execution.  We currently plan to use Java RMI for coordinating communication between multiple nodes, and JUnit for executing test suites.  The client, in its most naive implementation, will connect with an RMI registry to request execution of all available tests.  The registry will keep track of all requested tests and forward them to servers with the least amount of active processes.  If a server is given multiple test requests, then it will begin multithreading to better utilize available resources.  Ultimately, the servers will report back to the client with the test results, and once all tests have finished then the total elapsed time will be recorded.  This metric will then be compared with those obtained from a comparable implementation of the same system on a single node.  By comparing these results we hope to draw relevant conclusions on the effectiveness of distributed and parallel test suite execution.  We hope to add more features as the system develops and as we research similar approaches in the available literature, but this is the basic structure we hope to achieve for the final project.
+
+\end{document}
