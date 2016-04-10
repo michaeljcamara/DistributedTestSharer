@@ -1,0 +1,25 @@
+<project default="compile">
+
+    <!-- Target directories -->
+    <property name="lib_dir" value="lib" />
+    <property name="src_dir" location="src/" />
+    <property name="build_dir" location="bin/" />
+
+    <!-- The common classpath for building the system. -->
+    <path id="build_classpath">
+        <fileset dir="${lib_dir}" includes="*.jar" />
+    </path>
+
+    <!-- CLEANING TASK - "ant clean" -->
+    <target name="clean">
+        <delete dir="${build_dir}"/>
+    </target>
+
+    <!-- COMPILING TASK - "ant compile" -->  
+    <target name="compile">
+        <mkdir dir="${build_dir}"/>
+        <javac srcdir="${src_dir}" destdir="${build_dir}" includeantruntime="false" debug="true" debuglevel="vars,lines,source">
+            <classpath refid="build_classpath"/>
+        </javac>
+    </target>
+</project>
