@@ -1,3 +1,5 @@
+\section{Existing Tool}
+
 Work in distributing Java test suites has been completed, specifically by a tool
 named Test Load Balancer (TLB) that we found on GitHub (https://github.com/test-load-balancer/tlb).
 This tool is able to distribute JUnit tests to multiple nodes. These nodes
@@ -27,3 +29,18 @@ than writing a system to test. There are a number of Java projects on GitHub
 with adequate test suites. We will run a number---large enough to gather
 adequate results---of these projects' test suites against the aforementioned
 systems and compare the runtimes.
+
+\section{Work Distribution}
+
+\begin{itemize}
+\item Michael Camara - Michael will implement a system for test suite distribution. Additionally,
+Michael will write about this system in our final report.
+\item Colton McCurdy - Colton will run the existing TLB tool in the multiple accepted configurations to collect
+and analyze data about runtimes. Colton will produce visualizations of these
+results using the R programming language.
+\item Herbie Torrance - Herbie will run the test suites of the existing projects
+on GitHub, locally and analyze those results.
+\item Gary Miller - Gary will read and write about the TLB tool and any
+other tools that he finds will contribute to this project. Gary will also
+write about test suite distribution in general.
+\end{itemize}
