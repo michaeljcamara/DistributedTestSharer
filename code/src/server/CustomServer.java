@@ -4,13 +4,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
+import java.net.NetworkInterface;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Enumeration;
 import java.util.Map.Entry;
 import java.util.Properties;
 
@@ -43,6 +46,8 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 	}
 	
 	public void updateClassLoader() {
+		
+		System.out.println("BEGIN UPDATECLASSLOADER");
 		try {
 			FTPClient client = new FTPClient();
 
@@ -56,7 +61,9 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 			for(int i = 0; i < jarFiles.length; i++) {
 				CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i].getName()));
-			}	
+			}
+			
+			System.out.println("END UPDATECLASSLOADER");
 		} catch(Exception e){e.printStackTrace();}
 	}
 
@@ -65,13 +72,36 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		
 //		System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
 		
-			host = "192.168.0.103";
-//			host = "141.195.23.234";
+//			host = "192.168.0.103";
+//			host = "141.195.226.138";
+			host = "141.195.23.54";
 			registryPort = 12345;
 			ftpServerPort = 12346;
 
+			try {
+				Enumeration e = NetworkInterface.getNetworkInterfaces();
+				while(e.hasMoreElements())	{
+
+					NetworkInterface n = (NetworkInterface) e.nextElement();
+					Enumeration ee = n.getInetAddresses();
+
+					while (ee.hasMoreElements()) {
+						InetAddress i = (InetAddress) ee.nextElement();
+
+						System.out.println(i.getHostAddress());
+					}
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 			System.setProperty("java.security.policy", "rmi.policy");
-			System.setSecurityManager(new SecurityManager());
+//			System.setProperty("java.rmi.server.hostname", "141.195.226.138");
+			System.setProperty("java.rmi.server.useLocalHostname", "true");
+//			System.setProperty("jav.rmi.server.codebase", "/home/c/camaram/cs441s2015/cs441s2016-fp-team1/code/bin/");
+//			System.setProperty("java.rmi.server.hostname", "141.195.23.54");
+//			System.setSecurityManager(new SecurityManager());
 			
 			ftpClassDir = "resources/bin/";
 			ftpJarDir = "resources/lib/";
