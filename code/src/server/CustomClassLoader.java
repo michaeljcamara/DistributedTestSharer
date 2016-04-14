@@ -7,6 +7,8 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.security.CodeSource;
+import java.security.SecureClassLoader;
 
 public class CustomClassLoader extends URLClassLoader{
 
@@ -58,18 +60,79 @@ public class CustomClassLoader extends URLClassLoader{
 	
 	//http://baptiste-wicht.com/posts/2010/05/tip-add-resources-dynamically-to-a-classloader.html
 	public static void addURLToSystemClassLoader(URL url) throws IntrospectionException { 
-		  URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); 
-		  Class<URLClassLoader> classLoaderClass = URLClassLoader.class; 
+		URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); 
+		Class<URLClassLoader> classLoaderClass = URLClassLoader.class; 
 
-		  try { 
-		    Method method = classLoaderClass.getDeclaredMethod("addURL", new Class[]{URL.class}); 
-		    method.setAccessible(true); 
-		    method.invoke(systemClassLoader, new Object[]{url}); 
-		  } catch (Throwable t) { 
-		    t.printStackTrace(); 
-		    throw new IntrospectionException("Error when adding url to system ClassLoader "); 
-		  } 
+		try { 
+			Method method = classLoaderClass.getDeclaredMethod("addURL", new Class[]{URL.class}); 
+			method.setAccessible(true); 
+			method.invoke(systemClassLoader, new Object[]{url}); 
+		} catch (Throwable t) { 
+			t.printStackTrace(); 
+			throw new IntrospectionException("Error when adding url to system ClassLoader "); 
+		} 
+	}
+	
+	public static Class findClassWithSystemClassLoader(String name) throws IntrospectionException { 
+		URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); 
+		Class<URLClassLoader> classLoaderClass = URLClassLoader.class; 
+		
+		Class convertedClass = null;
+		
+		for(Method m : classLoaderClass.getDeclaredMethods()) {
+			System.out.print(m.getName() + " ");
+			
+			for(Class c : m.getParameterTypes()) {
+				System.out.print(c.getName() + " ");
+			}
+			
+			System.out.println(", return: " + m.getReturnType().getName());
+			
 		}
+
+		try { 
+			Method method = classLoaderClass.getDeclaredMethod("findClass", new Class[]{String.class}); 
+			method.setAccessible(true); 
+			convertedClass = (Class) method.invoke(systemClassLoader, new Object[]{name}); 
+		} catch (Throwable t) { 
+			t.printStackTrace(); 
+			throw new IntrospectionException("Error when finding class with system ClassLoader "); 
+		} 
+		
+		return convertedClass;
+	}
+	
+//	public static Class convertToClass(String name, byte[] bytes, int off, int len, CodeSource source) throws IntrospectionException {
+//		URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+////		ClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); 
+////		Class<URLClassLoader> classLoaderClass = URLClassLoader.class; 
+//		Class<SecureClassLoader> classLoaderClass = SecureClassLoader.class;
+////		Class<URLClassLoader> classLoaderClass = URLClassLoader.class;
+//		Class convertedClass = null;
+//		
+//		try { 
+//			for(Method m : classLoaderClass.getDeclaredMethods()) {
+//				System.out.print(m.getName() + " ");
+//				
+//				for(Class c : m.getParameterTypes()) {
+//					System.out.print(c.getName() + " ");
+//				}
+//				
+//				System.out.println(", return: " + m.getReturnType().getName());
+//				
+//			}
+//			Method method = classLoaderClass.getDeclaredMethod("defineClass", new Class[]{String.class, byte[].class, int.class, int.class, CodeSource.class}); 
+////			Method method = classLoaderClass.getMethod("defineClass", new Class[]{String.class, bytes.getClass(), int.class, int.class});
+//			method.setAccessible(true); 
+////			convertedClass = (Class) method.invoke(systemClassLoader, new Object[]{"asd", bytes, off, len}); 
+//			convertedClass = (Class) method.invoke(systemClassLoader, new Object[]{name, bytes, off, len, source});
+//		} catch (Throwable t) { 
+//			t.printStackTrace(); 
+//			throw new IntrospectionException("Error when converting bytes to class"); 
+//		} 
+//		
+//		return convertedClass;
+//	}
 
 	
 //	private static URL[] getUrls() throws IOException {
@@ -105,11 +168,11 @@ public class CustomClassLoader extends URLClassLoader{
 //	}
 	
 	
-	public Class convertToClass(byte[] bytes) {
-		
-//		return defineClass("CorrectnessTest", bytes, 0, bytes.length);
-		return defineClass(bytes, 0, bytes.length);
-	}
+//	public Class convertToClass(byte[] bytes) {
+//		
+////		return defineClass("CorrectnessTest", bytes, 0, bytes.length);
+//		return defineClass(bytes, 0, bytes.length);
+//	}
 //	
 //	
 //	public URL getResource(String name) {

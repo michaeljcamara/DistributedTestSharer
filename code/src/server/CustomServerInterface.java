@@ -9,5 +9,7 @@ import org.junit.runner.Result;
 public interface CustomServerInterface extends Remote {
 
 	public Result runTest(File testFile) throws RemoteException;
+	public Result runTest(Class testClass) throws RemoteException;
+	public void updateClassLoader() throws RemoteException;
 	
 }
