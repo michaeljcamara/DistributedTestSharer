@@ -3,11 +3,10 @@ package delegator;
 import java.io.File;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.LinkedList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.junit.runner.Result;
 
-import server.CustomServer;
 import server.CustomServerInterface;
 
 public interface DelegatorInterface extends Remote {
@@ -18,7 +17,8 @@ public interface DelegatorInterface extends Remote {
 	
 	public String ping() throws RemoteException;
 
-	public Result runTests() throws RemoteException;
+//	public Result runTests() throws RemoteException;
+	public ConcurrentLinkedQueue<Result> runTests() throws RemoteException;
 	
 //	public void createTestList(File file);
 

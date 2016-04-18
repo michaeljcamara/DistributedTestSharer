@@ -1,20 +1,10 @@
 package client;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.nio.file.CopyOption;
-import java.nio.file.FileVisitOption;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.rmi.Naming;
-import java.util.EnumSet;
-import java.util.stream.Stream;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
 import delegator.DelegatorInterface;
 
@@ -23,13 +13,13 @@ public class CustomClient {
 	public static void main(String[] args) {
 		try	{
 									
-//			String host = "192.168.0.103";
+			String host = "192.168.0.100";
 //			String host = "141.195.226.138";
-			String host = "141.195.23.54";
+//			String host = "141.195.23.54";
 			String port = "12345";
 			System.setProperty("java.security.policy", "rmi.policy");
 //			System.setSecurityManager(new SecurityManager());
-
+			
 			DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + port + "/Delegator");
 			
 //			File resourceFile = new File("sentByClient/SimpleResource.class");
@@ -41,19 +31,36 @@ public class CustomClient {
 //			File testFile = new File("sentByClient/AllTests.class");
 //			File testFile = new File("sentByClient/CorrectnessTest.class");
 			
-//			Result result = delegator.uploadTestCases(testFile);
-			Result result = delegator.runTests();
+			long start = System.currentTimeMillis();
+			ConcurrentLinkedQueue<Result> results = delegator.runTests();
+			long end = System.currentTimeMillis();
+			long elapsed = end - start;
 			
-			// Indicate overall results of testing 
-			System.out.println("Total tests run: " + result.getRunCount());
-			System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-			System.out.println("Number of failures: " + result.getFailureCount());
-	
-			// List all failures that have been generated 
-			for (Failure failure : result.getFailures()) {
-				System.out.println("\t" + failure.toString());
+			int runs, successes, failures;
+			runs = successes = failures = 0;
+			
+			for(Result result : results) {
+				runs += result.getRunCount();
+				failures += result.getFailureCount();
 			}
-
+			successes = runs - failures;
+			
+			System.out.println("Total tests run: " + runs);
+			System.out.println("Number of successes: " + successes);
+			System.out.println("Number of failures: " + failures);
+			System.out.println("Elapsed time: " + elapsed);
+			
+			
+//			// Indicate overall results of testing 
+//			System.out.println("Total tests run: " + result.getRunCount());
+//			System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
+//			System.out.println("Number of failures: " + result.getFailureCount());
+//	
+//			// List all failures that have been generated 
+//			for (Failure failure : result.getFailures()) {
+//				System.out.println("\t" + failure.toString());
+//			}
+			
 		}
 		catch(Exception e) {e.printStackTrace();}
 	}

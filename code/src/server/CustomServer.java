@@ -2,107 +2,98 @@ package server;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.net.InetAddress;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.net.NetworkInterface;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Enumeration;
-import java.util.Map.Entry;
-import java.util.Properties;
 
-import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
-import org.apache.commons.net.ftp.FTPListParseEngine;
-import org.apache.commons.net.ftp.FTPSServerSocketFactory;
-import org.junit.internal.runners.JUnit38ClassRunner;
-import org.junit.runner.Computer;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
-import org.junit.runner.Runner;
 import org.junit.runner.notification.Failure;
-import org.junit.runner.notification.RunListener;
-import org.junit.runner.notification.RunNotifier;
-import org.junit.runners.BlockJUnit4ClassRunner;
-import org.junit.runners.Suite.SuiteClasses;
 
-import delegator.DelegatorInterface; 
+import delegator.DelegatorInterface;
 
 public class CustomServer extends UnicastRemoteObject implements CustomServerInterface{
 
 	private static String host, ftpClassDir, ftpJarDir, ftpRootDir, userName, userPassword;
 	private static int registryPort, ftpServerPort;
+	private static FTPClient client;
 	
 	protected CustomServer() throws RemoteException {
 		super();
-//		System.setSecurityManager(new SecurityManager());
 	}
 	
 	public void updateClassLoader() {
 		
 		System.out.println("BEGIN UPDATECLASSLOADER");
 		try {
-			FTPClient client = new FTPClient();
-
+			client = new FTPClient();
+			System.out.println("BEGIN UPDATECLASSLOADER1");
 			client.connect(host, ftpServerPort);		
+			System.out.println("BEGIN UPDATECLASSLOADER2");
 			client.login(userName, userPassword);
+			
+			System.out.println(client.getReplyCode());
+			System.out.println(client.getLocalAddress());
+			System.out.println(client.getLocalPort());
+			System.out.println(client.getRemotePort());
+			System.out.println(client.printWorkingDirectory());
+			System.out.println(client.getKeepAlive());
+			
+			//change user.dir ->
+			
+			System.out.println("BEGIN UPDATECLASSLOADER3");
 
 			CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpClassDir));
-
+			System.out.println("BEGIN UPDATECLASSLOADER4");
 			// Add all files in the ftp lib directory directly to classpath
+			
+			System.out.println(ftpJarDir);
+//			String[] jarFiles = client.listNames(ftpJarDir);
 			FTPFile[] jarFiles = client.listFiles(ftpJarDir);
-
+			System.out.println("got names");
+			client.setKeepAlive(true);
+			
+//			FTPFile[] jarFiles = client.listFiles(ftpJarDir);
+			System.out.println("BEGIN UPDATECLASSLOADER5");
 			for(int i = 0; i < jarFiles.length; i++) {
 				CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i].getName()));
+//				CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i]));
+//				System.out.println("BEGIN UPDATECLASSLOADER6");
+				System.out.println(jarFiles[i].getName());
 			}
 			
-			System.out.println("END UPDATECLASSLOADER");
+			
 		} catch(Exception e){e.printStackTrace();}
+		
+		System.out.println("END UPDATECLASSLOADER");
 	}
 
 	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
 
 		
-//		System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
+			System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
 		
-//			host = "192.168.0.103";
+			host = "192.168.0.100";
 //			host = "141.195.226.138";
-			host = "141.195.23.54";
+//			host = "141.195.23.54";
 			registryPort = 12345;
 			ftpServerPort = 12346;
 
-			try {
-				Enumeration e = NetworkInterface.getNetworkInterfaces();
-				while(e.hasMoreElements())	{
-
-					NetworkInterface n = (NetworkInterface) e.nextElement();
-					Enumeration ee = n.getInetAddresses();
-
-					while (ee.hasMoreElements()) {
-						InetAddress i = (InetAddress) ee.nextElement();
-
-						System.out.println(i.getHostAddress());
-					}
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
 			System.setProperty("java.security.policy", "rmi.policy");
 //			System.setProperty("java.rmi.server.hostname", "141.195.226.138");
-			System.setProperty("java.rmi.server.useLocalHostname", "true");
+//			System.setProperty("java.rmi.server.useLocalHostname", "true");
 //			System.setProperty("jav.rmi.server.codebase", "/home/c/camaram/cs441s2015/cs441s2016-fp-team1/code/bin/");
 //			System.setProperty("java.rmi.server.hostname", "141.195.23.54");
 //			System.setSecurityManager(new SecurityManager());
-			
+//			
 			ftpClassDir = "resources/bin/";
 			ftpJarDir = "resources/lib/";
 			ftpRootDir = "resources/";
@@ -120,62 +111,10 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		System.out.println("**BEGINNING runTest()**");
 		
 		try{
-		FTPClient client = new FTPClient();
-		
-		client.connect(host, ftpServerPort);		
-		client.login(userName, userPassword);
-
-//		client.changeToParentDirectory();
-//		System.out.println("WD: " + client.printWorkingDirectory());
-//		System.out.println("ChangeDir?: " + client.changeWorkingDirectory("bin/"));
-//		System.out.println("WD: " + client.printWorkingDirectory());
-//		client.setFileType(FTP.BINARY_FILE_TYPE); //LOCAL?
-//		client.setFileType(FTP.LOCAL_FILE_TYPE);
-		
-		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpClassDir));
-		
-		// Add all files in the ftp lib directory directly to classpath
-//		FTPFile[] jarFiles = client.listFiles("lib/");
-		FTPFile[] jarFiles = client.listFiles(ftpJarDir);
-		
-		for(int i = 0; i < jarFiles.length; i++) {
-			System.out.println(jarFiles[i].getName());
-			CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i].getName()));
-		}
-				
-		// TODO: Need to recursively traverse lib directory and add all individual jar files to the class loader
-		// TODO: Need to keep host name, username/password as user configurable (e.g. specify at runtime)
-		// TODO: Ultimately try changing from ftp to ftps
-		
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port + "/"));
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port));
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port + "/config/"));
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port + "/bin/config/"));
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port + "/"));
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://user:user@" + host + ":" + port + "/config/locations.properties"));
-		
-		//**THIS MIGHT THROW CASTING ERROR!!!! STILL need to use this later
-//		CustomClassLoader a = (CustomClassLoader)((URLClassLoader) URLClassLoader.getSystemClassLoader());
-		
-		for(URL url : ((URLClassLoader) URLClassLoader.getSystemClassLoader()).getURLs()) {
-			System.out.println(url);
-		}
-		
-//		for(Entry<Object, Object> p : System.getProperties().entrySet()) {
-//			System.out.println((String)p.getKey() + " ||| " + (String)p.getValue());
-//		}
-		
-//		System.setProperty("user.dir", "ftp://user:user@" + host + ":" + port + "/");
-//		System.setProperty("java.class.path", "ftp://user:user@" + host + ":" + port + "/bin/");
-		
-//		System.setProperty("user.dir", ftpRootDir);
 		
 		FileInputStream in = new FileInputStream(testFile);
 		byte[] classBytes = new byte[(int) testFile.length()];
 		in.read(classBytes);	
-		
-		System.out.println(classBytes.getClass());
-		System.out.println(classBytes.getClass().getName());
 		
 		SimpleClassLoader loader = new SimpleClassLoader();
 //		CustomClassLoader loader = (CustomClassLoader) URLClassLoader.getSystemClassLoader();
@@ -183,54 +122,180 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		
 //		Class convertedClass = CustomClassLoader.findClassWithSystemClassLoader("testsuite.CorrectnessTest");
 //		Class convertedClass = CustomClassLoader.findClassWithSystemClassLoader("org.schemaanalyst.unittest.AllTests");
-
 		
-		//Get classes in suite
-//		try {
-//			Class<?> convertedClass = loader.convertToClass(classBytes);
-//			SuiteClasses suiteAnnotation = convertedClass.getAnnotation(SuiteClasses.class);
-//			if(suiteAnnotation != null) {
-//				Class<?>[] classesInSuite = suiteAnnotation.value();
+//		CustomClassLoader loader2 = new CustomClassLoader(((URLClassLoader)ClassLoader.getSystemClassLoader()).getURLs());
+//		SimpleClassLoader loader2 = new SimpleClassLoader(); 
+//		FileOutputStream out = new FileOutputStream("temp.file");
+//		InputStream in = client.retrieveFileStream(ftpClassDir + "testSuite/CorrectnessTest.class");
+//		System.out.println(in);
+//		System.out.println(client.getReplyCode());
+//		byte[] testBytes2 = new byte[(int) testFile.length()];
+//		for(byte b : testBytes2) System.out.println(b);
+//		System.out.println(in.read(testBytes2));
+		
+		
+		Class convertedClass = loader.convertToClass(classBytes);
+//		Class convertedClass = loader.convertToClass(testBytes2);
+		System.out.println("ConvertedClass: " + convertedClass);
+		System.out.println("convertedClass CL: " + convertedClass.getClassLoader().toString());	
+		
+		Result result = JUnitCore.runClasses(convertedClass);
+		
+		// Indicate overall results of testing 
+		System.out.println("Total tests run: " + result.getRunCount());
+		System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
+		System.out.println("Number of failures: " + result.getFailureCount());
+
+		// List all failures that have been generated 
+		for (Failure failure : result.getFailures()) {
+			System.out.println("EXCEPTION" + failure.getException());
+		}
+		
+		System.out.println("============================");
+		
+		return result;
+//		return null;
+		
+		}
+		catch(Exception e) {e.printStackTrace(); System.out.println("EXCEPTION!!!");return null;}
+		}
+	
+	public Result runTest(Class testClass) {
+		
+		System.out.println("**BEGINNING runTest(class)**");
+//		for(URL url : ((URLClassLoader) URLClassLoader.getSystemClassLoader()).getURLs()) {
+//			System.out.println(url);
+//		}		
+		
+		try{
+
+//		CustomClassLoader loader2 = new CustomClassLoader(((URLClassLoader)ClassLoader.getSystemClassLoader()).getURLs());
+//		SimpleClassLoader loader2 = new SimpleClassLoader(); 
+		
+//		Class convertedClass = loader2.convertToClass(testClass);
+		
+//		System.out.println(convertedClass.getComponentType());
+//		System.out.println(convertedClass.getName());
+//		System.out.println(convertedClass.getSimpleName());
+//		System.out.println(convertedClass.getTypeName());
+//		System.out.println(convertedClass.getPackage());
+//		System.out.println(convertedClass.getSuperclass());
+		
+		System.out.println(testClass.getName());
+		
+//		System.setProperty("user.dir", "ftp://user:user@" + host + ":" + ftpServerPort + "/resources/");
+//		System.setProperty("user.dir", "ftp://user:user@" + host + ":" + ftpServerPort + "/resources/");
+//		System.setProperty("user.dir", "C:/FileZilla/resources");
+//		System.setProperty("java.class.path", "bin;lib/*;C:/FileZilla/resources/config");
+		
+		
+		Result result = JUnitCore.runClasses(testClass);
+		
+		// Indicate overall results of testing 
+		System.out.println("Total tests run: " + result.getRunCount());
+		System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
+		System.out.println("Number of failures: " + result.getFailureCount());
+
+		// List all failures that have been generated 
+		for (Failure failure : result.getFailures()) {
+			System.out.println("EXCEPTION" + failure.getException());
+//			System.out.println("TRACE: " + failure.getTrace());
+		}
+		
+		System.out.println("============================");
+		
+		return result;
+		}
+		catch(Exception e) {e.printStackTrace(); System.out.println("EXCEPTION!!!");return null;}
+		}
+	
+	
+	public Result runTest(byte[] testBytes) {
+		
+		System.out.println("**BEGINNING runTest(BYTES)**");
+		
+		try{
+			
+			for(URL url : ((URLClassLoader) URLClassLoader.getSystemClassLoader()).getURLs()) {
+				System.out.println(url);
+			}
+			
+//			Thread.sleep(1000);
+			
+//			((URLClassLoader) URLClassLoader.getSystemClassLoader()).defineClass("aa", testBytes, 0, testBytes.length-1);
+//			ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
+//			Class<ClassLoader> classLoaderClass = ClassLoader.class;
+//			
+//			for(Method m : classLoaderClass.getDeclaredMethods()) {
+//				System.out.print(m.getName() + " ");
 //
-//				for(Class<?> c : classesInSuite) {
-//					System.out.println(c.getName());
-//					
-//					Result result = JUnitCore.runClasses(c);
-//					System.out.println("Result: ");
-//					System.out.println(result);
-//					
-//					// Indicate overall results of testing 
-//					System.out.println("Total tests run: " + result.getRunCount());
-//					System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-//					System.out.println("Number of failures: " + result.getFailureCount());
-//
-//					// List all failures that have been generated 
-//					for (Failure failure : result.getFailures()) {
-////						System.out.println("\t" + failure.toString());
-////						System.out.println("MESSAGE: " + failure.getMessage());
-////						System.out.println("HEADER: " + failure.getTestHeader());
-////						System.out.println("TRACE: " + failure.getTrace());
-////						System.out.println("DESCRIPTION: " + failure.getDescription());
-//						System.out.println("EXCEPTION" + failure.getException());
-//					}
-//					
+//				for(Class c : m.getParameterTypes()) {
+//					System.out.print(c.getName() + " ");
 //				}
+//
+//				System.out.println(", return: " + m.getReturnType().getName());
+//
 //			}
 //
-//			System.out.println("# CLASSES IN SUITE: " + suiteAnnotation.value().length);
-//		}
-//		catch(Exception e){e.printStackTrace();}
+//			Method method = classLoaderClass.getDeclaredMethod("defineClass", new Class[]{byte[].class, int.class, int.class}); 
+//			method.setAccessible(true); 
+//			System.out.println("CUSTOMMETHOD: " + method.getName());
+//			for(Class c : method.getParameterTypes()) {
+//				System.out.print(c.getName() + " ");
+//			}
+//			System.out.println(", return: " + method.getReturnType().getName());
+//			Class convertedClass =  (Class) method.invoke(systemClassLoader, new Object[]{testBytes, 0, testBytes.length-1});
+			
+//		FTPClient client = new FTPClient();
+//		
+//		System.out.println("1");
+//		client.connect(host, ftpServerPort);
+//		System.out.println("1");
+//		client.login(userName, userPassword);
+//		System.out.println("1");
+				
+//		System.setProperty("user.dir", "ftp://user:user@" + host + ":" + ftpServerPort + "/");
+//		System.setProperty("java.class.path", "ftp://user:user@" + host + ":" + port + "/bin/");
+//		System.setProperty("user.dir", ftpRootDir);
 		
 		
+//		CustomClassLoader loader = (CustomClassLoader) URLClassLoader.getSystemClassLoader();
+//		Class convertedClass = CustomClassLoader.convertToClass(testFile.getName(), classBytes, 0, classBytes.length, null);
 		
-		Class convertedClass = loader.convertToClass(classBytes);		
+//		Class convertedClass = CustomClassLoader.findClassWithSystemClassLoader("testsuite.CorrectnessTest");
+//		Class convertedClass = CustomClassLoader.findClassWithSystemClassLoader("org.schemaanalyst.unittest.AllTests");
+		
+//		client.retrieveFile("resources/tests/AllTests.class", local)
+			
+//			CustomClassLoader loader2 = new CustomClassLoader(ClassLoader.getSystemClassLoader());
+			CustomClassLoader loader2 = new CustomClassLoader(((URLClassLoader)ClassLoader.getSystemClassLoader()).getURLs());			
+			
+			FileOutputStream out = null;
+			client.retrieveFile(ftpClassDir + "testSuite/CorrectnessTest.class", out);
+			byte[] testBytes2 = new byte[]{};
+			out.write(testBytes2);
+			Class convertedClass = loader2.convertToClass(testBytes2);
+			
+			System.out.println(convertedClass.getComponentType());
+			System.out.println(convertedClass.getName());
+			System.out.println(convertedClass.getSimpleName());
+			System.out.println(convertedClass.getTypeName());
+			System.out.println(convertedClass.getPackage());
+			System.out.println(convertedClass.getSuperclass());
+			
+			
+		
+
+		
+//		SimpleClassLoader loader = new SimpleClassLoader();
+//		Class convertedClass = loader.convertToClass(testBytes);
+//		Class convertedClass = loader2.convertToClass(testBytes);
 		System.out.println("ConvertedClass: " + convertedClass);
 		System.out.println("convertedClass CL: " + convertedClass.getClassLoader().toString());
 		System.out.println("system CL: " + CustomClassLoader.getSystemClassLoader().toString());
 
 		System.out.println("Current dir: " + System.getProperty("user.dir"));
 		
-		System.out.println("FTP WD: " + client.printWorkingDirectory());
 		Result result = JUnitCore.runClasses(convertedClass);
 		System.out.println("Result: ");
 		System.out.println(result);
@@ -242,80 +307,24 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		// List all failures that have been generated 
 		for (Failure failure : result.getFailures()) {
-//			System.out.println("\t" + failure.toString());
-//			System.out.println("MESSAGE: " + failure.getMessage());
-//			System.out.println("HEADER: " + failure.getTestHeader());
-//			System.out.println("TRACE: " + failure.getTrace());
-//			System.out.println("DESCRIPTION: " + failure.getDescription());
 			System.out.println("EXCEPTION" + failure.getException());
+			System.out.println("\t" + failure.toString());
+			System.out.println("MESSAGE: " + failure.getMessage());
+			System.out.println("HEADER: " + failure.getTestHeader());
+//			System.out.println("TRACE: " + failure.getTrace());
+			System.out.println("DESCRIPTION: " + failure.getDescription());
 		}
 		
 		System.out.println("============================");
+				
+//		client.disconnect();
 		
-//		RunNotifier notifierb = new RunNotifier();
-//		BlockJUnit4ClassRunner b = new BlockJUnit4ClassRunner(convertedClass);
-//		b.run(notifierb);
-//		RunListener listener = new RunListener();
-//		listener.
-		
-		
-		client.disconnect();
 		
 //		return result;
 		return null;
-		
-		
-		
-		
-//		client.storeFile("testFile.file", new FileInputStream("testFile.file"));
 
-//		-Djava.security.policy=rmi.policy
-//		System.setSecurityManager(new SecurityManager());
-		
 		}
-		catch(Exception e) {e.printStackTrace(); System.out.println("EXCEPTION!!!");return null;}
-		}
+		catch(Exception e) {e.printStackTrace(); System.out.println("EXCEPTION!!!");System.out.println(e.getCause());return null;}
+		}	
 	
-	public Result runTest(Class testClass) {
-		
-		System.out.println("**BEGINNING runTest(class)**");
-		
-		try{
-//		FTPClient client = new FTPClient();
-//		
-//		client.connect(host, ftpServerPort);		
-//		client.login(userName, userPassword);
-		
-//		CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpClassDir));
-//		
-//		// Add all files in the ftp lib directory directly to classpath
-//		FTPFile[] jarFiles = client.listFiles(ftpJarDir);
-//		
-//		for(int i = 0; i < jarFiles.length; i++) {
-//			CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i].getName()));
-//		}		
-
-		Result result = JUnitCore.runClasses(testClass);
-		System.out.println("Result: ");
-		System.out.println(result);
-		
-		// Indicate overall results of testing 
-		System.out.println("Total tests run: " + result.getRunCount());
-		System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-		System.out.println("Number of failures: " + result.getFailureCount());
-
-		// List all failures that have been generated 
-		for (Failure failure : result.getFailures()) {
-			System.out.println("EXCEPTION" + failure.getException());
-		}
-		
-		System.out.println("============================");
-		
-//		client.disconnect();
-		
-		return result;
-//		return null;
-		}
-		catch(Exception e) {e.printStackTrace(); System.out.println("EXCEPTION!!!");return null;}
-		}
 }

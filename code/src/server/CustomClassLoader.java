@@ -74,7 +74,7 @@ public class CustomClassLoader extends URLClassLoader{
 	}
 	
 	public static Class findClassWithSystemClassLoader(String name) throws IntrospectionException { 
-		URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); 
+		URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
 		Class<URLClassLoader> classLoaderClass = URLClassLoader.class; 
 		
 		Class convertedClass = null;
@@ -98,6 +98,8 @@ public class CustomClassLoader extends URLClassLoader{
 			t.printStackTrace(); 
 			throw new IntrospectionException("Error when finding class with system ClassLoader "); 
 		} 
+		
+		
 		
 		return convertedClass;
 	}
@@ -187,5 +189,9 @@ public class CustomClassLoader extends URLClassLoader{
 //		return findLoadedClass(name);
 //	}
 	
+    public Class<?> convertToClass(byte[] bytes) {
+		return defineClass(bytes, 0, bytes.length);
+		
+	}
 
 }
