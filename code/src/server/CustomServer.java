@@ -81,9 +81,8 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		
 			System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
 		
-			host = "192.168.0.100";
-//			host = "141.195.226.138";
-//			host = "141.195.23.54";
+//			host = "192.168.0.100";
+			host = "141.195.23.157";
 			registryPort = 12345;
 			ftpServerPort = 12346;
 

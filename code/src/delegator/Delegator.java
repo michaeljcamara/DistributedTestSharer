@@ -55,9 +55,8 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 		Logger.getRootLogger().removeAllAppenders();
 		Logger.getRootLogger().addAppender(new NullAppender());
 		
-		host = "192.168.0.100";
-//		host = "141.195.23.234";
-//		host = "141.195.23.54";
+//		host = "192.168.0.100";
+		host = "141.195.23.157";
 		registryPort = 12345;
 		ftpServerPort = 12346;
 		ftpRootDir = "C:/FileZilla/";

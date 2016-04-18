@@ -13,9 +13,8 @@ public class CustomClient {
 	public static void main(String[] args) {
 		try	{
 									
-			String host = "192.168.0.100";
-//			String host = "141.195.226.138";
-//			String host = "141.195.23.54";
+//			String host = "192.168.0.100";
+			String host = "141.195.23.157";
 			String port = "12345";
 			System.setProperty("java.security.policy", "rmi.policy");
 //			System.setSecurityManager(new SecurityManager());
