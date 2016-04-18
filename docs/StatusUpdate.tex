@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\pagenumbering{arabic}
+\linespread{1.5}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
+
+\usepackage{fancyvrb}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage[section]{placeins}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\begin{document}
+
+\title{CMPSC 441 Final Project\\An Empirical Study of Distributed Test Suite Execution\\Status Update}
+\author{Michael Camara\\Gary Miller\\Herbie Torrance\\Colton McCurdy\\\textit{Honor Code Pledge: This work is ours unless otherwise cited}}
+\date{4-18-16}
+\maketitle
+
+\section{Michael Camara}
+A significant amount of progress has been made on our novel framework for distributed test suite execution.  Input has been streamlined to allow the user (on the "client" machine) to put all relevant files into the \texttt{/resources} directory in our main project directory.  This directory is further divided into: \texttt{/bin} for all class files needed to run the system; \texttt{/lib} for all \texttt{jar} libraries; \texttt{/test\_singles} for all individual test cases; and \texttt{/test\_suites} for all test suites (i.e. classes that refer to other test classes, such as \texttt{AllTests.class}).  The \texttt{/resources} directory is passed from the client node to the delegator node, where it is recursively traversed to recreate all files on the delegator node while retaining the inherent hierarchical structure.  Further, test suites like \texttt{AllTests.class} are now deconstructed by the delegator into individual test classes, which can then be distributed individually to servers instead of needing to send the entire test suite to a single server.  A multithreaded load sharing system has also been implemented to try and distribute the work load between all available servers.  A new FTP server using \texttt{Apache Mina} has further been programmed into the delegator, obviating the need for the third-party \texttt{FileZilla} server previously utilized.  There are still a number of problems to fix and streamline, but it should still be feasible to complete this system by the deadline.
+
+\section{Herbie Torrance}
+Many steps have been taken in advance for preparation of experimentation, data collection,  graph/chart creation, and analysis of our NDTS or "Novel Distributed Test Suite." These steps include a review of R syntax and RStudio tools, review of research papers surrounding distributed test suites, review of papers surrounding FTP Servers, and a book review of ideas surrounding Java RMI.  These preparations have provided a substantial foundation on which we can build off of later this week as the system is officially finished and ready for experimentation. Enriching information was retrieved from research papers "Method and system for a user interface for remote FTP hosts", "Distributed Unit Testing", and the book required for this course.
+
+\section{Gary Miller}
+Gary has been researching the broad topic of distributed test suites, including the benefits of partitioning tests across multiple nodes, the challenges associated with testing in a distributed fashion, and finally the potential drawbacks of this approach. Also, he has focused on analyzing the documentation of the Test Load Balancer (TLB) system to determine both the advantages and disadvantages of the approach taken by the TLB system. Finally, he has also looked into the documentation and approach taken by other systems identified by Colton, including Ant Ivy, Cassanadra, and Tomcat. He is currently working on preparing a comprehensive report on the information he has gathered on distributed test suites and the previously mentioned systems.
+
+\section{Colton McCurdy}
+Colton has continued finding existing tools with adequate test suites that use JUnit and Apache Ant. We are defining the test suite as adequate if it runs for more than five minutes. Additionally, Colton has continued working on configuring the Test-Load-Balancer tool. Colton is currently working on running the existing tools' test suites on the Test-Load-Balancer.
+
+\end{document}
