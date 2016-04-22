@@ -12,5 +12,6 @@ public interface CustomServerInterface extends Remote {
 	public Result runTest(Class testClass) throws RemoteException;
 	public Result runTest(byte[] testBytes) throws RemoteException;
 	public void updateClassLoader() throws RemoteException;
+	public String ping() throws RemoteException;
 	
 }

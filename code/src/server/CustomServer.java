@@ -10,6 +10,9 @@ import java.net.URLClassLoader;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.RMISocketFactory;
 import java.rmi.server.UnicastRemoteObject;
 
 import org.apache.commons.net.ftp.FTPClient;
@@ -18,6 +21,8 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import delegator.CustomSocketFactory;
+import delegator.Delegator;
 import delegator.DelegatorInterface;
 
 public class CustomServer extends UnicastRemoteObject implements CustomServerInterface{
@@ -27,7 +32,7 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 	private static FTPClient client;
 	
 	protected CustomServer() throws RemoteException {
-		super();
+		super(12345);
 	}
 	
 	public void updateClassLoader() {
@@ -81,14 +86,15 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		
 			System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
 		
-			host = "192.168.0.101";
-//			host = "141.195.23.157";
+//			host = "192.168.0.101";
+			host = "141.195.226.180";
 			registryPort = 12345;
 			ftpServerPort = 12346;
 
 			System.setProperty("java.security.policy", "rmi.policy");
+			System.setProperty("java.rmi.server.disableHttp", "false");
 //			System.setProperty("java.rmi.server.hostname", "141.195.226.138");
-//			System.setProperty("java.rmi.server.useLocalHostname", "true");
+			
 //			System.setProperty("jav.rmi.server.codebase", "/home/c/camaram/cs441s2015/cs441s2016-fp-team1/code/bin/");
 //			System.setProperty("java.rmi.server.hostname", "141.195.23.54");
 //			System.setSecurityManager(new SecurityManager());
@@ -99,11 +105,38 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 			userName = "user";
 			userPassword = "user";
 
+//			try {
+//				RMISocketFactory.setSocketFactory(new CustomSocketFactory(registryPort));
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
 
-			DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
+//			Registry registry = LocateRegistry.getRegistry(host, registryPort, new CustomSocketFactory(registryPort));
+			Registry registry = LocateRegistry.getRegistry(host, registryPort);
+			System.out.println("GOT REGISTRY");
+			for(String a : registry.list()) {
+				System.out.println("Bound name: " + a);
+			}
+			
+			System.out.println(registry);
+
+//			DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
+			DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");			
 			CustomServer server = new CustomServer();
+			
+			Registry registry2 = LocateRegistry.createRegistry(12345);
+	        registry2.rebind("Delegator", delegator);
+			
+			System.out.println(delegator);
 			delegator.rebindServer((CustomServerInterface) server);
+//			System.out.println(delegator.getClass());
+			System.out.println(delegator.ping());
+			
+	        
+			
 	}
+	
+	public String ping() throws RemoteException {return "==========PING FROM SERVER==============";}
 	
 	public Result runTest(File testFile) {
 				

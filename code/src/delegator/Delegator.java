@@ -5,9 +5,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.rmi.AlreadyBoundException;
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.RMISocketFactory;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -39,6 +43,8 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     private static String host, ftpRootDir;
 
     private static int registryPort, ftpServerPort;
+    
+    private static Registry registry;
 
     // private static LinkedList<File> testList;
     private static LinkedList<File> testSuiteList, testSingleList;
@@ -46,16 +52,21 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     private static LinkedList<CustomServerInterface> serverList;
 
     public static void main(String[] args) throws RemoteException {
-
+//    	try {
+//			RMISocketFactory.setSocketFactory(new CustomSocketFactory(12345));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
         // Prevent console logging output
         Logger.getRootLogger().removeAllAppenders();
         Logger.getRootLogger().addAppender(new NullAppender());
 
-        host = "192.168.0.101";
-        // host = "141.195.23.157";
+//        host = "192.168.0.101";
+         host = "141.195.226.180";
         registryPort = 12345;
         ftpServerPort = 12346;
-        ftpRootDir = "C:/FileZilla/";
+//        ftpRootDir = "C:/FileZilla/";
+        ftpRootDir = "/tmp/camaram_temp/";
         // testList = new LinkedList<File>();
         testSuiteList = new LinkedList<File>();
         testSingleList = new LinkedList<File>();
@@ -64,8 +75,8 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
         System.setProperty("java.security.policy", "rmi.policy");
         // System.setSecurityManager(new SecurityManager());
         System.setProperty("java.rmi.server.hostname", host);
-        // System.setProperty("java.rmi.server.codebase", "ftp://" + "user" + ":" + "user"+ "@" +
-        // host + ":" + ftpServerPort + "/");
+        //System.setProperty("java.rmi.server.codebase", "ftp://" + "user" + ":" + "user"+ "@" + host + ":" + ftpServerPort + "/");
+//        System.setProperty("java.rmi.server.codebase", "bin/");
 
         createRegistry();
         createFTPServer();
@@ -73,7 +84,9 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     }
 
     protected Delegator() throws RemoteException {
-        super();
+//        super(12345, new CustomSocketFactory(12345), new CustomSocketFactory(12345));
+//    	super();
+        super(12345);
     }
 
     private void updateServers() throws RemoteException {
@@ -170,11 +183,34 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     }
 
     private static void createRegistry() throws RemoteException {
-        // Registry registry = LocateRegistry.createRegistry(registryPort);
-        Registry registry = LocateRegistry.createRegistry(registryPort,
-            new CustomSocketFactory(registryPort), new CustomSocketFactory(registryPort));
+    	
+//    	try {
+//    		RMISocketFactory.setSocketFactory(new CustomSocketFactory(registryPort));
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
+        
+
+//        try {
+//			RMISocketFactory.setSocketFactory(new CustomSocketFactory(12345));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+         
+        
+        registry = LocateRegistry.createRegistry(12345);
+//        Registry registry = LocateRegistry.getRegistry(host, 12345);
+
         Delegator delegator = new Delegator();
+//    	Registry registry = LocateRegistry.createRegistry(12345, new CustomSocketFactory(12345), new CustomSocketFactory(12345));
+//    	
         registry.rebind("Delegator", delegator);
+        
+        
+//        for(String a : registry.list()) {
+//        	System.out.println("Name = " + a);
+//        }
+//        delegator.exportObject(delegator);
     }
 
     public void uploadResources(File file) throws RemoteException {
@@ -202,7 +238,7 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     private void createResources(File file) {
         try {
             if (file.isDirectory()) {
-                File targetFile = new File("C:/FileZilla/" + file.toPath());
+                File targetFile = new File(ftpRootDir + file.toPath());
                 targetFile.mkdirs();
                 for (File subDir : file.listFiles()) {
                     createResources(subDir);
@@ -215,7 +251,7 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
                 byte[] fileBytes = new byte[(int) file.length()];
                 in.read(fileBytes);
 
-                FileOutputStream out = new FileOutputStream("C:/FileZilla/" + file.getPath());
+                FileOutputStream out = new FileOutputStream(ftpRootDir + file.getPath());
                 out.write(fileBytes);
             }
 
@@ -356,12 +392,14 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
     public void rebindServer(CustomServerInterface remoteObject) throws RemoteException {
 
         try {
-            Registry registry = LocateRegistry.getRegistry(registryPort);
+        	System.out.println("1");
 
             for (String s : registry.list()) {
                 System.out.println(s);
             }
 
+            System.out.println("2");
+            Registry registry = LocateRegistry.getRegistry(host, registryPort);
             registry.rebind("CustomServer_" + registry.list().length, remoteObject);
             serverList.add(remoteObject);
 
@@ -372,5 +410,7 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+        System.out.println(remoteObject.ping());
     }
 }

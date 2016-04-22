@@ -21,5 +21,6 @@
         <javac srcdir="${src_dir}" destdir="${build_dir}" includeantruntime="false" debug="true" debuglevel="vars,lines,source">
             <classpath refid="build_classpath"/>
         </javac>
+	<rmic classname="delegator.Delegator" base="${build_dir}"/>
     </target>
 </project>
