@@ -81,8 +81,8 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		
 			System.setProperty("java.system.class.loader", "server.CustomClassLoader"); 
 		
-//			host = "192.168.0.100";
-			host = "141.195.23.157";
+			host = "192.168.0.101";
+//			host = "141.195.23.157";
 			registryPort = 12345;
 			ftpServerPort = 12346;
 
@@ -147,7 +147,12 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		// List all failures that have been generated 
 		for (Failure failure : result.getFailures()) {
+//			System.out.println("EXCEPTION" + failure.getException());
 			System.out.println("EXCEPTION" + failure.getException());
+			System.out.println("TRACE: " + failure.getTrace());
+			System.out.println("MESSAGE: " + failure.getMessage());
+			System.out.println("HEADER: " + failure.getTestHeader());
+			System.out.println("DESCRIPTION: " + failure.getDescription());
 		}
 		
 		System.out.println("============================");
@@ -198,7 +203,10 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		// List all failures that have been generated 
 		for (Failure failure : result.getFailures()) {
 			System.out.println("EXCEPTION" + failure.getException());
-//			System.out.println("TRACE: " + failure.getTrace());
+			System.out.println("TRACE: " + failure.getTrace());
+			System.out.println("MESSAGE: " + failure.getMessage());
+			System.out.println("HEADER: " + failure.getTestHeader());
+			System.out.println("DESCRIPTION: " + failure.getDescription());
 		}
 		
 		System.out.println("============================");
