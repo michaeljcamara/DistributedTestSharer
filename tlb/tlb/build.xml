@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+        <!ENTITY manifest SYSTEM "misc/manifest.xml">
+        <!ENTITY extension-name SYSTEM "misc/extension-name.xml">
+]>
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="tlb" basedir="." default="all">
+    <property name="lib.dir" location="${basedir}/lib"/>
+    <property name="build.lib.dir" location="${basedir}/lib/build"/>
+    <property name="test.lib.dir" location="${lib.dir}/test"/>
+
+    <property name="target.dir" location="${basedir}/target"/>
+    <property name="test.tmpdata.dir" location="${target.dir}/tmp"/>
+    <property name="dog-fooding.reports.target.dir" location="${target.dir}/reports"/>
+    <property name="all.tests.dir" location="${target.dir}/all-tests"/>
+
+    <property name="build.dir" location="${basedir}/build"/>
+    <property name="core.dir" location="${basedir}/core"/>
+    <property name="balancer.dir" location="${basedir}/balancer"/>
+    <property name="restlet.dir" location="${basedir}/restlet"/>
+    <property name="alien.dir" location="${basedir}/alien"/>
+    <property name="java.dir" location="${basedir}/java"/>
+    <property name="server.dir" location="${basedir}/server"/>
+    <property name="integration_tests.dir" location="${basedir}/integration_tests"/>
+
+    <property name="dist.dir" location="${target.dir}/dist"/>
+    <property name="tmp.dir" location="${target.dir}/tmp"/>
+    <property name="dependencies.tmp.dir" location="${tmp.dir}/dependencies"/>
+    <property name="emma.dir" location="${target.dir}/emma"/>
+    <property name="emma.tmp.dir" location="${target.dir}/emma-tmp"/>
+    <property name="emma.version" value="2.1.5320"/>
+
+    <property name="sample-projects.dir" location="${basedir}/../sample_projects"/>
+
+    <property name="title" value="TLB - Test Load Balancer"/>
+    <property name="vendor" value="TLB Core Team - Janmejay Singh, Pavan KS"/><!-- follow alpha first name -->
+    <property name="license" value="2-clause BSD License"/>
+    <property name="description" value="A tool to load-balance tests across multiple processes or machines"/>
+
+    <path id="test.dependencies">
+        <fileset dir="${test.lib.dir}" includes="*.jar"/>
+    </path>
+
+    <path id="emma.classpath">
+        <pathelement location="${build.lib.dir}/emma-${emma.version}.jar"/>
+        <pathelement location="${build.lib.dir}/emma_ant-${emma.version}.jar"/>
+    </path>
+
+    <property name="ivy.install.version" value="2.2.0" />
+    <condition property="ivy.home" value="/${user.home}/.ant" else="${user.home}/.ant">
+        <os family="windows" />
+    </condition>
+    <condition property="ivy.home" value="${env.IVY_HOME}">
+      <isset property="env.IVY_HOME" />
+    </condition>
+    <property name="ivy.jar.dir" value="${ivy.home}/lib" />
+    <property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+
+    <target name="download-ivy" unless="offline">
+        <mkdir dir="${ivy.jar.dir}"/>
+        <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" dest="${ivy.jar.file}" usetimestamp="true"/>
+    </target>
+
+    <target name="init-ivy" depends="download-ivy">
+        <path id="ivy.lib.path">
+            <fileset dir="${ivy.jar.dir}" includes="*.jar"/>
+        </path>
+        <taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
+    </target>
+
+    <target name="resolve" depends="init-ivy">
+        <ivy:retrieve pattern="${lib.dir}/[conf]/[artifact]-[revision].[ext]" sync="true"/>
+    </target>
+
+    <import file="${build.dir}/build-build.xml"/>
+    <import file="${core.dir}/core-build.xml"/>
+    <import file="${balancer.dir}/balancer-build.xml"/>
+    <import file="${restlet.dir}/restlet-build.xml"/>
+    <import file="${alien.dir}/alien-build.xml"/>
+    <import file="${java.dir}/java-build.xml"/>
+    <import file="${server.dir}/server-build.xml"/>
+
+    <import file="${integration_tests.dir}/integration_tests-build.xml"/>
+
+    <target name="base.init" depends="build.jar">
+        <mkdir dir="${target.dir}"/>
+        <mkdir dir="${tmp.dir}"/>
+        <mkdir dir="${dog-fooding.reports.target.dir}"/>
+
+        <property name="one-jar.dist.dir" value="./dist"/>
+        <property name="one-jar.version" value="0.96"/>
+
+        <taskdef name="onejar" classname="com.simontuffs.onejar.ant.OneJarTask">
+            <classpath>
+                <pathelement location="${build.lib.dir}/one-jar-ant-task-${one-jar.version}.jar"/>
+            </classpath>
+        </taskdef>
+        <tstamp>
+            <format property="build-time" pattern="MMM/dd/yyyy hh:mm aa" timezone="${ENV.TZ}"/>
+        </tstamp>
+        <property name="build-time-with-timezone" value="${build-time} UTC"/>
+
+        <typedef name="dup-lib-checker" classname="tlb.packaging.DuplicateLibraryChecker" classpath="${build.jar}"/>
+    </target>
+
+    <target name="init" depends="resolve, base.init, core.init, balancer.init, java.init, restlet.init, alien.init, server.init, integration-tests.init"/>
+
+    <target name="clean">
+        <delete dir="${target.dir}" includeemptydirs="true"/>
+    </target>
+
+    <target name="-load.short.rev">
+        <exec executable="git" outputproperty="short_rev">
+            <arg line="describe --always"/>
+        </exec>
+        <property name="tlb.basename" value="tlb-${short_rev}"/>
+        <property name="tlb.server.basename" value="tlb-server-${short_rev}"/>
+        <property name="tlb.alien.basename" value="tlb-alien-${short_rev}"/>
+        <property name="tlb.java.basename" value="tlb-java-${short_rev}"/>
+        <property name="tlb.jar.name" value="${tlb.basename}.jar"/>
+        <property name="tlb.server.jar.name" value="${tlb.server.basename}.jar"/>
+        <property name="tlb.alien.jar.name" value="${tlb.alien.basename}.jar"/>
+        <property name="tlb.java.jar.name" value="${tlb.java.basename}.jar"/>
+        <property name="tlb.src.jar.name" value="${tlb.basename}-src.jar"/>
+        <property name="tlb.complete.basename" value="tlb-complete-${short_rev}"/>
+        <property name="tlb.examples.basename" value="setup-examples-${short_rev}"/>
+    </target>
+
+    <macrodef name="test-task-config">
+        <attribute name="emma.file"/>
+        <attribute name="test.classpath"/>
+        <attribute name="test.reports.dir"/>
+        <attribute name="test.classes.dir"/>
+        <attribute name="test.wildcard" default="**/*Test.class*"/>
+        <element name="extra-jvmargs" optional="true"/>
+        <element name="extra-envvars" optional="true"/>
+        <sequential>
+            <junit failureproperty="test.failured" printsummary="yes" haltonfailure="false" fork="true">
+                <classpath refid="emma.classpath"/>
+                <jvmarg value="-Demma.coverage.out.file=@{emma.file}"/>
+                <jvmarg value="-Demma.coverage.out.merge=true"/>
+                <jvmarg value="-Dtest.tmp.dir=${test.tmpdata.dir}"/>
+                <extra-jvmargs/>
+                <extra-envvars/>
+
+                <classpath refid="@{test.classpath}"/>
+                <batchtest todir="@{test.reports.dir}">
+                    <fileset dir="@{test.classes.dir}" includes="@{test.wildcard}"/>
+                    <formatter type="xml"/>
+                </batchtest>
+            </junit>
+            <fail message="Test failure detected, check test results." if="test.failed" />
+        </sequential>
+    </macrodef>
+
+    <macrodef name="tlb-jar">
+        <attribute name="dest"/>
+        <element name="extra-manifest" optional="true"/>
+        <element name="content"/>
+        <sequential>
+            <fail message="Packaging aborted, classes are instrumented" if="cov.instrd"/>
+            <jar destfile="@{dest}">
+                <manifest>
+                    <extra-manifest/>
+                    <section name="tlb/">
+                        <attribute name="Sealed" value="true"/>
+                        &extension-name;
+                    </section>
+                    &manifest;
+                </manifest>
+                <content/>
+            </jar>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="jar-restlet">
+        <attribute name="jar-name"/>
+        <attribute name="main-class"/>
+        <element name="class-dirs"/>
+        <sequential>
+            <tlb-jar dest="@{jar-name}">
+                <extra-manifest>
+                    <attribute name="Main-Class" value="@{main-class}"/>
+                </extra-manifest>
+                <content>
+                    <class-dirs/>
+                    <fileset dir="${restlet.classes.dir}"/>
+                    <fileset dir="${core.classes.dir}"/>
+                    <fileset dir="${core.src.dir}">
+                        <include name="log4j.properties"/>
+                    </fileset>
+                </content>
+            </tlb-jar>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="populate-dependency-dir">
+        <attribute name="name"/>
+        <element name="dependencies"/>
+        <sequential>
+            <delete dir="${dependencies.tmp.dir}/@{name}"/>
+            <mkdir dir="${dependencies.tmp.dir}/@{name}"/>
+            <copy todir="${dependencies.tmp.dir}/@{name}">
+                <dependencies/>
+            </copy>
+            <dup-lib-checker libDir="${dependencies.tmp.dir}/@{name}"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="onejar-restlet">
+        <attribute name="jar-name"/>
+        <attribute name="name"/>
+        <element name="additional-dependencies" optional="true"/>
+        <sequential>
+            <populate-dependency-dir name="@{name}">
+                <dependencies>
+                    <fileset refid="core.dependencies.fileset"/>
+                    <fileset refid="restlet.dependencies.fileset"/>
+                    <additional-dependencies/>
+                </dependencies>
+            </populate-dependency-dir>
+            <onejar destfile="${target.dir}/@{name}">
+                <manifest>
+                    &extension-name;
+                    &manifest;
+                </manifest>
+                <main jar="@{jar-name}"/>
+                <lib>
+                    <fileset dir="${dependencies.tmp.dir}/@{name}"/>
+                </lib>
+            </onejar>
+        </sequential>
+    </macrodef>
+
+    <target name="compile" depends="core.compile, balancer.compile, restlet.compile, alien.compile, java.compile, server.compile"/>
+    <target name="compile.tests" depends="compile, core.compile.tests, balancer.compile.tests, restlet.compile.tests, alien.compile.tests, java.compile.tests, server.compile.tests"/>
+
+    <target name="package.src" depends="init, -load.short.rev">
+        <property name="tlb.src.jar" value="${target.dir}/${tlb.src.jar.name}"/>
+        <tlb-jar dest="${tlb.src.jar}">
+            <content>
+                <fileset dir="core/src"/>
+                <fileset dir="balancer/src"/>
+                <fileset dir="restlet/src"/>
+                <fileset dir="java/src"/>
+                <fileset dir="alien/src"/>
+                <fileset dir="server/src"/>
+            </content>
+        </tlb-jar>
+    </target>
+
+    <target name="package.server.jar" depends="init, compile, test, -load.short.rev">
+        <property name="tlb_server_jar" value="${target.dir}/main.jar"/>
+        <jar-restlet jar-name="${tlb_server_jar}" main-class="tlb.ServerApp">
+            <class-dirs>
+                <fileset dir="${server.classes.dir}"/>
+            </class-dirs>
+        </jar-restlet>
+
+        <onejar-restlet jar-name="${tlb_server_jar}" name="${tlb.server.jar.name}">
+            <additional-dependencies>
+                <fileset refid="server.dependencies.fileset"/>
+            </additional-dependencies>
+        </onejar-restlet>
+
+        <delete file="${tlb_server_jar}"/>
+    </target>
+
+    <target name="package.alien.jar" depends="init, compile, test, -load.short.rev">
+        <property name="tlb_alien_jar" value="${target.dir}/main.jar"/>
+        <jar-restlet jar-name="${tlb_alien_jar}" main-class="tlb.BalancerApp">
+            <class-dirs>
+                <fileset dir="${alien.classes.dir}"/>
+                <fileset dir="${balancer.classes.dir}"/>
+            </class-dirs>
+        </jar-restlet>
+
+        <onejar-restlet jar-name="${tlb_alien_jar}" name="${tlb.alien.jar.name}">
+            <additional-dependencies>
+                <fileset refid="balancer.dependencies.fileset"/>
+            </additional-dependencies>
+        </onejar-restlet>
+
+        <delete file="${tlb_alien_jar}"/>
+    </target>
+
+    <target name="package.java.jar" depends="init, compile, test, -load.short.rev">
+        <tlb-jar dest="${target.dir}/${tlb.java.jar.name}">
+            <content>
+                <fileset dir="${java.classes.dir}"/>
+                <fileset dir="${balancer.classes.dir}"/>
+                <fileset dir="${core.classes.dir}"/>
+                <fileset dir="${core.src.dir}">
+                    <include name="log4j.properties"/>
+                </fileset>
+            </content>
+        </tlb-jar>
+    </target>
+
+    <target name="package" depends="clean, init, package.src, test, package.java.jar, package.alien.jar, package.server.jar"/>
+
+    <target name="prepare-dist" depends="init">
+        <mkdir dir="${dist.dir}"/>
+        <property name="java.dist.libs.dir" value="java/${java.dist.libs.dir.basename}"/>
+    </target>
+
+    <target name="tar-examples" depends="prepare-dist, -load.short.rev">
+        <property name="example-projects.tar" location="${tmp.dir}/examples.tar"/>
+        <exec executable="git" output="${example-projects.tar}" error="/dev/null">
+            <arg value="archive"/>
+            <arg value="--remote=${sample-projects.dir}"/>
+            <arg value="--format=tar"/>
+            <arg value="--prefix=examples/"/>
+            <arg value="master"/>
+        </exec>
+    </target>
+
+    <target name="dist-examples" depends="prepare-dist, package, tar-examples">
+        <property name="example-projects.archive" location="${dist.dir}/${tlb.examples.basename}.tar.gz"/>
+        <tar destfile="${example-projects.archive}" compression="gzip">
+            <tarfileset dir="${sample-projects.dir}" prefix="${tlb.examples.basename}">
+                <include name="README"/>
+            </tarfileset>
+            <tarfileset dir="${basedir}" prefix="${tlb.examples.basename}">
+                <include name="LICENSE"/>
+            </tarfileset>
+            <tarfileset src="${example-projects.tar}" prefix="${tlb.examples.basename}"/>
+            <tarfileset dir="${target.dir}" prefix="${tlb.examples.basename}/java">
+                <include name="tlb-java*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${java.dependencies.dir}" prefix="${tlb.examples.basename}/${java.dist.libs.dir}">
+                <include name="*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.examples.basename}/server">
+                <include name="tlb-server*.jar"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="dist-java" depends="package, prepare-dist, -load.short.rev">
+        <property name="dist-java.archive" location="${dist.dir}/${tlb.java.basename}.tar.gz"/>
+        <tar destfile="${dist-java.archive}" compression="gzip">
+            <tarfileset dir="${basedir}" fullpath="${tlb.java.basename}/README">
+                <include name="README.release"/>
+            </tarfileset>
+            <tarfileset dir="${basedir}" prefix="${tlb.java.basename}">
+                <include name="LICENSE"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.java.basename}">
+                <include name="tlb-java*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${java.dependencies.dir}" prefix="${tlb.java.basename}/${java.dist.libs.dir.basename}">
+                <include name="*.jar"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="dist-server" depends="package, prepare-dist, -load.short.rev">
+        <property name="dist-server.archive" location="${dist.dir}/${tlb.server.basename}.tar.gz"/>
+        <tar destfile="${dist-server.archive}" compression="gzip">
+            <tarfileset dir="${basedir}" fullpath="${tlb.server.basename}/README">
+                <include name="README.release"/>
+            </tarfileset>
+            <tarfileset dir="${basedir}" prefix="${tlb.server.basename}">
+                <include name="LICENSE"/>
+            </tarfileset>
+            <tarfileset dir="${server.dir}" prefix="${tlb.server.basename}" filemode="0755">
+                <include name="*.sh"/>
+            </tarfileset>
+            <tarfileset dir="${server.dir}" prefix="${tlb.server.basename}" >
+                <include name="*.bat"/>
+                <include name="*.cmd"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.server.basename}">
+                <include name="tlb-server*.jar"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="dist-complete" depends="package, prepare-dist, tar-examples, -load.short.rev">
+        <property name="dist-complete.archive" location="${dist.dir}/${tlb.complete.basename}.tar.gz"/>
+        <tar destfile="${dist-complete.archive}" compression="gzip">
+            <tarfileset dir="${basedir}" fullpath="${tlb.complete.basename}/README">
+                <include name="README.release"/>
+            </tarfileset>
+            <tarfileset dir="${basedir}" prefix="${tlb.complete.basename}">
+                <include name="LICENSE"/>
+            </tarfileset>
+            <tarfileset dir="${server.dir}" prefix="${tlb.complete.basename}/server" filemode="0755">
+                <include name="*.sh"/>
+            </tarfileset>
+            <tarfileset dir="${server.dir}" prefix="${tlb.complete.basename}/server" >
+                <include name="*.bat"/>
+                <include name="*.cmd"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.complete.basename}/server">
+                <include name="tlb-server*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.complete.basename}/alien">
+                <include name="tlb-alien*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.complete.basename}/source">
+                <include name="tlb-*-src.jar"/>
+            </tarfileset>
+            <tarfileset dir="${target.dir}" prefix="${tlb.complete.basename}/java">
+                <include name="tlb-java*.jar"/>
+            </tarfileset>
+            <tarfileset dir="${java.dependencies.dir}" prefix="${tlb.complete.basename}/${java.dist.libs.dir}">
+                <include name="*.jar"/>
+            </tarfileset>
+            <tarfileset src="${example-projects.tar}" prefix="${tlb.complete.basename}"/>
+        </tar>
+    </target>
+
+    <target name="release-files" depends="prepare-dist">
+        <property name="dist.readme" value="${dist.dir}/README-${short_rev}"/>
+        <copyfile src="${basedir}/README.release" dest="${dist.readme}"/>
+    </target>
+
+    <macrodef name="sign">
+        <attribute name="path"/>
+        <sequential>
+            <exec command="gpg">
+                <arg value="-ba"/>
+                <arg value="@{path}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <target name="sign-dist" depends="dist">
+        <sign path="${dist.readme}"/>
+        <sign path="${dist-server.archive}"/>
+        <sign path="${dist-java.archive}"/>
+        <sign path="${dist-complete.archive}"/>
+        <sign path="${example-projects.archive}"/>
+    </target>
+
+    <target name="dist" depends="dist-complete, dist-examples, dist-server, dist-java, release-files"/>
+
+    <target name="release" depends="dist, sign-dist"/>
+
+    <path id="file.upload.classpath">
+      <pathelement location="${build.lib.dir}/net-bluecow-googlecode-ant-0.0.2.jar" />
+    </path>
+
+    <property environment="env"/>
+
+    <property name="upload.password" value="${env.TLB_UPLOAD_PASSWORD}"/>
+    <property name="upload.project" value="${env.TLB_PROJECT_NAME}"/>
+    <property name="upload.user" value="${env.TLB_USER_NAME}"/>
+    <property name="upload.filePath" value="${env.TLB_UPLOAD_FILE_PATH}"/>
+    <property name="upload.targetFileName" value="${env.TLB_UPLOAD_TARGET_FILE_NAME}"/>
+    <property name="upload.summary" value="${env.TLB_UPLOAD_SUMMARY}"/>
+    <property name="upload.labels" value="${env.TLB_UPLOAD_LABELS}"/>
+
+    <target name="upload-files" depends="resolve">
+      <taskdef classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask" classpathref="file.upload.classpath" name="gcupload"/>
+      <gcupload username="${upload.user}" 
+          password="${upload.password}"
+          projectname="${upload.project}"
+          filename="${upload.filePath}"
+          targetfilename="${upload.targetFileName}"
+          summary="${upload.summary}"
+          labels="${upload.labels}" />
+    </target>
+
+    <target name="emma.prepare">
+        <taskdef resource="emma_ant.properties" classpathref="emma.classpath"/>
+        <mkdir dir="${emma.dir}"/>
+    </target>
+
+    <macrodef name="emma-instr">
+        <attribute name="classes-src"/>
+        <attribute name="classes-dest"/>
+        <attribute name="name"/>
+        <sequential>
+            <delete dir="${emma.tmp.dir}"/>
+            <delete dir="@{classes-dest}"/>
+            <property name="@{name}.emma.file" location="${emma.dir}/@{name}.emma"/>
+            <emma enabled="true">
+                <instr instrpath="@{classes-src}" destdir="${emma.tmp.dir}" metadatafile="${@{name}.emma.file}" merge="true" mode="fullcopy"/>
+            </emma>
+            <copy todir="@{classes-dest}">
+                <fileset dir="${emma.tmp.dir}/classes">
+                    <include name="**"/>
+                </fileset>
+            </copy>
+        </sequential>
+    </macrodef>
+
+    <target name="emma.instr" depends="emma.prepare, emma.instr.core, emma.instr.balancer, emma.instr.restlet, emma.instr.java, emma.instr.alien, emma.instr.server">
+        <property name="junit.fail.on.error" value="false"/>
+        <property name="cov.instrd" value="true"/>
+    </target>
+
+    <target name="coverage" depends="emma.instr, test">
+        <emma enabled="true">
+            <report sort="+name" metrics="method:85,block:90,line:90,class:90" sourcepath="${core.src.dir},${balancer.src.dir},${java.src.dir},${restlet.src.dir},${alien.src.dir},${server.src.dir}">
+                <fileset dir="${emma.dir}">
+                    <include name="**/*.emma"/>
+                </fileset>
+                <html outfile="${emma.dir}/coverage.html"/>
+                <xml outfile="${emma.dir}/coverage.xml"/>
+            </report>
+        </emma>
+    </target>
+
+    <target name="test" depends="init, core.test, balancer.test, java.test, restlet.test, alien.test, server.test, integration-tests.test"/>
+
+    <target name="test.perf" depends="init, server.test.perf"/>
+
+    <target name="run_balancer" depends="compile, compile.tests">
+        <java classname="tlb.TestBalancerApp" fork="true">
+            <env key="TLB_BASE_URL" value="http://localhost:7019"/>
+            <env key="TLB_JOB_NAME" value="foo"/>
+            <env key="TLB_PARTITION_NUMBER" value="1"/>
+            <env key="TLB_TOTAL_PARTITIONS" value="2"/>
+            <env key="TLB_JOB_VERSION" value="1.1"/>
+            <env key="TLB_SPLITTER" value="tlb.splitter.CountBasedTestSplitter"/>
+            <env key="TYPE_OF_SERVER" value="tlb.service.TlbServer"/>
+            <env key="TLB_BALANCER_PORT" value="${random.balancer.port}"/>
+            <classpath>
+                <path refid="core.src.classpath"/>
+                <path refid="balancer.src.classpath"/>
+                <path refid="restlet.src.classpath"/>
+                <path refid="alien.src.classpath"/>
+                <path refid="alien.test.classpath"/>
+                <path refid="emma.classpath"/>
+            </classpath>
+        </java>
+    </target>
+
+    <path id="all.classpath">
+        <path refid="core.src.classpath"/>
+        <path refid="balancer.src.classpath"/>
+        <path refid="java.src.classpath"/>
+        <path refid="restlet.src.classpath"/>
+        <path refid="alien.src.classpath"/>
+        <path refid="server.src.classpath"/>
+
+        <path location="${all.tests.dir}"/>
+
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="merge.test.dirs" depends="compile.tests">
+        <mkdir dir="${all.tests.dir}"/>
+        <copy todir="${all.tests.dir}">
+            <fileset dir="${core.test.classes.dir}" includes="**/*"/>
+            <fileset dir="${balancer.test.classes.dir}" includes="**/*"/>
+            <fileset dir="${java.test.classes.dir}" includes="**/*"/>
+            <fileset dir="${restlet.test.classes.dir}" includes="**/*"/>
+            <fileset dir="${alien.test.classes.dir}" includes="**/*"/>
+            <fileset dir="${server.test.classes.dir}" includes="**/*"/>
+        </copy>
+    </target>
+
+    <target name="-typedef.tlb.classes">
+        <typedef name="lbfs" classname="tlb.ant.LoadBalancedFileSet" classpathref="all.classpath"/>
+        <typedef name="assertAllPartitionsExecuted" classname="tlb.ant.CheckMissingPartitions" classpathref="all.classpath"/>
+    </target>
+
+    <target name="test.count_balanced" depends="merge.test.dirs, -typedef.tlb.classes">
+        <junit failureproperty="test.failure" printsummary="yes" haltonfailure="true" haltonerror="true" showoutput="true" fork="true">
+            <classpath refid="all.classpath"/>
+            <batchtest todir="${dog-fooding.reports.target.dir}">
+                <lbfs dir="${all.tests.dir}" includes="**/*Test.class" moduleName="all"/>
+                <formatter type="plain"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="test.time_balanced" depends="merge.test.dirs, -typedef.tlb.classes">
+        <junit failureproperty="test.failure" printsummary="yes" haltonfailure="true" haltonerror="true" showoutput="true" fork="true">
+            <classpath refid="all.classpath"/>
+            <batchtest todir="${dog-fooding.reports.target.dir}">
+                <lbfs dir="${all.tests.dir}" includes="**/*Test.class" moduleName="all"/>
+                <formatter classname="tlb.ant.JunitDataRecorder"/>
+                <formatter type="plain"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="assert.all.partitions.executed" depends="-typedef.tlb.classes">
+        <assertAllPartitionsExecuted moduleNames="all"/>
+    </target>
+
+    <target name="all" depends="clean, test, package"/>
+</project>

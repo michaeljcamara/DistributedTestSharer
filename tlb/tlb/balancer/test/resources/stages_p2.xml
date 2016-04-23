@@ -1,0 +1,111 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[pipeline-foo]]></title>
+    <id>http://test.host:8153/go/api/pipelines/pipeline-foo/stages.xml</id>
+    <author>
+        <name>Go</name>
+    </author>
+    <updated>2010-12-02T12:26:09+05:30</updated>
+    <link rel="self" href="http://test.host:8153/go/api/pipelines/pipeline-foo/stages.xml"/>
+
+
+        <link rel="next" href="http://test.host:8153/go/api/pipelines/pipeline-foo/stages.xml?before=19"/>
+
+
+      <entry>
+            <title><![CDATA[pipeline-foo/22/stage-baz/1]]></title>
+            <updated>2010-12-02T12:22:09+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/22/stage-baz/1</id>
+            <link href="http://test.host:8153/go/api/stages/68.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/22/stage-baz/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/50.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/22/stage-bar/1]]></title>
+            <updated>2010-12-02T12:21:49+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/22/stage-bar/1</id>
+            <link href="http://test.host:8153/go/api/stages/67.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/22/stage-bar/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/50.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/21/stage-baz/1]]></title>
+            <updated>2010-12-02T12:21:09+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/21/stage-baz/1</id>
+            <link href="http://test.host:8153/go/api/stages/66.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/21/stage-baz/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/49.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/21/stage-bar/1]]></title>
+            <updated>2010-12-02T12:20:49+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/21/stage-bar/1</id>
+            <link href="http://test.host:8153/go/api/stages/65.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/21/stage-bar/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/49.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/20/stage-foo-bar/1]]></title>
+            <updated>2010-12-02T12:20:09+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/20/stage-foo-bar/1</id>
+            <link href="http://test.host:8153/go/api/stages/3.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/20/stage-foo-bar/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/48.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/20/stage-baz/1]]></title>
+            <updated>2010-12-02T12:20:09+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/20/stage-baz/1</id>
+            <link href="http://test.host:8153/go/api/stages/64.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/20/stage-baz/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/48.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/20/stage-bar/1]]></title>
+            <updated>2010-12-02T12:19:49+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/20/stage-bar/1</id>
+            <link href="http://test.host:8153/go/api/stages/63.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/20/stage-bar/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/48.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+
+        <entry>
+            <title><![CDATA[pipeline-foo/19/stage-baz/1]]></title>
+            <updated>2010-12-02T12:19:09+05:30</updated>
+            <id>http://test.host:8153/go/pipelines/pipeline-foo/19/stage-baz/1</id>
+            <link href="http://test.host:8153/go/api/stages/62.xml" rel="alternate"/>
+            <link href="http://test.host:8153/go/pipelines/pipeline-foo/19/stage-baz/1" rel="alternate" type="text/html"/>
+            <link href="http://test.host:8153/go/api/pipelines/pipeline-foo/47.xml" rel="http://studios.thoughtworks.com/ns/relations/go/pipeline" type="text/xml"/>
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="stage" label="Stage" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="completed" label="Completed" />
+            <category scheme="http://studios.thoughtworks.com/ns/categories/go" term="passed" label="Passed" />
+        </entry>
+</feed>
+
+

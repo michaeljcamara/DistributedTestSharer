@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<project name="tlb-restlet" basedir="..">
+    <property name="restlet.dir" location="${basedir}/restlet"/>
+    <property name="restlet.src.dir" location="${restlet.dir}/src"/>
+    <property name="restlet.test.dir" location="${restlet.dir}/test"/>
+    <property name="restlet.test.resources.dir" location="${restlet.test.dir}/resources"/>
+    <property name="restlet.lib.dir" location="${lib.dir}/restlet"/>
+
+    <property name="restlet.target.dir" location="${target.dir}/restlet"/>
+    <property name="restlet.classes.dir" location="${restlet.target.dir}/classes"/>
+    <property name="restlet.classes.for-test.dir" location="${restlet.target.dir}/classes-for-test"/>
+    <property name="restlet.test.classes.dir" location="${restlet.target.dir}/test-classes"/>
+    <property name="restlet.test.reports.dir" location="${restlet.target.dir}/reports"/>
+
+    <path id="restlet.dependencies">
+        <fileset dir="${restlet.lib.dir}" includes="*.jar" id="restlet.dependencies.fileset"/>
+    </path>
+
+    <path id="restlet.dependencies.all">
+        <path refid="restlet.dependencies"/>
+        <path refid="core.dependencies"/>
+    </path>
+
+    <path id="restlet.src.classpath">
+        <pathelement path="${restlet.classes.dir}"/>
+        <pathelement path="${core.classes.dir}"/>
+        <path refid="restlet.dependencies.all"/>
+    </path>
+
+    <path id="restlet.src.for-test.classpath">
+        <pathelement path="${restlet.classes.for-test.dir}"/>
+        <pathelement path="${core.classes.for-test.dir}"/>
+        <path refid="restlet.dependencies.all"/>
+    </path>
+
+    <path id="restlet.test.classpath">
+        <pathelement path="${restlet.test.classes.dir}"/>
+        <pathelement path="${core.test.classes.dir}"/>
+        <path refid="restlet.src.for-test.classpath"/>
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="restlet.init" depends="base.init">
+        <mkdir dir="${restlet.classes.dir}"/>
+        <mkdir dir="${restlet.classes.for-test.dir}"/>
+        <mkdir dir="${restlet.test.classes.dir}"/>
+        <mkdir dir="${restlet.test.reports.dir}"/>
+    </target>
+
+    <target name="restlet.compile" depends="init, core.compile">
+        <javac destdir="${restlet.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="restlet.src.classpath"/>
+            <src path="${restlet.src.dir}"/>
+        </javac>
+        <copydir src="${restlet.classes.dir}" dest="${restlet.classes.for-test.dir}"/>
+    </target>
+
+    <target name="restlet.compile.tests" depends="restlet.compile, init, core.compile.tests">
+        <javac destdir="${restlet.test.classes.dir}" target="1.5" source="1.5" includeantruntime="false">
+            <classpath refid="restlet.test.classpath"/>
+            <src path="${restlet.test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="restlet.test" depends="restlet.compile.tests, restlet.compile">
+        <test-task-config test.classpath="restlet.test.classpath" test.classes.dir="${restlet.test.classes.dir}" test.reports.dir="${restlet.test.reports.dir}" emma.file="${restlet.emma.file}"/>
+    </target>
+
+    <target name="emma.instr.restlet" depends="restlet.compile">
+        <emma-instr classes-src="${restlet.classes.dir}" classes-dest="${restlet.classes.for-test.dir}" name="restlet"/>
+    </target>
+</project>

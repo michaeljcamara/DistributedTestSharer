@@ -1,0 +1,26 @@
+<ivysettings>
+    <settings defaultResolver="tlbChain"/>
+    <property name="ivy.default.settings.dir" value="jar:file://${ivy.jar.file}!/org/apache/ivy/core/settings" override="true"/>
+    <include url="${ivy.default.settings.dir}/ivysettings-public.xml"/>
+    <include url="${ivy.default.settings.dir}/ivysettings-shared.xml"/>
+    <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>
+    <include url="${ivy.default.settings.dir}/ivysettings-main-chain.xml"/>
+    <include url="${ivy.default.settings.dir}/ivysettings-default-chain.xml"/>
+    <resolvers>
+        <chain name="local">
+            <filesystem name="local">
+                <artifact pattern="${basedir}/local_repo/[organisation]/[module]/[artifact]-[revision].[ext]"/>
+            </filesystem>
+        </chain>
+        <chain name="restlet">
+            <url name="restlet" m2compatible="true">
+                <artifact pattern="http://maven.restlet.org/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+            </url>
+        </chain>
+        <chain name="tlbChain">
+            <resolver ref="local"/>
+            <resolver ref="default"/>
+            <resolver ref="restlet"/>
+        </chain>
+    </resolvers>
+</ivysettings>
