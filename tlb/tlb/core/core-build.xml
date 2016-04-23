@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<project name="tlb-core" basedir="..">
+    <property name="core.dir" location="${basedir}/core"/>
+    <property name="core.src.dir" location="${core.dir}/src"/>
+    <property name="core.test.dir" location="${core.dir}/test"/>
+    <property name="core.lib.dir" location="${lib.dir}/core"/>
+
+    <property name="core.target.dir" location="${target.dir}/core"/>
+    <property name="core.classes.dir" location="${core.target.dir}/classes"/>
+    <property name="core.classes.for-test.dir" location="${core.target.dir}/classes-for-test"/>
+    <property name="core.test.classes.dir" location="${core.target.dir}/test-classes"/>
+    <property name="core.test.reports.dir" location="${core.target.dir}/reports"/>
+
+    <path id="core.dependencies">
+        <fileset dir="${core.lib.dir}" includes="*.jar" id="core.dependencies.fileset"/>
+    </path>
+
+    <path id="core.src.classpath">
+        <path refid="core.dependencies"/>
+        <pathelement path="${core.classes.dir}"/>
+    </path>
+
+    <path id="core.src.for-test.classpath">
+        <path refid="core.dependencies"/>
+        <pathelement path="${core.classes.for-test.dir}"/>
+    </path>
+
+    <path id="core.test.classpath">
+        <path refid="core.src.for-test.classpath"/>
+        <pathelement path="${core.test.classes.dir}"/>
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="core.init" depends="base.init">
+        <mkdir dir="${core.classes.dir}"/>
+        <mkdir dir="${core.test.classes.dir}"/>
+        <mkdir dir="${core.test.reports.dir}"/>
+        <mkdir dir="${core.classes.for-test.dir}"/>
+    </target>
+
+    <target name="core.compile" depends="init">
+        <javac destdir="${core.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="core.src.classpath"/>
+            <src path="${core.src.dir}"/>
+        </javac>
+        <copydir src="${core.classes.dir}" dest="${core.classes.for-test.dir}"/>
+    </target>
+
+    <target name="core.compile.tests" depends="core.compile, init">
+        <javac destdir="${core.test.classes.dir}" target="1.5" source="1.5" includeantruntime="false">
+            <classpath refid="core.test.classpath"/>
+            <src path="${core.test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="core.test" depends="core.compile.tests, core.compile">
+        <test-task-config test.classpath="core.test.classpath" test.classes.dir="${core.test.classes.dir}" test.reports.dir="${core.test.reports.dir}" emma.file="${core.emma.file}"/>
+    </target>
+
+    <target name="emma.instr.core" depends="core.compile">
+        <emma-instr classes-src="${core.classes.dir}" classes-dest="${core.classes.for-test.dir}" name="core"/>
+    </target>
+</project>

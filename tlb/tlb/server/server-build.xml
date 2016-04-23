@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<project name="tlb-server" basedir="..">
+    <property name="server.dir" location="${basedir}/server"/>
+    <property name="server.src.dir" location="${server.dir}/src"/>
+    <property name="server.test.dir" location="${server.dir}/test"/>
+    <property name="server.lib.dir" location="${lib.dir}/server"/>
+
+    <property name="server.target.dir" location="${target.dir}/server"/>
+    <property name="server.classes.dir" location="${server.target.dir}/classes"/>
+    <property name="server.classes.for-test.dir" location="${server.target.dir}/classes-for-test"/>
+    <property name="server.test.classes.dir" location="${server.target.dir}/test-classes"/>
+    <property name="server.test.reports.dir" location="${server.target.dir}/reports"/>
+
+    <path id="server.dependencies">
+        <fileset dir="${server.lib.dir}" includes="*.jar" id="server.dependencies.fileset"/>
+    </path>
+
+    <path id="server.dependencies.all">
+        <path refid="server.dependencies"/>
+        <path refid="restlet.dependencies"/>
+        <path refid="core.dependencies"/>
+    </path>
+
+    <path id="server.src.classpath">
+        <pathelement path="${server.classes.dir}"/>
+        <pathelement path="${restlet.classes.dir}"/>
+        <pathelement path="${core.classes.dir}"/>
+        <path refid="server.dependencies.all"/>
+    </path>
+
+    <path id="server.src.for-test.classpath">
+        <pathelement path="${server.classes.for-test.dir}"/>
+        <pathelement path="${restlet.classes.for-test.dir}"/>
+        <pathelement path="${core.classes.for-test.dir}"/>
+        <path refid="server.dependencies.all"/>
+    </path>
+
+    <path id="server.test.classpath">
+        <pathelement path="${server.test.classes.dir}"/>
+        <pathelement path="${restlet.test.classes.dir}"/>
+        <pathelement path="${core.test.classes.dir}"/>
+        <path refid="server.src.for-test.classpath"/>
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="server.init" depends="base.init">
+        <mkdir dir="${server.classes.dir}"/>
+        <mkdir dir="${server.test.classes.dir}"/>
+        <mkdir dir="${server.test.reports.dir}"/>
+    </target>
+
+    <target name="server.compile" depends="init, restlet.compile">
+        <javac destdir="${server.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="server.src.classpath"/>
+            <src path="${server.src.dir}"/>
+        </javac>
+        <copydir src="${server.classes.dir}" dest="${server.classes.for-test.dir}"/>
+    </target>
+
+    <target name="server.compile.tests" depends="server.compile, init, restlet.compile.tests">
+        <javac destdir="${server.test.classes.dir}" target="1.5" source="1.5" includeantruntime="false">
+            <classpath refid="server.test.classpath"/>
+            <src path="${server.test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="server.test" depends="server.compile.tests, server.compile">
+        <test-task-config test.classpath="server.test.classpath" test.classes.dir="${server.test.classes.dir}" test.reports.dir="${server.test.reports.dir}" emma.file="${server.emma.file}"/>
+    </target>
+
+    <target name="server.test.perf" depends="server.test.lowmem"/>
+
+    <target name="server.test.lowmem" depends="server.compile.tests, server.compile">
+        <low_mem_test mem="50m" cache-size="20"/><!-- fast gc called a lot of times -->
+        <low_mem_test mem="256m" cache-size="100"/><!-- more neutral free-up to occupancy ratio, but slightly slower gc, called fewer number of times -->
+        <low_mem_test mem="4096m" cache-size="2000"/><!-- high space free-up(not good ratio though), but looonng gc, called few times --> 
+    </target>
+
+    <macrodef name="low_mem_test">
+        <attribute name="mem"/>
+        <attribute name="cache-size"/>
+        <sequential>
+            <echo message="*************************************************************"/>
+            <echo message="Running with @{cache-size} repos and max-memory set to @{mem}"/>
+            <echo message="*************************************************************"/>
+            <test-task-config test.classpath="server.test.classpath" test.classes.dir="${server.test.classes.dir}" test.reports.dir="${server.test.reports.dir}" emma.file="${server.emma.file}" test.wildcard="**/*_LowMem.class*">
+                <extra-jvmargs>
+                    <jvmarg value="-Xms@{mem}"/>
+                    <jvmarg value="-Xmx@{mem}"/>
+                    <jvmarg value="-verbose:gc"/>
+                    <jvmarg value="-Xloggc:${server.test.reports.dir}/GC_@{mem}_@{cache-size}.log"/>
+                    <jvmarg value="-XX:+PrintGCDetails"/>
+                </extra-jvmargs>
+                <extra-envvars>
+                    <env key="TLB_DATA_CACHE_SIZE" value="@{cache-size}"/>
+                </extra-envvars>
+            </test-task-config>
+        </sequential>
+    </macrodef>
+
+    <target name="emma.instr.server" depends="server.compile">
+        <emma-instr classes-src="${server.classes.dir}" classes-dest="${server.classes.for-test.dir}" name="server"/>
+    </target>
+</project>

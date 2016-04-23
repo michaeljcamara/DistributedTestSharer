@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<project name="tlb-alien" basedir="..">
+    <property name="alien.dir" location="${basedir}/alien"/>
+    <property name="alien.src.dir" location="${alien.dir}/src"/>
+    <property name="alien.test.dir" location="${alien.dir}/test"/>
+    <property name="alien.test.resources.dir" location="${alien.test.dir}/resources"/>
+    <property name="alien.lib.dir" location="${lib.dir}/alien"/>
+
+    <property name="alien.target.dir" location="${target.dir}/alien"/>
+    <property name="alien.classes.dir" location="${alien.target.dir}/classes"/>
+    <property name="alien.classes.for-test.dir" location="${alien.target.dir}/classes-for-test"/>
+    <property name="alien.test.classes.dir" location="${alien.target.dir}/test-classes"/>
+    <property name="alien.test.reports.dir" location="${alien.target.dir}/reports"/>
+
+    <path id="alien.dependencies.all">
+        <path refid="restlet.dependencies"/>
+        <path refid="balancer.dependencies"/>
+        <path refid="core.dependencies"/>
+    </path>
+
+    <path id="alien.src.classpath">
+        <pathelement path="${alien.classes.dir}"/>
+        <pathelement path="${restlet.classes.dir}"/>
+        <pathelement path="${balancer.classes.dir}"/>
+        <pathelement path="${core.classes.dir}"/>
+        <path refid="alien.dependencies.all"/>
+    </path>
+
+    <path id="alien.src.for-test.classpath">
+        <pathelement path="${alien.classes.for-test.dir}"/>
+        <pathelement path="${restlet.classes.for-test.dir}"/>
+        <pathelement path="${balancer.classes.for-test.dir}"/>
+        <pathelement path="${core.classes.for-test.dir}"/>
+        <path refid="alien.dependencies.all"/>
+    </path>
+
+    <path id="alien.test.classpath">
+        <pathelement path="${alien.test.classes.dir}"/>
+        <pathelement path="${restlet.test.classes.dir}"/>
+        <pathelement path="${balancer.test.classes.dir}"/>
+        <pathelement path="${core.test.classes.dir}"/>
+        <path refid="alien.src.for-test.classpath"/>
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="alien.init" depends="base.init">
+        <mkdir dir="${alien.classes.dir}"/>
+        <mkdir dir="${alien.classes.for-test.dir}"/>
+        <mkdir dir="${alien.test.classes.dir}"/>
+        <mkdir dir="${alien.test.reports.dir}"/>
+    </target>
+
+    <target name="alien.compile" depends="init, balancer.compile, restlet.compile">
+        <javac destdir="${alien.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="alien.src.classpath"/>
+            <src path="${alien.src.dir}"/>
+        </javac>
+        <copydir src="${alien.classes.dir}" dest="${alien.classes.for-test.dir}"/>
+    </target>
+
+    <target name="alien.compile.tests" depends="alien.compile, init, balancer.compile.tests, restlet.compile.tests">
+        <javac destdir="${alien.test.classes.dir}" target="1.5" source="1.5" includeantruntime="false">
+            <classpath refid="alien.test.classpath"/>
+            <src path="${alien.test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="alien.test" depends="alien.compile.tests, alien.compile">
+        <test-task-config test.classpath="alien.test.classpath" test.classes.dir="${alien.test.classes.dir}" test.reports.dir="${alien.test.reports.dir}" emma.file="${alien.emma.file}"/>
+    </target>
+
+    <target name="emma.instr.alien" depends="alien.compile">
+        <emma-instr classes-src="${alien.classes.dir}" classes-dest="${alien.classes.for-test.dir}" name="alien"/>
+    </target>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project name="tlb-integration-tests" basedir="..">
+    <property name="integration-tests.dir" location="${basedir}/integration_tests"/>
+    <property name="integration-tests.test.dir" location="${integration-tests.dir}/test"/>
+
+    <property name="integration-tests.target.dir" location="${target.dir}/integration-tests"/>
+    <property name="integration-tests.test.classes.dir" location="${integration-tests.target.dir}/test-classes"/>
+    <property name="integration-tests.test.reports.dir" location="${integration-tests.target.dir}/reports"/>
+
+    <path id="integration-tests.test.classpath">
+        <pathelement path="${integration-tests.test.classes.dir}"/>
+        <pathelement path="${server.classes.for-test.dir}"/>
+        <pathelement path="${server.test.classes.dir}"/>
+        <pathelement path="${restlet.classes.for-test.dir}"/>
+        <pathelement path="${restlet.test.classes.dir}"/>
+        <pathelement path="${balancer.classes.for-test.dir}"/>
+        <pathelement path="${balancer.test.classes.dir}"/>
+        <pathelement path="${core.classes.for-test.dir}"/>
+        <pathelement path="${core.test.classes.dir}"/>
+        <path refid="server.dependencies"/>
+        <path refid="restlet.dependencies"/>
+        <path refid="balancer.dependencies"/>
+        <path refid="core.dependencies"/>
+        <path refid="test.dependencies"/>
+    </path>
+
+    <target name="integration-tests.init" depends="base.init">
+        <mkdir dir="${integration-tests.test.classes.dir}"/>
+        <mkdir dir="${integration-tests.test.reports.dir}"/>
+    </target>
+
+    <target name="integration-tests.compile.tests" depends="server.compile.tests, balancer.compile.tests">
+        <javac destdir="${integration-tests.test.classes.dir}" target="1.5" source="1.5" includeantruntime="false">
+            <classpath refid="integration-tests.test.classpath"/>
+            <src path="${integration-tests.test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="integration-tests.test" depends="integration-tests.compile.tests">
+        <test-task-config test.classpath="integration-tests.test.classpath" test.classes.dir="${integration-tests.test.classes.dir}" test.reports.dir="${integration-tests.test.reports.dir}" emma.file="${emma.dir}/coverage.emma"/>
+    </target>
+</project>
