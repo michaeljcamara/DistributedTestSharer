@@ -35,6 +35,11 @@ import server.CustomServerInterface;
 
 public class Delegator extends UnicastRemoteObject implements DelegatorInterface {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7417123750947132852L;
+
 	private static String host, ftpRootDir;
 
 	private static int registryPort, ftpServerPort;
@@ -64,6 +69,7 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 
 		System.setProperty("java.security.policy", "rmi.policy");
 		System.setProperty("java.rmi.server.hostname", host);
+		System.setProperty("java.rmi.activation.port", "12345");
 
 		createRegistry();
 		createFTPServer();
@@ -76,7 +82,33 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 		// Update the servers' classpaths and establish connection with the FTP server
 		updateServers();
 
-		runTests();
+		long start = System.currentTimeMillis();
+        ConcurrentLinkedQueue<Result> results = runTests();
+        long end = System.currentTimeMillis();
+        long elapsed = end - start;
+
+        int runs, successes, failures;
+        runs = successes = failures = 0;
+
+        for (Result result : results) {
+            runs += result.getRunCount();
+            failures += result.getFailureCount();
+        }
+        successes = runs - failures;
+
+        System.out.println("Total tests run: " + runs);
+        System.out.println("Number of successes: " + successes);
+        System.out.println("Number of failures: " + failures);
+        System.out.println("Elapsed time: " + elapsed);
+
+		 //List all failures that have been generated
+//		 for (Failure failure : result.getFailures()) {
+//		 System.out.println("EXCEPTION" + failure.getException());
+//		 System.out.println("TRACE: " + failure.getTrace());
+//		 System.out.println("MESSAGE: " + failure.getMessage());
+//		 System.out.println("HEADER: " + failure.getTestHeader());
+//		 System.out.println("DESCRIPTION: " + failure.getDescription());
+//		 }
 
 	}
 
@@ -286,6 +318,7 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 					TestAgent agent = agents.remove();
 
 					if (!agent.isAlive()) {
+						System.out.println("Assigning test: " + c.getName());
 						agent = new TestAgent(agent, c);
 						agent.start();
 						i++;
@@ -311,15 +344,17 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 	}
 
 	public String ping() throws RemoteException {
-		System.out.println("===PING!===");
 		return "===PING!===";
 	}
 
 	public void rebindServer(CustomServerInterface remoteObject) throws RemoteException {
 
+		System.out.println("Starting to bind server");
 		try {
 			Registry registry = LocateRegistry.getRegistry(host, registryPort);
+			System.out.println("got registry: " + registry);
 			registry.rebind("CustomServer_" + registry.list().length, remoteObject);
+			System.out.println("bound it");
 			serverList.add(remoteObject);
 
 			System.out.println("CURRENTLY BOUND REMOTE OBJECTS: ");
