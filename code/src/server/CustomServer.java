@@ -21,6 +21,11 @@ import delegator.SimpleClassLoader;
 
 public class CustomServer extends UnicastRemoteObject implements CustomServerInterface {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3247691930817118343L;
+
 	private static String host, ftpClassDir, ftpJarDir, ftpRootDir, userName, userPassword;
 
 	private static int registryPort, ftpServerPort;
@@ -48,6 +53,7 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		System.setProperty("java.security.policy", "rmi.policy");
 		// System.setProperty("java.rmi.server.disableHttp", "false");
+		System.setProperty("java.rmi.server.hostname", "192.168.0.103");
 
 		DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
 		// DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");
@@ -55,6 +61,7 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		System.out.println(delegator.ping());
 		delegator.rebindServer((CustomServerInterface) server);
+		// delegator.rebindServer(server);
 	}
 
 	public void updateClassLoader() {
