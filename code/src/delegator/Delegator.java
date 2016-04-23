@@ -29,6 +29,7 @@ import org.apache.ftpserver.usermanager.impl.WritePermission;
 import org.apache.log4j.Logger;
 import org.apache.log4j.varia.NullAppender;
 import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 import org.junit.runners.Suite.SuiteClasses;
 
 import server.CustomServerInterface;
@@ -79,36 +80,45 @@ public class Delegator extends UnicastRemoteObject implements DelegatorInterface
 		System.out.println("== Press ENTER when all servers are connected ==");
 		scan.nextLine();
 
+		long start = System.currentTimeMillis();
+
 		// Update the servers' classpaths and establish connection with the FTP server
 		updateServers();
 
-		long start = System.currentTimeMillis();
-        ConcurrentLinkedQueue<Result> results = runTests();
-        long end = System.currentTimeMillis();
-        long elapsed = end - start;
+		ConcurrentLinkedQueue<Result> results = runTests();
+		long end = System.currentTimeMillis();
+		long elapsed = end - start;
 
-        int runs, successes, failures;
-        runs = successes = failures = 0;
+		int runs, successes, failures;
+		runs = successes = failures = 0;
 
-        for (Result result : results) {
-            runs += result.getRunCount();
-            failures += result.getFailureCount();
-        }
-        successes = runs - failures;
+		for (Result result : results) {
+			runs += result.getRunCount();
+			failures += result.getFailureCount();
 
-        System.out.println("Total tests run: " + runs);
-        System.out.println("Number of successes: " + successes);
-        System.out.println("Number of failures: " + failures);
-        System.out.println("Elapsed time: " + elapsed);
+			for (Failure failure : result.getFailures()) {
+				System.out.println("EXCEPTION" + failure.getException());
+				System.out.println("TRACE: " + failure.getTrace());
+				System.out.println("MESSAGE: " + failure.getMessage());
+				System.out.println("HEADER: " + failure.getTestHeader());
+				System.out.println("DESCRIPTION: " + failure.getDescription());
+			}
+		}
+		successes = runs - failures;
 
-		 //List all failures that have been generated
-//		 for (Failure failure : result.getFailures()) {
-//		 System.out.println("EXCEPTION" + failure.getException());
-//		 System.out.println("TRACE: " + failure.getTrace());
-//		 System.out.println("MESSAGE: " + failure.getMessage());
-//		 System.out.println("HEADER: " + failure.getTestHeader());
-//		 System.out.println("DESCRIPTION: " + failure.getDescription());
-//		 }
+		System.out.println("Total tests run: " + runs);
+		System.out.println("Number of successes: " + successes);
+		System.out.println("Number of failures: " + failures);
+		System.out.println("Elapsed time: " + elapsed);
+
+		// List all failures that have been generated
+		// for (Failure failure : result.getFailures()) {
+		// System.out.println("EXCEPTION" + failure.getException());
+		// System.out.println("TRACE: " + failure.getTrace());
+		// System.out.println("MESSAGE: " + failure.getMessage());
+		// System.out.println("HEADER: " + failure.getTestHeader());
+		// System.out.println("DESCRIPTION: " + failure.getDescription());
+		// }
 
 	}
 

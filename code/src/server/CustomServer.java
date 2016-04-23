@@ -42,6 +42,12 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		// host = "192.168.0.103";
 		host = args[0];
+
+		if (args.length > 1) {
+			String thisRMIhost = args[1];
+			System.setProperty("java.rmi.server.hostname", thisRMIhost);
+		}
+
 		System.out.println("Using host address: " + host);
 		registryPort = 12345;
 		ftpServerPort = 12346;
@@ -53,7 +59,6 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 		System.setProperty("java.security.policy", "rmi.policy");
 		// System.setProperty("java.rmi.server.disableHttp", "false");
-		System.setProperty("java.rmi.server.hostname", "192.168.0.103");
 
 		DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
 		// DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");
