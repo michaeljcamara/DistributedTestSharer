@@ -28,8 +28,33 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 	private static FTPClient client;
 
 	protected CustomServer() throws RemoteException {
-		// super(12345);
 		super();
+	}
+
+	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
+
+		System.setProperty("java.system.class.loader", "server.CustomClassLoader");
+
+		// host = "192.168.0.103";
+		host = args[0];
+		System.out.println("Using host address: " + host);
+		registryPort = 12345;
+		ftpServerPort = 12346;
+		ftpClassDir = "resources/bin/";
+		ftpJarDir = "resources/lib/";
+		ftpRootDir = "resources/";
+		userName = "user";
+		userPassword = "user";
+
+		System.setProperty("java.security.policy", "rmi.policy");
+		// System.setProperty("java.rmi.server.disableHttp", "false");
+
+		DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
+		// DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");
+		CustomServer server = new CustomServer();
+
+		System.out.println(delegator.ping());
+		delegator.rebindServer((CustomServerInterface) server);
 	}
 
 	public void updateClassLoader() {
@@ -72,7 +97,7 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 			if (file.isDirectory()) {
 				// File targetFile = new File(currentDir + "/" + parentDir + file.getName() + "/");
 				File targetFile = new File(parentDir + file.getName() + "/");
-				// System.out.println("Inner mkdir?: " + targetFile.mkdir());
+				targetFile.mkdir();
 				for (FTPFile subDir : client.listFiles(file.getName())) {
 					createResources(subDir, parentDir + file.getName() + "/");
 				}
@@ -90,34 +115,37 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		}
 	}
 
-	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
-
-		System.setProperty("java.system.class.loader", "server.CustomClassLoader");
-
-		// host = "192.168.0.103";
-		host = args[0];
-		System.out.println("Using host address: " + host);
-		registryPort = 12345;
-		ftpServerPort = 12346;
-		ftpClassDir = "resources/bin/";
-		ftpJarDir = "resources/lib/";
-		ftpRootDir = "resources/";
-		userName = "user";
-		userPassword = "user";
-
-		System.setProperty("java.security.policy", "rmi.policy");
-		// System.setProperty("java.rmi.server.disableHttp", "false");
-
-		DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
-		// DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");
-		CustomServer server = new CustomServer();
-
-		System.out.println(delegator.ping());
-		delegator.rebindServer((CustomServerInterface) server);
-	}
-
 	public String ping() throws RemoteException {
 		return "==========PING FROM SERVER==============";
+	}
+
+	public Result runTest(Class testClass) {
+
+		System.out.println("**Running test: " + testClass.getName());
+
+		try {
+
+			Result result = JUnitCore.runClasses(testClass);
+
+			// Indicate overall results of testing
+			// System.out.println("Total tests run: " + result.getRunCount());
+			// System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
+			// System.out.println("Number of failures: " + result.getFailureCount());
+			//
+			// // List all failures that have been generated
+			// for (Failure failure : result.getFailures()) {
+			// System.out.println("EXCEPTION" + failure.getException());
+			// System.out.println("TRACE: " + failure.getTrace());
+			// System.out.println("MESSAGE: " + failure.getMessage());
+			// System.out.println("HEADER: " + failure.getTestHeader());
+			// System.out.println("DESCRIPTION: " + failure.getDescription());
+			// }
+
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	public Result runTest(File testFile) {
@@ -151,35 +179,6 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 
 			return result;
 
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
-
-	public Result runTest(Class testClass) {
-
-		System.out.println("**Running test: " + testClass.getName());
-
-		try {
-
-			Result result = JUnitCore.runClasses(testClass);
-
-			// Indicate overall results of testing
-			// System.out.println("Total tests run: " + result.getRunCount());
-			// System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-			// System.out.println("Number of failures: " + result.getFailureCount());
-			//
-			// // List all failures that have been generated
-			// for (Failure failure : result.getFailures()) {
-			// System.out.println("EXCEPTION" + failure.getException());
-			// System.out.println("TRACE: " + failure.getTrace());
-			// System.out.println("MESSAGE: " + failure.getMessage());
-			// System.out.println("HEADER: " + failure.getTestHeader());
-			// System.out.println("DESCRIPTION: " + failure.getDescription());
-			// }
-
-			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

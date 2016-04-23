@@ -35,297 +35,299 @@ import server.CustomServerInterface;
 
 public class Delegator extends UnicastRemoteObject implements DelegatorInterface {
 
-    private static String host, ftpRootDir;
+	private static String host, ftpRootDir;
 
-    private static int registryPort, ftpServerPort;
+	private static int registryPort, ftpServerPort;
 
-    private static Registry registry;
+	// private static Registry registry;
 
-    private static LinkedList<File> testSuiteList, testSingleList;
+	private static LinkedList<File> testSuiteList, testSingleList;
 
-    private static LinkedList<CustomServerInterface> serverList;
+	private static LinkedList<CustomServerInterface> serverList;
 
-    public static void main(String[] args) throws RemoteException {
+	public static void main(String[] args) throws RemoteException {
 
-        // Prevent console logging output
-        Logger.getRootLogger().removeAllAppenders();
-        Logger.getRootLogger().addAppender(new NullAppender());
+		// Prevent console logging output
+		Logger.getRootLogger().removeAllAppenders();
+		Logger.getRootLogger().addAppender(new NullAppender());
 
-        // host = "192.168.0.103";
-        host = args[0];
-        System.out.println("Using host address: " + host);
-        registryPort = 12345;
-        ftpServerPort = 12346;
-        ftpRootDir = "ftpserver/";
+		// host = "192.168.0.103";
+		host = args[0];
+		System.out.println("Using host address: " + host);
+		registryPort = 12345;
+		ftpServerPort = 12346;
+		ftpRootDir = "ftpserver/";
 
-        testSuiteList = new LinkedList<File>();
-        testSingleList = new LinkedList<File>();
-        serverList = new LinkedList<CustomServerInterface>();
+		testSuiteList = new LinkedList<File>();
+		testSingleList = new LinkedList<File>();
+		serverList = new LinkedList<CustomServerInterface>();
 
-        System.setProperty("java.security.policy", "rmi.policy");
-        System.setProperty("java.rmi.server.hostname", host);
+		System.setProperty("java.security.policy", "rmi.policy");
+		System.setProperty("java.rmi.server.hostname", host);
 
-        createRegistry();
-        createFTPServer();
-        createTestList();
+		createRegistry();
+		createFTPServer();
+		createTestList();
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("== Press ENTER when all servers are connected ==");
-        scan.nextLine();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("== Press ENTER when all servers are connected ==");
+		scan.nextLine();
 
-        // Update the servers' classpaths and establish connection with the FTP server
-        updateServers();
+		// Update the servers' classpaths and establish connection with the FTP server
+		updateServers();
 
-        runTests();
+		runTests();
 
-    }
+	}
 
-    protected Delegator() throws RemoteException {
-        super();
-    }
+	protected Delegator() throws RemoteException {
+		super();
+	}
 
-    private static void updateServers() throws RemoteException {
-        try {
-            System.out.println("Begin update servers");
+	private static void updateServers() throws RemoteException {
+		try {
+			System.out.println("Begin update servers");
 
-            for (CustomServerInterface server : serverList) {
-                server.updateClassLoader();
-            }
-            System.out.println("End update servers");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+			for (CustomServerInterface server : serverList) {
+				server.updateClassLoader();
+			}
+			System.out.println("End update servers");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
-    private static void createFTPServer() {
+	private static void createFTPServer() {
 
-        FtpServerFactory ftpServerFactory = new FtpServerFactory();
+		FtpServerFactory ftpServerFactory = new FtpServerFactory();
 
-        UserManager userManager = ftpServerFactory.getUserManager();
-        BaseUser adminUser = new BaseUser();
-        adminUser.setName("user");
-        adminUser.setPassword("user");
-        adminUser.setEnabled(true);
-        ArrayList<Authority> authorities = new ArrayList<Authority>();
-        authorities.add(new WritePermission());
-        adminUser.setAuthorities(authorities);
-        adminUser.setHomeDirectory(ftpRootDir);
-        adminUser.setMaxIdleTime(999);
-        try {
-            userManager.save(adminUser);
-        } catch (FtpException e2) {
-            e2.printStackTrace();
-        }
-        ftpServerFactory.setUserManager(userManager);
+		UserManager userManager = ftpServerFactory.getUserManager();
+		BaseUser adminUser = new BaseUser();
+		adminUser.setName("user");
+		adminUser.setPassword("user");
+		adminUser.setEnabled(true);
+		ArrayList<Authority> authorities = new ArrayList<Authority>();
+		authorities.add(new WritePermission());
+		adminUser.setAuthorities(authorities);
+		adminUser.setHomeDirectory(ftpRootDir);
+		adminUser.setMaxIdleTime(999);
+		try {
+			userManager.save(adminUser);
+		} catch (FtpException e2) {
+			e2.printStackTrace();
+		}
+		ftpServerFactory.setUserManager(userManager);
 
-        ListenerFactory listenerFactory = new ListenerFactory();
-        listenerFactory.setPort(ftpServerPort);
-        listenerFactory.setServerAddress(host);
-        listenerFactory.setIdleTimeout(999);
+		ListenerFactory listenerFactory = new ListenerFactory();
+		listenerFactory.setPort(ftpServerPort);
+		listenerFactory.setServerAddress(host);
+		listenerFactory.setIdleTimeout(999);
 
-        ConnectionConfigFactory connectionFactory = new ConnectionConfigFactory();
-        connectionFactory.setAnonymousLoginEnabled(true);
-        connectionFactory.setMaxAnonymousLogins(999);
-        connectionFactory.setMaxLogins(999);
-        connectionFactory.setMaxLoginFailures(999);
-        connectionFactory.setMaxThreads(999);
-        ftpServerFactory.setConnectionConfig(connectionFactory.createConnectionConfig());
+		ConnectionConfigFactory connectionFactory = new ConnectionConfigFactory();
+		connectionFactory.setAnonymousLoginEnabled(true);
+		connectionFactory.setMaxAnonymousLogins(999);
+		connectionFactory.setMaxLogins(999);
+		connectionFactory.setMaxLoginFailures(999);
+		connectionFactory.setMaxThreads(999);
+		ftpServerFactory.setConnectionConfig(connectionFactory.createConnectionConfig());
 
-        DataConnectionConfigurationFactory dataFactory = new DataConnectionConfigurationFactory();
-        dataFactory.setActiveEnabled(true);
-        dataFactory.setActiveIpCheck(false);
-        dataFactory.setActiveLocalAddress(host);
-        dataFactory.setPassiveAddress(host);
-        dataFactory.setIdleTime(999);
-        listenerFactory
-                .setDataConnectionConfiguration(dataFactory.createDataConnectionConfiguration());
-        ftpServerFactory.addListener("default", listenerFactory.createListener());
+		DataConnectionConfigurationFactory dataFactory = new DataConnectionConfigurationFactory();
+		dataFactory.setActiveEnabled(true);
+		dataFactory.setActiveIpCheck(false);
+		dataFactory.setActiveLocalAddress(host);
+		dataFactory.setPassiveAddress(host);
+		dataFactory.setIdleTime(999);
+		listenerFactory.setDataConnectionConfiguration(dataFactory.createDataConnectionConfiguration());
+		ftpServerFactory.addListener("default", listenerFactory.createListener());
 
-        NativeFileSystemFactory fileFactory = new NativeFileSystemFactory();
-        try {
-            fileFactory.createFileSystemView(adminUser);
-            fileFactory.setCreateHome(true);
-            // fileFactory.setCaseInsensitive(true);
-        } catch (FtpException e1) {
-            e1.printStackTrace();
-        }
-        ftpServerFactory.setFileSystem(fileFactory);
+		NativeFileSystemFactory fileFactory = new NativeFileSystemFactory();
+		try {
+			fileFactory.createFileSystemView(adminUser);
+			fileFactory.setCreateHome(true);
+			// fileFactory.setCaseInsensitive(true);
+		} catch (FtpException e1) {
+			e1.printStackTrace();
+		}
+		ftpServerFactory.setFileSystem(fileFactory);
 
-        FtpServer ftpServer = ftpServerFactory.createServer();
+		FtpServer ftpServer = ftpServerFactory.createServer();
 
-        try {
-            ftpServer.start();
-        } catch (FtpException e) {
-            e.printStackTrace();
-        }
-    }
+		try {
+			ftpServer.start();
+		} catch (FtpException e) {
+			e.printStackTrace();
+		}
+	}
 
-    private static void createRegistry() throws RemoteException {
+	private static void createRegistry() throws RemoteException {
 
-        registry = LocateRegistry.createRegistry(registryPort);
-        Delegator delegator = new Delegator();
-        registry.rebind("Delegator", delegator);
-    }
+		Registry registry = LocateRegistry.createRegistry(registryPort);
+		Delegator delegator = new Delegator();
+		registry.rebind("Delegator", delegator);
+	}
 
-    private static void createTestList() throws RemoteException {
+	private static void createTestList() throws RemoteException {
 
-        File file = new File("resources/");
+		File file = new File("ftpserver/resources/");
 
-        for (File subDir : file.listFiles()) {
-            if (subDir.getName().equals("test_singles")) {
-                createSingleTestList(subDir);
-            } else if (subDir.getName().equals("test_suites")) {
-                createTestSuiteList(subDir);
-            }
-        }
-    }
+		for (File subDir : file.listFiles()) {
+			if (subDir.getName().equals("test_singles")) {
+				createSingleTestList(subDir);
+			}
+			else if (subDir.getName().equals("test_suites")) {
+				createTestSuiteList(subDir);
+			}
+		}
+	}
 
-    private static void createResources(File file) {
-        try {
-            if (file.isDirectory()) {
-                File targetFile = new File(ftpRootDir + file.toPath());
-                targetFile.mkdirs();
+	private static void createResources(File file) {
+		try {
+			if (file.isDirectory()) {
+				File targetFile = new File(ftpRootDir + file.toPath());
+				targetFile.mkdirs();
 
-                for (File subDir : file.listFiles()) {
-                    createResources(subDir);
-                }
-            } else {
+				for (File subDir : file.listFiles()) {
+					createResources(subDir);
+				}
+			}
+			else {
 
-                FileInputStream in = new FileInputStream(file);
-                byte[] fileBytes = new byte[(int) file.length()];
-                in.read(fileBytes);
+				FileInputStream in = new FileInputStream(file);
+				byte[] fileBytes = new byte[(int) file.length()];
+				in.read(fileBytes);
 
-                FileOutputStream out = new FileOutputStream(ftpRootDir + file.getPath());
-                out.write(fileBytes);
-            }
+				FileOutputStream out = new FileOutputStream(ftpRootDir + file.getPath());
+				out.write(fileBytes);
+			}
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
-    private static void createSingleTestList(File file) {
+	private static void createSingleTestList(File file) {
 
-        System.out.println("begin create single tests");
-        System.out.println(FilenameUtils.getExtension(file.getName()));
+		System.out.println("begin create single tests");
+		System.out.println(FilenameUtils.getExtension(file.getName()));
 
-        if (file.isDirectory()) {
-            for (File subDir : file.listFiles()) {
-                createSingleTestList(subDir);
-            }
-        } else if (FilenameUtils.getExtension(file.getName()).equals("class")
-                && (!file.getName().contains("$"))) {
-            testSingleList.add(file);
-        }
-        System.out.println("end create single tests");
-    }
+		if (file.isDirectory()) {
+			for (File subDir : file.listFiles()) {
+				createSingleTestList(subDir);
+			}
+		}
+		else if (FilenameUtils.getExtension(file.getName()).equals("class") && (!file.getName().contains("$"))) {
+			testSingleList.add(file);
+		}
+		System.out.println("end create single tests");
+	}
 
-    private static void createTestSuiteList(File file) {
-        System.out.println("begin create suite tests");
+	private static void createTestSuiteList(File file) {
+		System.out.println("begin create suite tests");
 
-        if (file.isDirectory()) {
-            for (File subDir : file.listFiles()) {
-                createTestSuiteList(subDir);
-            }
-        } else if (FilenameUtils.getExtension(file.getName()).equals("class")) {
-            testSuiteList.add(file);
-        }
-        System.out.println("end create suite tests");
-    }
+		if (file.isDirectory()) {
+			for (File subDir : file.listFiles()) {
+				createTestSuiteList(subDir);
+			}
+		}
+		else if (FilenameUtils.getExtension(file.getName()).equals("class")) {
+			testSuiteList.add(file);
+		}
+		System.out.println("end create suite tests");
+	}
 
-    private static ConcurrentLinkedQueue<Result> runTests() throws RemoteException {
+	private static ConcurrentLinkedQueue<Result> runTests() throws RemoteException {
 
-        try {
+		try {
 
-            ConcurrentLinkedQueue<Result> resultQueue = new ConcurrentLinkedQueue<Result>();
-            ConcurrentLinkedQueue<TestAgent> agents = new ConcurrentLinkedQueue<TestAgent>();
+			ConcurrentLinkedQueue<Result> resultQueue = new ConcurrentLinkedQueue<Result>();
+			ConcurrentLinkedQueue<TestAgent> agents = new ConcurrentLinkedQueue<TestAgent>();
 
-            // Add separate agent for each server
-            for (CustomServerInterface server : serverList) {
-                agents.add(new TestAgent(server, resultQueue));
-            }
+			// Add separate agent for each server
+			for (CustomServerInterface server : serverList) {
+				agents.add(new TestAgent(server, resultQueue));
+			}
 
-            SimpleClassLoader simpleLoader = new SimpleClassLoader();
+			SimpleClassLoader simpleLoader = new SimpleClassLoader();
 
-            Iterator<File> suiteIterator = testSuiteList.iterator();
-            Iterator<File> singleIterator = testSingleList.iterator();
+			Iterator<File> suiteIterator = testSuiteList.iterator();
+			Iterator<File> singleIterator = testSingleList.iterator();
 
-            while (singleIterator.hasNext()) {
-                // **TODO: Need to see if able to pass by File, or if need to convert to bytes first
-                // FileInputStream in = new FileInputStream(testList.getFirst());
-                // byte[] classBytes = new byte[(int) testList.getFirst().length()];
-                // in.read(classBytes);
+			while (singleIterator.hasNext()) {
+				// **TODO: Need to see if able to pass by File, or if need to convert to bytes first
+				// FileInputStream in = new FileInputStream(testList.getFirst());
+				// byte[] classBytes = new byte[(int) testList.getFirst().length()];
+				// in.read(classBytes);
 
-                File testFile = testSingleList.getFirst();
-                TestAgent agent = agents.remove();
+				File testFile = testSingleList.getFirst();
+				TestAgent agent = agents.remove();
 
-                if (!agent.isAlive()) {
-                    agent = new TestAgent(agent, testFile);
-                    agent.start();
-                    singleIterator.next();
-                }
+				if (!agent.isAlive()) {
+					agent = new TestAgent(agent, testFile);
+					agent.start();
+					singleIterator.next();
+				}
 
-                agents.add(agent);
-            }
+				agents.add(agent);
+			}
 
-            while (suiteIterator.hasNext()) {
+			while (suiteIterator.hasNext()) {
 
-                FileInputStream in = new FileInputStream(suiteIterator.next());
-                byte[] classBytes = new byte[(int) testSuiteList.getFirst().length()];
-                in.read(classBytes);
-                simpleLoader = new SimpleClassLoader();
-                Class<?> convertedClass = simpleLoader.convertToClass(classBytes);
+				FileInputStream in = new FileInputStream(suiteIterator.next());
+				byte[] classBytes = new byte[(int) testSuiteList.getFirst().length()];
+				in.read(classBytes);
+				simpleLoader = new SimpleClassLoader();
+				Class<?> convertedClass = simpleLoader.convertToClass(classBytes);
 
-                SuiteClasses suiteAnnotation = convertedClass.getAnnotation(SuiteClasses.class);
-                Class<?>[] classesInSuite = suiteAnnotation.value();
+				SuiteClasses suiteAnnotation = convertedClass.getAnnotation(SuiteClasses.class);
+				Class<?>[] classesInSuite = suiteAnnotation.value();
 
-                for (int i = 0; i < classesInSuite.length;) {
-                    Class<?> c = classesInSuite[i];
-                    TestAgent agent = agents.remove();
+				for (int i = 0; i < classesInSuite.length;) {
+					Class<?> c = classesInSuite[i];
+					TestAgent agent = agents.remove();
 
-                    if (!agent.isAlive()) {
-                        agent = new TestAgent(agent, c);
-                        agent.start();
-                        i++;
-                    }
+					if (!agent.isAlive()) {
+						agent = new TestAgent(agent, c);
+						agent.start();
+						i++;
+					}
 
-                    agents.add(agent);
-                }
-            }
+					agents.add(agent);
+				}
+			}
 
-            // Wait until all agents have finished before returning result
-            while (!agents.isEmpty()) {
-                TestAgent agent = agents.peek();
-                if (!agent.isAlive()) {
-                    agents.remove();
-                }
-            }
+			// Wait until all agents have finished before returning result
+			while (!agents.isEmpty()) {
+				TestAgent agent = agents.peek();
+				if (!agent.isAlive()) {
+					agents.remove();
+				}
+			}
 
-            return resultQueue;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+			return resultQueue;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
-    public String ping() throws RemoteException {
-        System.out.println("===PING!===");
-        return "===PING!===";
-    }
+	public String ping() throws RemoteException {
+		System.out.println("===PING!===");
+		return "===PING!===";
+	}
 
-    public void rebindServer(CustomServerInterface remoteObject) throws RemoteException {
+	public void rebindServer(CustomServerInterface remoteObject) throws RemoteException {
 
-        try {
-            // Registry registry = LocateRegistry.getRegistry(host, registryPort);
-            registry.rebind("CustomServer_" + registry.list().length, remoteObject);
-            serverList.add(remoteObject);
+		try {
+			Registry registry = LocateRegistry.getRegistry(host, registryPort);
+			registry.rebind("CustomServer_" + registry.list().length, remoteObject);
+			serverList.add(remoteObject);
 
-            System.out.println("CURRENTLY BOUND REMOTE OBJECTS: ");
-            for (String s : registry.list()) {
-                System.out.println(s);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+			System.out.println("CURRENTLY BOUND REMOTE OBJECTS: ");
+			for (String s : registry.list()) {
+				System.out.println(s);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
