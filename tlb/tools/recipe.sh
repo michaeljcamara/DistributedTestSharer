@@ -28,7 +28,9 @@ echo "******************************** started the server **********************
 
 export TLB_OUT_FILE=/tmp/tlb_balancer.out 
 export TLB_ERR_FILE=/tmp/tlb_balancer.err
-export TLB_BASE_URL='http://localhost:7019' 
+# export TLB_BASE_URL='http://localhost:7019' 
+export TLB_BASE_URL='http://141.195.23.248:7019/'
+echo "$TLB_BASE_URL"
 export TLB_JOB_VERSION=`date | sed -e 's# #-#g'`
 making_partitions_message $TLB_TOTAL_PARTITIONS
 
@@ -36,7 +38,8 @@ for((i=1; i <= $TLB_TOTAL_PARTITIONS; i++)); do
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>> executing partition $i <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
     export TLB_PARTITION_NUMBER=$i
     this_is_partition_x_of_y_message $TLB_PARTITION_NUMBER $TLB_TOTAL_PARTITIONS
-    export TLB_BALANCER_PORT=300$i
+    # export TLB_BALANCER_PORT=300$i
+    export TLB_BALANCER_PORT=12345
     running_partition_x_on_port $TLB_PARTITION_NUMBER $TLB_BALANCER_PORT
     $TEST_TASK
     echo "==================================================================================="
