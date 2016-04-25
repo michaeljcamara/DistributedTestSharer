@@ -1,0 +1,5 @@
+Testsuite: org.apache.ivy.plugins.resolver.VfsResolverTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.039 sec
+
+Testcase: testInit took 0.032 sec
+Testcase: testTypeName took 0 sec

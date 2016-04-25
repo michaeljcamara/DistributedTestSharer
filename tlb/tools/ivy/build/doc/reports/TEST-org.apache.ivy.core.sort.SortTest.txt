@@ -1,0 +1,14 @@
+Testsuite: org.apache.ivy.core.sort.SortTest
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testSort took 0.222 sec
+Testcase: testCircularDependency took 0.01 sec
+Testcase: testCircularDependency2 took 0.003 sec
+Testcase: testCircularDependencyInfiniteLoop took 0 sec
+Testcase: testCircularDependencyReport took 0.001 sec
+Testcase: testLatestIntegration took 0.002 sec
+Testcase: testDifferentVersionNotConsidered took 0.003 sec
+Testcase: testDifferentVersionWarning took 0.001 sec

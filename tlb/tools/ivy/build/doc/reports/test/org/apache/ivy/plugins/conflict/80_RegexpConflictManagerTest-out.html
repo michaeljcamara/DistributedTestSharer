@@ -1,0 +1,81 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from RegexpConflictManagerTest</title>
+</head>
+<body>
+<pre>:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-regexp-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-regexp-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+	found org2#mod2.1;0.5 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21B-0.5.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.1;0.5!art21B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21A-0.5.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.1;0.5!art21A.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21AB-0.5.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.1;0.5!art21AB.jar (2ms)
+:: resolution report :: resolve 70ms :: artifacts dl 11ms
+	:: evicted modules:
+	org1#mod1.2;2.0.1 by [org1#mod1.2;2.0.7] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   1   |   1   |   1   ||   3   |   3   |
+	---------------------------------------------------------------------
+
+:: problems summary ::
+:::: WARNINGS
+		module not found: org1#mod1.2;2.0.1
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/ivys/ivy-2.0.1.xml
+
+	  -- artifact org1#mod1.2;2.0.1!mod1.2.jar:
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.1.jar
+
+		module not found: org1#mod1.2;2.0.7
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/ivys/ivy-2.0.7.xml
+
+	  -- artifact org1#mod1.2;2.0.7!mod1.2.jar:
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.7.jar
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		::          UNRESOLVED DEPENDENCIES         ::
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		:: org1#mod1.2;2.0.1: not found
+
+		:: org1#mod1.2;2.0.7: not found
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-regexp-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-regexp-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+
+:: problems summary ::
+:::: ERRORS
+	org1#mod1.2;2.0.0:2.0 (needed by [apache#resolve-noconflict;1.0]) conflicts with org1#mod1.2;2.1.0:2.1 (needed by [apache#resolve-noconflict;1.0])
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+</pre>
+</body>
+</html>

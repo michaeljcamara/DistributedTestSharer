@@ -1,0 +1,66 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from XmlModuleDescriptorWriterTest</title>
+</head>
+<body>
+<pre>:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+--&gt;
+&lt;ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven"&gt;
+	&lt;info organisation="org.apache"
+		module="test-depMgt"
+		revision="1.0"
+		status="release"
+		publication="20140429153143"
+	&gt;
+		&lt;description homepage="http://ivy.jayasoft.org/" /&gt;
+		&lt;m:properties__commons.logging.version&gt;1.0.4&lt;/m:properties__commons.logging.version&gt;
+		&lt;m:properties__commons.collections.version&gt;1.0.5&lt;/m:properties__commons.collections.version&gt;
+		&lt;m:dependency.management__commons-logging__commons-logging__version&gt;1.0.4&lt;/m:dependency.management__commons-logging__commons-logging__version&gt;
+		&lt;m:dependency.management__commons-collections__commons-collections__version&gt;1.0.5&lt;/m:dependency.management__commons-collections__commons-collections__version&gt;
+		&lt;m:dependency.management__commons-collections__commons-collections__exclusion_0&gt;javax.mail__mail&lt;/m:dependency.management__commons-collections__commons-collections__exclusion_0&gt;
+		&lt;m:dependency.management__commons-collections__commons-collections__exclusion_1&gt;javax.jms__jms&lt;/m:dependency.management__commons-collections__commons-collections__exclusion_1&gt;
+	&lt;/info&gt;
+	&lt;configurations&gt;
+		&lt;conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/&gt;
+		&lt;conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/&gt;
+		&lt;conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/&gt;
+		&lt;conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/&gt;
+		&lt;conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/&gt;
+		&lt;conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/&gt;
+		&lt;conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/&gt;
+		&lt;conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/&gt;
+		&lt;conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/&gt;
+		&lt;conf name="optional" visibility="public" description="contains all optional dependencies"/&gt;
+	&lt;/configurations&gt;
+	&lt;publications&gt;
+		&lt;artifact name="test-depMgt" type="jar" ext="jar" conf="master"/&gt;
+	&lt;/publications&gt;
+	&lt;dependencies&gt;
+		&lt;dependency org="commons-logging" name="commons-logging" rev="1.0.4" force="true" conf="compile-&gt;compile(*),master(*);runtime-&gt;runtime(*)"/&gt;
+		&lt;override org="commons-logging" module="commons-logging" matcher="exact" rev="1.0.4"/&gt;
+		&lt;override org="commons-collections" module="commons-collections" matcher="exact" rev="1.0.5"/&gt;
+	&lt;/dependencies&gt;
+&lt;/ivy-module&gt;
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Testsuite: org.apache.ivy.osgi.obr.OBRParserTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.851 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testParse took 2.646 sec
+Testcase: testParseSource took 0.186 sec

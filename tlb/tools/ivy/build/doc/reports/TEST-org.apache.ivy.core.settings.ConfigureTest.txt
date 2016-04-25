@@ -1,0 +1,13 @@
+Testsuite: org.apache.ivy.core.settings.ConfigureTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings-1.4.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-custom-typedef.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-custom-typedef2.xml
+------------- ---------------- ---------------
+
+Testcase: testDefault took 0.197 sec
+Testcase: testDefault14 took 0.026 sec
+Testcase: testTypedefWithCustomClasspath took 0.023 sec
+Testcase: testTypedefWithCustomClasspathWithFile took 0.009 sec

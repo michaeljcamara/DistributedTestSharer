@@ -1,0 +1,89 @@
+Testsuite: org.apache.ivy.ant.IvyRepositoryReportTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.683 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-716/ivysettings.xml
+     [null] :: resolving dependencies :: caller#all-caller;working
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.1#branch2;1.0 in myresolver
+     [null] 	[1.0] org1#mod1.1#branch2;latest.integration
+     [null] 	found org1#mod1.1#branch1;1.0 in myresolver
+     [null] 	[1.0] org1#mod1.1#branch1;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-716/org1/branch1/mod1.1/1.0/mod1.1.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1#branch1;1.0!mod1.1.jar (5ms)
+     [null] :: resolution report :: resolve 50ms :: artifacts dl 9ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.1#branch2;1.0 by [org1#mod1.1#branch1;1.0] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   0   |   1   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-1.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-1.xml)
+     [null] :: resolving dependencies :: caller#all-caller;working
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.4;2.0 in 1
+     [null] 	[2.0] org1#mod1.4;latest.integration
+     [null] 	found org1#mod1.5;1.0.2 in 1
+     [null] 	[1.0.2] org1#mod1.5;latest.integration
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] 	found org1#mod1.6;1.0.4 in 1
+     [null] 	[1.0.4] org1#mod1.6;latest.integration
+     [null] 	found org1#mod1.1;2.0 in 1
+     [null] 	[2.0] org1#mod1.1;latest.integration
+     [null] 	found org1#mod1.3;C-3.1 in 1
+     [null] 	[C-3.1] org1#mod1.3;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-C-3.1.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.3;C-3.1!mod1.3.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 221ms :: artifacts dl 8ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.3;3.0 by [org1#mod1.3;C-3.1] in [default]
+     [null] 	org1#mod1.2;2.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   8   |   6   |   4   |   2   ||   3   |   3   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-729/ivysettings.xml
+     [null] :: resolving dependencies :: caller#all-caller;working
+     [null] 	confs: [default]
+     [null] 	found null#a;1 in test
+     [null] 	[1] null#a;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-729/a/1/jars/a-1.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] null#a;1!a.jar (1ms)
+     [null] :: resolution report :: resolve 37ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] 
+     [null] :: problems summary ::
+     [null] :::: WARNINGS
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		::          UNRESOLVED DEPENDENCIES         ::
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		:: null#b;latest.integration: java.lang.NullPointerException at org.apache.ivy.plugins.resolver.BasicResolver.checkDescriptorConsistency(BasicResolver.java:586)
+     [null] 		:: null#c;latest.integration: java.lang.NullPointerException at org.apache.ivy.plugins.resolver.BasicResolver.checkDescriptorConsistency(BasicResolver.java:586)
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 
+     [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+------------- ---------------- ---------------
+
+Testcase: testBranchBeforeModule took 0.352 sec
+Testcase: testSimple took 0.264 sec
+Testcase: testPatternWithoutOrganisation took 0.058 sec

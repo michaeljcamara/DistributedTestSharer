@@ -1,0 +1,16 @@
+Testsuite: org.apache.ivy.plugins.matcher.GlobPatternMatcherTest
+Tests run: 13, Failures: 0, Errors: 0, Time elapsed: 0.368 sec
+
+Testcase: testValidRegexpSyntaxAsNormalCharacter took 0.015 sec
+Testcase: testRegexpSyntaxAndGlob took 0 sec
+Testcase: testImplementation took 0 sec
+Testcase: testQuoteMeta took 0 sec
+Testcase: testInvalidRegexpSyntaxAsNormalCharacter took 0 sec
+Testcase: testGlob took 0.001 sec
+Testcase: testInvalidSyntax took 0.001 sec
+Testcase: testAnyExpression took 0.001 sec
+Testcase: testIsExact took 0.001 sec
+Testcase: testNullInput took 0 sec
+Testcase: testNullExpression took 0.001 sec
+Testcase: testLoadTestMatches took 0.058 sec
+Testcase: testLoadTestGetMatcher took 0.278 sec

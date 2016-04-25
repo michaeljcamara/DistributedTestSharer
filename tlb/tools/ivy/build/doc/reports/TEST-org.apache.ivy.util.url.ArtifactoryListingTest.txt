@@ -1,0 +1,4 @@
+Testsuite: org.apache.ivy.util.url.ArtifactoryListingTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.173 sec
+
+Testcase: testWicketListing took 0.162 sec

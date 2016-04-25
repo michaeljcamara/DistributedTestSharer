@@ -1,0 +1,9 @@
+Testsuite: org.apache.ivy.plugins.resolver.MirroredURLResolverTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.669 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testSolo took 0.554 sec
+Testcase: testFailover took 0.054 sec
+Testcase: testFail took 0.05 sec

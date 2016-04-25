@@ -1,0 +1,6 @@
+ant_junit/target
+buildr_junit/reports
+buildr_junit/target
+.idea
+out
+sample_projects.iws

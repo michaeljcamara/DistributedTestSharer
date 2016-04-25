@@ -1,0 +1,47 @@
+Testsuite: org.apache.ivy.plugins.parser.m2.PomModuleDescriptorParserTest
+Tests run: 41, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testAccept took 0.009 sec
+Testcase: testParentVersion took 0.221 sec
+Testcase: testParentGroupId took 0.01 sec
+Testcase: testProjectParentVersion took 0.008 sec
+Testcase: testDependencies took 0.008 sec
+Testcase: testDependenciesWithClassifier took 0.124 sec
+Testcase: testDependenciesWithType took 0.007 sec
+Testcase: testWithVersionPropertyAndPropertiesTag took 0.007 sec
+Testcase: testDependenciesWithProfile took 0.007 sec
+Testcase: testWithoutVersion took 0.006 sec
+Testcase: testProperties took 0.005 sec
+Testcase: testReal took 0.007 sec
+Testcase: testReal2 took 0.009 sec
+Testcase: testVariables took 0.012 sec
+Testcase: testDependenciesInProfile took 0.006 sec
+Testcase: testIVY424 took 0.009 sec
+Testcase: testOptional took 0.006 sec
+Testcase: testDependenciesWithScope took 0.006 sec
+Testcase: testExclusion took 0.007 sec
+Testcase: testWithPlugins took 0.008 sec
+Testcase: testHomeAndDescription took 0.007 sec
+Testcase: testLicense took 0.008 sec
+Testcase: testLicenseFromParent took 0.011 sec
+Testcase: testOverriddenLicense took 0.009 sec
+Testcase: testDependencyManagment took 0.006 sec
+Testcase: testDependencyManagmentWithScope took 0.006 sec
+Testcase: testParentDependencyMgt took 0.016 sec
+Testcase: testOverrideParentVersionPropertyDependencyMgt took 0.011 sec
+Testcase: testParentProperties took 0.027 sec
+Testcase: testOverrideParentProperties took 0.012 sec
+Testcase: testOverrideGrandparentProperties took 0.014 sec
+Testcase: testPomWithEntity took 0.007 sec
+Testcase: testModel took 0.004 sec
+Testcase: testSimple took 0.004 sec
+Testcase: testLargePom took 0.014 sec
+Testcase: testPackaging took 0.003 sec
+Testcase: testEjbPackaging took 0.007 sec
+Testcase: testEjbType took 0.005 sec
+Testcase: testParent took 0.005 sec
+Testcase: testParentNotFound took 0.006 sec
+Testcase: testParent2 took 0.007 sec

@@ -1,0 +1,1251 @@
+Testsuite: org.apache.ivy.ant.IvyDeliverTest
+Tests run: 15, Failures: 0, Errors: 15, Time elapsed: 1.309 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-simple;1.0
+     [null] 	confs: [default, compile]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org1#mod1.1;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (1ms)
+     [null] :: resolution report :: resolve 77ms :: artifacts dl 6ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	|      compile     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 16ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 14ms :: artifacts dl 3ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-simple;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 10ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 14ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-simple;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 9ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 9ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (5ms)
+     [null] :: resolution report :: resolve 12ms :: artifacts dl 6ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2#TRUNK;2.2 in 1
+     [null] 	[2.2] org1#mod1.2#TRUNK;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2#TRUNK;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 13ms :: artifacts dl 4ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest#BRANCH1;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2#BRANCH1;2.2 in 1
+     [null] 	[2.2] org1#mod1.2#BRANCH1;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2#BRANCH1;2.2!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 11ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (3ms)
+     [null] :: resolution report :: resolve 11ms :: artifacts dl 5ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;1.1 in 1
+     [null] 	[1.1] org1#mod1.2;1+
+     [null] 	found org6#mod6.1;2.0 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org6#mod6.1;2.0!mod6.1.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 68ms :: artifacts dl 4ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.2;1.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org6#mod6.1;2.0 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	found org1#mod1.2;1.1 in 1
+     [null] 	[1.1] org1#mod1.2;1+
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org6#mod6.1;2.0!mod6.1.jar (4ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 35ms :: artifacts dl 7ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.2;1.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [conf1, conf2]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 14ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       conf1      |   1   |   1   |   0   |   0   ||   1   |   1   |
+	|       conf2      |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [${myvar}]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 10ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|     ${myvar}     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 9ms :: artifacts dl 3ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#different-revs;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org1#mod1.1;1.0 in 1
+     [null] 	found org1#mod1.2;1.1 in 1
+     [null] 	[1.1] org1#mod1.2;1.+
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-1.1.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;1.1!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 28ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+------------- ---------------- ---------------
+
+Testcase: testMergeParent took 0.511 sec
+	Caused an ERROR
+apache#resolve-simple;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-simple;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyPublish.doExecute(IvyPublish.java:309)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testMergeParent(IvyDeliverTest.java:106)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyPublish.doExecute(IvyPublish.java:309)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testMergeParent(IvyDeliverTest.java:106)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyPublish.doExecute(IvyPublish.java:309)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testMergeParent(IvyDeliverTest.java:106)
+
+Testcase: testSimple took 0.056 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testSimple(IvyDeliverTest.java:159)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testSimple(IvyDeliverTest.java:159)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testSimple(IvyDeliverTest.java:159)
+
+Testcase: testNotGenerateRevConstraint took 0.051 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNotGenerateRevConstraint(IvyDeliverTest.java:185)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNotGenerateRevConstraint(IvyDeliverTest.java:185)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNotGenerateRevConstraint(IvyDeliverTest.java:185)
+
+Testcase: testWithResolveId took 0.067 sec
+	Caused an ERROR
+null: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+null: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveId(IvyDeliverTest.java:218)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveId(IvyDeliverTest.java:218)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveId(IvyDeliverTest.java:218)
+
+Testcase: testWithResolveIdInAnotherBuild took 0.073 sec
+	Caused an ERROR
+null: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+null: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveIdInAnotherBuild(IvyDeliverTest.java:255)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveIdInAnotherBuild(IvyDeliverTest.java:255)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithResolveIdInAnotherBuild(IvyDeliverTest.java:255)
+
+Testcase: testReplaceBranchInfo took 0.041 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranchInfo(IvyDeliverTest.java:279)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranchInfo(IvyDeliverTest.java:279)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranchInfo(IvyDeliverTest.java:279)
+
+Testcase: testWithBranch took 0.062 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithBranch(IvyDeliverTest.java:299)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithBranch(IvyDeliverTest.java:299)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithBranch(IvyDeliverTest.java:299)
+
+Testcase: testReplaceBranch took 0.038 sec
+	Caused an ERROR
+apache#resolve-latest#BRANCH1;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest#BRANCH1;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranch(IvyDeliverTest.java:331)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranch(IvyDeliverTest.java:331)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceBranch(IvyDeliverTest.java:331)
+
+Testcase: testWithExtraAttributes took 0.032 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithExtraAttributes(IvyDeliverTest.java:360)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithExtraAttributes(IvyDeliverTest.java:360)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithExtraAttributes(IvyDeliverTest.java:360)
+
+Testcase: testWithDynEvicted took 0.095 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted(IvyDeliverTest.java:387)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted(IvyDeliverTest.java:387)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted(IvyDeliverTest.java:387)
+
+Testcase: testWithDynEvicted2 took 0.064 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted2(IvyDeliverTest.java:434)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted2(IvyDeliverTest.java:434)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testWithDynEvicted2(IvyDeliverTest.java:434)
+
+Testcase: testReplaceImportedConfigurations took 0.043 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceImportedConfigurations(IvyDeliverTest.java:478)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceImportedConfigurations(IvyDeliverTest.java:478)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceImportedConfigurations(IvyDeliverTest.java:478)
+
+Testcase: testReplaceVariables took 0.036 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceVariables(IvyDeliverTest.java:501)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceVariables(IvyDeliverTest.java:501)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testReplaceVariables(IvyDeliverTest.java:501)
+
+Testcase: testNoReplaceDynamicRev took 0.033 sec
+	Caused an ERROR
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#resolve-latest;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNoReplaceDynamicRev(IvyDeliverTest.java:523)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNoReplaceDynamicRev(IvyDeliverTest.java:523)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testNoReplaceDynamicRev(IvyDeliverTest.java:523)
+
+Testcase: testDifferentRevisionsForSameModule took 0.08 sec
+	Caused an ERROR
+apache#different-revs;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#different-revs;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testDifferentRevisionsForSameModule(IvyDeliverTest.java:547)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testDifferentRevisionsForSameModule(IvyDeliverTest.java:547)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.ant.IvyTask.execute(IvyTask.java:272)
+	at org.apache.ivy.ant.IvyDeliverTest.testDifferentRevisionsForSameModule(IvyDeliverTest.java:547)
+

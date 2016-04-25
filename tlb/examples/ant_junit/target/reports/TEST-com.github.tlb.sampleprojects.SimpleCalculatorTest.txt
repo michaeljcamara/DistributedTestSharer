@@ -1,0 +1,11 @@
+Testsuite: com.github.tlb.sampleprojects.SimpleCalculatorTest
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.016 sec
+
+Testcase: shouldReturnTheDifferenceOfTwoNumbers took 0.003 sec
+Testcase: shouldReturnTheDifferenceOfTwoNegetiveNumbers took 0 sec
+Testcase: shouldReturnTheProductOfTwoNumbers took 0 sec
+Testcase: shouldReturnTheProductOfAPositiveAndANegetiveNumber took 0 sec
+Testcase: shouldReturnTheQuotientOfTwoNumbers took 0 sec
+Testcase: shouldReturnTheQuotientOfPositiveNumberWithNegetiveNumber took 0 sec
+Testcase: shouldReturnTheSumOfTwoNegetiveNumbers took 0 sec
+Testcase: shouldReturnTheSumOfTwoNumbers took 0 sec

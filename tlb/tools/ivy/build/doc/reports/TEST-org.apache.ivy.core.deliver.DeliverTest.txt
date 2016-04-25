@@ -1,0 +1,88 @@
+Testsuite: org.apache.ivy.core.deliver.DeliverTest
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0.596 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1111/ivysettings.xml
+     [null] :: resolving dependencies :: apache#IVY-1111;1.0
+     [null] 	confs: [default]
+     [null] 	found test#a;1 in local
+     [null] 	[1] test#a;latest.integration
+     [null] 	found junit#junit;4.4 in local
+     [null] 	found test#b;1.5 in local
+     [null] 	[1.5] test#b;latest.integration
+     [null] 	found junit#junit;3.8 in local
+     [null] 	[3.8] junit#junit;3.8+
+     [null] 	found junit#junit;4.4 in local
+     [null] 	[4.4] junit#junit;latest.integration
+     [null] :: resolution report :: resolve 161ms :: artifacts dl 1ms
+     [null] 	:: evicted modules:
+     [null] 	junit#junit;3.8 by [junit#junit;4.4] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   4   |   4   |   1   ||   0   |   0   |
+	---------------------------------------------------------------------
+------------- ---------------- ---------------
+
+Testcase: testIVY1111 took 0.584 sec
+	Caused an ERROR
+apache#IVY-1111;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+apache#IVY-1111;1.0: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:423)
+	at org.apache.ivy.core.deliver.DeliverTest.testIVY1111(DeliverTest.java:75)
+Caused by: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.core.deliver.DeliverTest.testIVY1111(DeliverTest.java:75)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.IvyDeliver.loadDeliveryList(IvyDeliver.java:435)
+	at org.apache.ivy.ant.IvyDeliver.doExecute(IvyDeliver.java:403)
+	at org.apache.ivy.core.deliver.DeliverTest.testIVY1111(DeliverTest.java:75)
+

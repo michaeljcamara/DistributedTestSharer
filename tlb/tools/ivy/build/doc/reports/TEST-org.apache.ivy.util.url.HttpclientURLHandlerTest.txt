@@ -1,0 +1,6 @@
+Testsuite: org.apache.ivy.util.url.HttpclientURLHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 4.092 sec
+
+Testcase: testIsReachable took 0.546 sec
+Testcase: testGetURLInfo took 0.929 sec
+Testcase: testContentEncoding took 2.601 sec

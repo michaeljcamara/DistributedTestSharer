@@ -1,0 +1,235 @@
+Testsuite: org.apache.ivy.plugins.conflict.LatestConflictManagerTest
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.033 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: resolving dependencies :: apache#resolve-latest-conflict;1.0
+	confs: [default, nontransitive]
+	found org1#mod1.1;1.0 in test
+	found org1#mod1.2;2.1 in test
+	found org6#mod6.1;0.6 in test
+	found org1#mod1.2;2.2 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.1.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.1!mod1.2.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-0.6.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org6#mod6.1;0.6!mod6.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+:: resolution report :: resolve 135ms :: artifacts dl 14ms
+	:: evicted modules:
+	org1#mod1.2;2.0 by [org1#mod1.2;2.1] in [default]
+	org1#mod1.2;2.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   4   |   2   |   2   ||   3   |   3   |
+	|   nontransitive  |   3   |   3   |   2   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: resolving dependencies :: apache#resolve-latest-conflict;1.0
+	confs: [default]
+	found org1#mod1.1;1.0 in test
+	found org1#mod1.2;2.0 in test
+	found org1#mod1.2;2.2 in test
+	[2.2] org1#mod1.2;[2,)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+:: resolution report :: resolve 34ms :: artifacts dl 5ms
+	:: evicted modules:
+	org1#mod1.2;2.0 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time.xml)
+:: resolving dependencies :: apache#resolve-latest-conflict;1.0
+	confs: [default]
+	found org1#mod1.1;1.0 in test
+	found org1#mod1.2;2.0 in test
+	found org1#mod1.2;2.2 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+:: resolution report :: resolve 27ms :: artifacts dl 5ms
+	:: evicted modules:
+	org1#mod1.2;2.0 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time.xml)
+:: resolving dependencies :: apache#resolve-latest-conflict;1.0
+	confs: [default]
+	found org1#mod1.2;2.2 in test
+	found org1#mod1.1;1.0 in test
+	found org1#mod1.2;2.0 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+:: resolution report :: resolve 30ms :: artifacts dl 7ms
+	:: evicted modules:
+	org1#mod1.2;2.0 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time-transitivity.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-time-transitivity.xml)
+:: resolving dependencies :: MyCompany#E;1.0.0
+	confs: [default]
+	found MyCompany#D;1.0.0 in test
+	found MyCompany#C;1.0.1 in test
+	found MyCompany#A;1.0.0 in test
+	found MyCompany#B;1.0.0 in test
+	found MyCompany#C;1.0.0 in test
+	found MyCompany#C;1.0.2 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/D/lib/D-1.0.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#D;1.0.0!D.jar(lib) (6ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/D/thirdparty/D-1.0.0.tar.gz ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#D;1.0.0!D.tar.gz(thirdparty) (5ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/A/thirdparty/A-1.0.0.tar.gz ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#A;1.0.0!A.tar.gz(thirdparty) (4ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/A/lib/A-1.0.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#A;1.0.0!A.jar(lib) (5ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/B/thirdparty/B-1.0.0.tar.gz ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#B;1.0.0!B.tar.gz(thirdparty) (3ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/B/lib/B-1.0.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#B;1.0.0!B.jar(lib) (3ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/C/thirdparty/C-1.0.2.tar.gz ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#C;1.0.2!C.tar.gz(thirdparty) (5ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-407/MyCompany/C/lib/C-1.0.2.jar ...
+.. (0kB)
+	[SUCCESSFUL ] MyCompany#C;1.0.2!C.jar(lib) (4ms)
+:: resolution report :: resolve 140ms :: artifacts dl 46ms
+	:: evicted modules:
+	MyCompany#C;1.0.1 by [MyCompany#C;1.0.2] in [default]
+	MyCompany#C;1.0.0 by [MyCompany#C;1.0.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   6   |   6   |   6   |   2   ||   8   |   8   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-evicted.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-evicted.xml)
+:: resolving dependencies :: MyCompany#target;1
+	confs: [all]
+	found MyCompany#A;1 in test
+	found conflicting-dependency#dep;1 in test
+	found OtherCompany#prefers-later;1 in test
+	found MyCompany#B;1 in test
+	found MyCompany#C;1 in test
+:: resolution report :: resolve 112ms :: artifacts dl 5ms
+	:: evicted modules:
+	conflicting-dependency#dep;2 by [conflicting-dependency#dep;1] in [all]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|        all       |   6   |   5   |   5   |   1   ||   5   |   0   |
+	---------------------------------------------------------------------
+
+:: problems summary ::
+:::: WARNINGS
+		[NOT FOUND  ] MyCompany#A;1!A.jar(lib) (0ms)
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1399/MyCompany/A/lib/A-1.jar
+
+		[NOT FOUND  ] MyCompany#B;1!B.jar(lib) (0ms)
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1399/MyCompany/B/lib/B-1.jar
+
+		[NOT FOUND  ] conflicting-dependency#dep;1!dep.jar(lib) (0ms)
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1399/conflicting-dependency/dep/lib/dep-1.jar
+
+		[NOT FOUND  ] OtherCompany#prefers-later;1!prefers-later.jar(lib) (0ms)
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1399/OtherCompany/prefers-later/lib/prefers-later-1.jar
+
+		[NOT FOUND  ] MyCompany#C;1!C.jar(lib) (0ms)
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1399/MyCompany/C/lib/C-1.jar
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		::              FAILED DOWNLOADS            ::
+
+		:: ^ see resolution messages for details  ^ ::
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		:: MyCompany#A;1!A.jar(lib)
+
+		:: conflicting-dependency#dep;1!dep.jar(lib)
+
+		:: OtherCompany#prefers-later;1!prefers-later.jar(lib)
+
+		:: MyCompany#B;1!B.jar(lib)
+
+		:: MyCompany#C;1!C.jar(lib)
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+------------- ---------------- ---------------
+
+Testcase: testIvy388 took 0.46 sec
+Testcase: testIvy383 took 0.055 sec
+Testcase: testLatestTime1 took 0.059 sec
+Testcase: testLatestTime2 took 0.061 sec
+Testcase: testLatestTimeTransitivity took 0.22 sec
+Testcase: testEvictedModules took 0.162 sec

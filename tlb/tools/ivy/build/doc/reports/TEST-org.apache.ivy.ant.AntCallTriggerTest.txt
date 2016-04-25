@@ -1,0 +1,56 @@
+Testsuite: org.apache.ivy.ant.AntCallTriggerTest
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0.182 sec
+------------- Standard Error -----------------
+
+BUILD FAILED
+/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/A/build.xml:21: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+
+Total time: 0 seconds
+------------- ---------------- ---------------
+
+Testcase: test took 0.171 sec
+	Caused an ERROR
+The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/A/build.xml:21: The following error occurred while executing this line:
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.AntCallTriggerTest.runBuild(AntCallTriggerTest.java:124)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:63)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:59)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:53)
+	at org.apache.ivy.ant.AntCallTriggerTest.test(AntCallTriggerTest.java:42)
+Caused by: jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+--- Nested Exception ---
+jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+	at org.apache.ivy.ant.AntCallTriggerTest.runBuild(AntCallTriggerTest.java:124)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:63)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:59)
+	at org.apache.ivy.ant.AntCallTriggerTest.runAnt(AntCallTriggerTest.java:53)
+	at org.apache.ivy.ant.AntCallTriggerTest.test(AntCallTriggerTest.java:42)
+
