@@ -5,10 +5,25 @@
     <property name="src_dir" location="src/" />
     <property name="build_dir" location="bin/" />
 
-    <!-- The common classpath for building the system. -->
-    <path id="build_classpath">
-        <fileset dir="${lib_dir}" includes="*.jar" />
-    </path>
+    <!-- SETUP VARIABLES AND PATHS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <property name="config_dir" value="ftpserver/config/"/>
+
+	<!-- Load the variable configurations. -->
+        <loadproperties srcfile="${config_dir}/locations.properties" />
+        <loadproperties srcfile="${config_dir}/database.properties" />
+
+	<!-- The common classpath for building the system. -->
+	<path id="build_classpath">
+            <fileset dir="lib/" includes="*.jar" />
+	</path>
+
+	<!-- The classpath for running the system. -->
+	<path id="run_classpath">
+            <pathelement path="ftpserver/resources/bin/"/>
+            <fileset dir="ftpserver/resources/lib/" includes="*.jar"/>
+            <fileset dir="${config_dir}" includes="*.properties"/>
+	</path>
 
     <!-- CLEANING TASK - "ant clean" -->
     <target name="clean">
@@ -23,4 +38,17 @@
         </javac>
 	<rmic classname="delegator.Delegator" base="${build_dir}"/>
     </target>
+
+    <!-- TESTING TASK - "ant test" -->
+	<target name="test">
+            <junit fork="true" dir = "ftpserver/" forkmode = "once">
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+			<classpath refid="run_classpath" />
+			<formatter type="brief" usefile="false" />
+		</junit>
+            </target>
 </project>
