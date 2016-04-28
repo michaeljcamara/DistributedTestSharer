@@ -1,0 +1,12 @@
+Testsuite: org.apache.ivy.plugins.resolver.IvyRepResolverTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.44 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (25ms)
+------------- ---------------- ---------------
+
+Testcase: testDefaults took 0.097 sec
+Testcase: testMandatoryRoot took 0.009 sec
+Testcase: testIvyRepWithLocalURL took 0.322 sec

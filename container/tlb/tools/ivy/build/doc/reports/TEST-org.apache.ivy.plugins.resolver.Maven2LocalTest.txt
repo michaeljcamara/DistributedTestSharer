@@ -1,0 +1,9 @@
+Testsuite: org.apache.ivy.plugins.resolver.Maven2LocalTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testNotUseMetadataForListing took 0.31 sec
+Testcase: testUseMetadataForListing took 0.041 sec

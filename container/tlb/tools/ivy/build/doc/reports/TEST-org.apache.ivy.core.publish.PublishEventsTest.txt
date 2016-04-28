@@ -1,0 +1,17 @@
+Testsuite: org.apache.ivy.core.publish.PublishEventsTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/publish/ivysettings-publisheventstest.xml
+:: publishing :: apache#PublishEventsTest
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/publish/ivysettings-publisheventstest.xml
+:: publishing :: apache#PublishEventsTest
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/publish/ivysettings-publisheventstest.xml
+:: publishing :: apache#PublishEventsTest
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/publish/ivysettings-publisheventstest.xml
+:: publishing :: apache#PublishEventsTest
+------------- ---------------- ---------------
+
+Testcase: testPublishNoOverwrite took 0.202 sec
+Testcase: testPublishWithOverwrite took 0.014 sec
+Testcase: testPublishMissingFile took 0.019 sec
+Testcase: testPublishWithException took 0.01 sec

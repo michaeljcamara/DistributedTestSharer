@@ -1,0 +1,5 @@
+Boot: Warning: Unable to locate main/main.jar in the JAR file tlb-server-0.3.2.jar
+Apr 25, 2016 8:54:51 PM com.noelios.restlet.http.StreamServerHelper start
+INFO: Starting the internal HTTP server
+Apr 25, 2016 8:55:03 PM com.noelios.restlet.LogFilter afterHandle
+INFO: 2016-04-25	20:55:03	0:0:0:0:0:0:0:1	-	-	7019	GET	/	-	404	330	-	5	http://localhost:7019	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36	-

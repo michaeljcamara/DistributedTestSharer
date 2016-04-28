@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><modules>
+<module organisation="org1" name="mod1.2" rev="2.0" status="release">
+<artifact name="mod1.2" ext="jar" type="jar">
+<origin-location is-local="true">/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/tools/ant-ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar</origin-location>
+<cache-location>/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/tools/ant-ivy/build/cache/org1/mod1.2/jars/mod1.2-2.0.jar</cache-location>
+<retrieve-location>lib/mod1.2-2.0.jar</retrieve-location>
+</artifact>
+</module>
+</modules>

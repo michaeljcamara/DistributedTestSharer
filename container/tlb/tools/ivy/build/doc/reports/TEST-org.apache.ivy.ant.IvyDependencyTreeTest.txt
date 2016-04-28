@@ -1,0 +1,458 @@
+Testsuite: org.apache.ivy.ant.IvyDependencyTreeTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.807 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-simple;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
+     [null] :: resolution report :: resolve 52ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] :: resolution report :: resolve 14ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] Dependency tree for apache-resolve-latest
+     [null] \- org1#mod1.2;latest.integration
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;1.1 in 1
+     [null] 	[1.1] org1#mod1.2;1+
+     [null] 	found org6#mod6.1;2.0 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org6#mod6.1;2.0!mod6.1.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (3ms)
+     [null] :: resolution report :: resolve 47ms :: artifacts dl 6ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.2;1.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] Dependency tree for apache-resolve-latest
+     [null] +- org1#mod1.2;1+ evicted by [org1#mod1.2;2.2] in apache#resolve-latest;1.0
+     [null] +- org6#mod6.1;2.0
+     [null]    \- org1#mod1.2;2.2
+     [null] \- org1#mod1.2;2.2
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: org.apache.ivy#ivy;working@Coltons-MacBook-Pro.local
+     [null] 	confs: [core, httpclient, oro, vfs, sftp, standalone, ant, default, test, source]
+     [null] :: resolution report :: resolve 87ms :: artifacts dl 1ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       core       |   0   |   0   |   0   |   0   ||   0   |   0   |
+	|    httpclient    |   1   |   0   |   0   |   0   ||   0   |   0   |
+	|        oro       |   1   |   0   |   0   |   0   ||   0   |   0   |
+	|        vfs       |   1   |   0   |   0   |   0   ||   0   |   0   |
+	|       sftp       |   4   |   0   |   0   |   0   ||   0   |   0   |
+	|    standalone    |   0   |   0   |   0   |   0   ||   0   |   0   |
+	|        ant       |   1   |   0   |   0   |   0   ||   0   |   0   |
+	|      default     |   12  |   0   |   0   |   0   ||   0   |   0   |
+	|       test       |   8   |   0   |   0   |   0   ||   0   |   0   |
+	|      source      |   0   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] 
+     [null] :: problems summary ::
+     [null] :::: WARNINGS
+     [null] 		module not found: commons-httpclient#commons-httpclient;3.0
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-httpclient/commons-httpclient/ivys/ivy-3.0.xml
+     [null] 	  -- artifact commons-httpclient#commons-httpclient;3.0!commons-httpclient.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.0.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-httpclient/ivy-3.0.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact commons-httpclient#commons-httpclient;3.0!commons-httpclient.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-httpclient/commons-httpclient-3.0.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-httpclient/commons-httpclient.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-httpclient/commons-httpclient/3.0/commons-httpclient-3.0.pom
+     [null] 	  -- artifact commons-httpclient#commons-httpclient;3.0!commons-httpclient.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-httpclient/commons-httpclient/3.0/commons-httpclient-3.0.jar
+     [null] 		module not found: oro#oro;2.0.8
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/oro/oro/ivys/ivy-2.0.8.xml
+     [null] 	  -- artifact oro#oro;2.0.8!oro.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/oro/oro/jars/oro-2.0.8.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/oro/ivy-2.0.8.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact oro#oro;2.0.8!oro.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/oro/oro-2.0.8.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/oro/oro.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/oro/oro/2.0.8/oro-2.0.8.pom
+     [null] 	  -- artifact oro#oro;2.0.8!oro.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/oro/oro/2.0.8/oro-2.0.8.jar
+     [null] 		module not found: commons-vfs#commons-vfs;1.0
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-vfs/commons-vfs/ivys/ivy-1.0.xml
+     [null] 	  -- artifact commons-vfs#commons-vfs;1.0!commons-vfs.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-vfs/commons-vfs/jars/commons-vfs-1.0.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-vfs/ivy-1.0.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact commons-vfs#commons-vfs;1.0!commons-vfs.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-vfs/commons-vfs-1.0.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-vfs/commons-vfs.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-vfs/commons-vfs/1.0/commons-vfs-1.0.pom
+     [null] 	  -- artifact commons-vfs#commons-vfs;1.0!commons-vfs.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-vfs/commons-vfs/1.0/commons-vfs-1.0.jar
+     [null] 		module not found: com.jcraft#jsch;0.1.50
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch/ivys/ivy-0.1.50.xml
+     [null] 	  -- artifact com.jcraft#jsch;0.1.50!jsch.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch/jars/jsch-0.1.50.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch/ivy-0.1.50.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact com.jcraft#jsch;0.1.50!jsch.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch/jsch-0.1.50.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch/jsch.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch/0.1.50/jsch-0.1.50.pom
+     [null] 	  -- artifact com.jcraft#jsch;0.1.50!jsch.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch/0.1.50/jsch-0.1.50.jar
+     [null] 		module not found: com.jcraft#jsch.agentproxy;0.0.6
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy/ivys/ivy-0.0.6.xml
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy;0.0.6!jsch.agentproxy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy/jars/jsch.agentproxy-0.0.6.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy/ivy-0.0.6.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy;0.0.6!jsch.agentproxy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy/jsch.agentproxy-0.0.6.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy/jsch.agentproxy.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy/0.0.6/jsch.agentproxy-0.0.6.pom
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy;0.0.6!jsch.agentproxy.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy/0.0.6/jsch.agentproxy-0.0.6.jar
+     [null] 		module not found: com.jcraft#jsch.agentproxy.connector-factory;0.0.6
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy.connector-factory/ivys/ivy-0.0.6.xml
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.connector-factory;0.0.6!jsch.agentproxy.connector-factory.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy.connector-factory/jars/jsch.agentproxy.connector-factory-0.0.6.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.connector-factory/ivy-0.0.6.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.connector-factory;0.0.6!jsch.agentproxy.connector-factory.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.connector-factory/jsch.agentproxy.connector-factory-0.0.6.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.connector-factory/jsch.agentproxy.connector-factory.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy.connector-factory/0.0.6/jsch.agentproxy.connector-factory-0.0.6.pom
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.connector-factory;0.0.6!jsch.agentproxy.connector-factory.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy.connector-factory/0.0.6/jsch.agentproxy.connector-factory-0.0.6.jar
+     [null] 		module not found: com.jcraft#jsch.agentproxy.jsch;0.0.6
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy.jsch/ivys/ivy-0.0.6.xml
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.jsch;0.0.6!jsch.agentproxy.jsch.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/com.jcraft/jsch.agentproxy.jsch/jars/jsch.agentproxy.jsch-0.0.6.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.jsch/ivy-0.0.6.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.jsch;0.0.6!jsch.agentproxy.jsch.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.jsch/jsch.agentproxy.jsch-0.0.6.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/jsch.agentproxy.jsch/jsch.agentproxy.jsch.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy.jsch/0.0.6/jsch.agentproxy.jsch-0.0.6.pom
+     [null] 	  -- artifact com.jcraft#jsch.agentproxy.jsch;0.0.6!jsch.agentproxy.jsch.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/com/jcraft/jsch.agentproxy.jsch/0.0.6/jsch.agentproxy.jsch-0.0.6.jar
+     [null] 		module not found: org.apache.ant#ant;1.7.1
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant/ivys/ivy-1.7.1.xml
+     [null] 	  -- artifact org.apache.ant#ant;1.7.1!ant.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant/jars/ant-1.7.1.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant/ivy-1.7.1.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.apache.ant#ant;1.7.1!ant.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant/ant-1.7.1.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant/ant.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant/1.7.1/ant-1.7.1.pom
+     [null] 	  -- artifact org.apache.ant#ant;1.7.1!ant.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant/1.7.1/ant-1.7.1.jar
+     [null] 		module not found: org.apache.ant#ant-nodeps;1.7.1
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-nodeps/ivys/ivy-1.7.1.xml
+     [null] 	  -- artifact org.apache.ant#ant-nodeps;1.7.1!ant-nodeps.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-nodeps/jars/ant-nodeps-1.7.1.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-nodeps/ivy-1.7.1.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.apache.ant#ant-nodeps;1.7.1!ant-nodeps.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-nodeps/ant-nodeps-1.7.1.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-nodeps/ant-nodeps.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-nodeps/1.7.1/ant-nodeps-1.7.1.pom
+     [null] 	  -- artifact org.apache.ant#ant-nodeps;1.7.1!ant-nodeps.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-nodeps/1.7.1/ant-nodeps-1.7.1.jar
+     [null] 		module not found: org.apache.ant#ant-trax;1.7.1
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-trax/ivys/ivy-1.7.1.xml
+     [null] 	  -- artifact org.apache.ant#ant-trax;1.7.1!ant-trax.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-trax/ivy-1.7.1.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.apache.ant#ant-trax;1.7.1!ant-trax.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-trax/ant-trax-1.7.1.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-trax/ant-trax.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-trax/1.7.1/ant-trax-1.7.1.pom
+     [null] 	  -- artifact org.apache.ant#ant-trax;1.7.1!ant-trax.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-trax/1.7.1/ant-trax-1.7.1.jar
+     [null] 		module not found: org.bouncycastle#bcpg-jdk15on;1.52
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.bouncycastle/bcpg-jdk15on/ivys/ivy-1.52.xml
+     [null] 	  -- artifact org.bouncycastle#bcpg-jdk15on;1.52!bcpg-jdk15on.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.bouncycastle/bcpg-jdk15on/jars/bcpg-jdk15on-1.52.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcpg-jdk15on/ivy-1.52.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.bouncycastle#bcpg-jdk15on;1.52!bcpg-jdk15on.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcpg-jdk15on/bcpg-jdk15on-1.52.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcpg-jdk15on/bcpg-jdk15on.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/bouncycastle/bcpg-jdk15on/1.52/bcpg-jdk15on-1.52.pom
+     [null] 	  -- artifact org.bouncycastle#bcpg-jdk15on;1.52!bcpg-jdk15on.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/bouncycastle/bcpg-jdk15on/1.52/bcpg-jdk15on-1.52.jar
+     [null] 		module not found: org.bouncycastle#bcprov-jdk15on;1.52
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.bouncycastle/bcprov-jdk15on/ivys/ivy-1.52.xml
+     [null] 	  -- artifact org.bouncycastle#bcprov-jdk15on;1.52!bcprov-jdk15on.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.bouncycastle/bcprov-jdk15on/jars/bcprov-jdk15on-1.52.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcprov-jdk15on/ivy-1.52.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.bouncycastle#bcprov-jdk15on;1.52!bcprov-jdk15on.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcprov-jdk15on/bcprov-jdk15on-1.52.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/bcprov-jdk15on/bcprov-jdk15on.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/bouncycastle/bcprov-jdk15on/1.52/bcprov-jdk15on-1.52.pom
+     [null] 	  -- artifact org.bouncycastle#bcprov-jdk15on;1.52!bcprov-jdk15on.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/bouncycastle/bcprov-jdk15on/1.52/bcprov-jdk15on-1.52.jar
+     [null] 		module not found: junit#junit;3.8.2
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/junit/junit/ivys/ivy-3.8.2.xml
+     [null] 	  -- artifact junit#junit;3.8.2!junit.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/junit/junit/jars/junit-3.8.2.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/junit/ivy-3.8.2.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact junit#junit;3.8.2!junit.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/junit/junit-3.8.2.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/junit/junit.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/junit/junit/3.8.2/junit-3.8.2.pom
+     [null] 	  -- artifact junit#junit;3.8.2!junit.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/junit/junit/3.8.2/junit-3.8.2.jar
+     [null] 		module not found: commons-lang#commons-lang;2.6
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-lang/commons-lang/ivys/ivy-2.6.xml
+     [null] 	  -- artifact commons-lang#commons-lang;2.6!commons-lang.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/commons-lang/commons-lang/jars/commons-lang-2.6.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-lang/ivy-2.6.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact commons-lang#commons-lang;2.6!commons-lang.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-lang/commons-lang-2.6.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/commons-lang/commons-lang.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-lang/commons-lang/2.6/commons-lang-2.6.pom
+     [null] 	  -- artifact commons-lang#commons-lang;2.6!commons-lang.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+     [null] 		module not found: org.apache.ant#ant-testutil;1.7.0
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-testutil/ivys/ivy-1.7.0.xml
+     [null] 	  -- artifact org.apache.ant#ant-testutil;1.7.0!ant-testutil.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org.apache.ant/ant-testutil/jars/ant-testutil-1.7.0.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-testutil/ivy-1.7.0.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact org.apache.ant#ant-testutil;1.7.0!ant-testutil.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-testutil/ant-testutil-1.7.0.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-testutil/ant-testutil.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-testutil/1.7.0/ant-testutil-1.7.0.pom
+     [null] 	  -- artifact org.apache.ant#ant-testutil;1.7.0!ant-testutil.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/ant/ant-testutil/1.7.0/ant-testutil-1.7.0.jar
+     [null] 		module not found: ant#ant-launcher;1.6.2
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/ant/ant-launcher/ivys/ivy-1.6.2.xml
+     [null] 	  -- artifact ant#ant-launcher;1.6.2!ant-launcher.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/ant/ant-launcher/jars/ant-launcher-1.6.2.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-launcher/ivy-1.6.2.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact ant#ant-launcher;1.6.2!ant-launcher.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-launcher/ant-launcher-1.6.2.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-launcher/ant-launcher.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ant/ant-launcher/1.6.2/ant-launcher-1.6.2.pom
+     [null] 	  -- artifact ant#ant-launcher;1.6.2!ant-launcher.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ant/ant-launcher/1.6.2/ant-launcher-1.6.2.jar
+     [null] 		module not found: ant-contrib#ant-contrib;1.0b3
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/ant-contrib/ant-contrib/ivys/ivy-1.0b3.xml
+     [null] 	  -- artifact ant-contrib#ant-contrib;1.0b3!ant-contrib.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/ant-contrib/ant-contrib/jars/ant-contrib-1.0b3.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-contrib/ivy-1.0b3.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact ant-contrib#ant-contrib;1.0b3!ant-contrib.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-contrib/ant-contrib-1.0b3.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/ant-contrib/ant-contrib.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.pom
+     [null] 	  -- artifact ant-contrib#ant-contrib;1.0b3!ant-contrib.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
+     [null] 		module not found: xmlunit#xmlunit;1.6
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xmlunit/xmlunit/ivys/ivy-1.6.xml
+     [null] 	  -- artifact xmlunit#xmlunit;1.6!xmlunit.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xmlunit/xmlunit/jars/xmlunit-1.6.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlunit/ivy-1.6.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact xmlunit#xmlunit;1.6!xmlunit.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlunit/xmlunit-1.6.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlunit/xmlunit.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xmlunit/xmlunit/1.6/xmlunit-1.6.pom
+     [null] 	  -- artifact xmlunit#xmlunit;1.6!xmlunit.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xmlunit/xmlunit/1.6/xmlunit-1.6.jar
+     [null] 		module not found: xerces#xercesImpl;2.6.2
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xerces/xercesImpl/ivys/ivy-2.6.2.xml
+     [null] 	  -- artifact xerces#xercesImpl;2.6.2!xercesImpl.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xerces/xercesImpl/jars/xercesImpl-2.6.2.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xercesImpl/ivy-2.6.2.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact xerces#xercesImpl;2.6.2!xercesImpl.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xercesImpl/xercesImpl-2.6.2.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xercesImpl/xercesImpl.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.pom
+     [null] 	  -- artifact xerces#xercesImpl;2.6.2!xercesImpl.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.jar
+     [null] 		module not found: xerces#xmlParserAPIs;2.6.2
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xerces/xmlParserAPIs/ivys/ivy-2.6.2.xml
+     [null] 	  -- artifact xerces#xmlParserAPIs;2.6.2!xmlParserAPIs.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xerces/xmlParserAPIs/jars/xmlParserAPIs-2.6.2.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlParserAPIs/ivy-2.6.2.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact xerces#xmlParserAPIs;2.6.2!xmlParserAPIs.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlParserAPIs/xmlParserAPIs-2.6.2.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/xmlParserAPIs/xmlParserAPIs.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.pom
+     [null] 	  -- artifact xerces#xmlParserAPIs;2.6.2!xmlParserAPIs.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		::          UNRESOLVED DEPENDENCIES         ::
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		:: commons-httpclient#commons-httpclient;3.0: not found
+     [null] 		:: oro#oro;2.0.8: not found
+     [null] 		:: commons-vfs#commons-vfs;1.0: not found
+     [null] 		:: com.jcraft#jsch;0.1.50: not found
+     [null] 		:: com.jcraft#jsch.agentproxy;0.0.6: not found
+     [null] 		:: com.jcraft#jsch.agentproxy.connector-factory;0.0.6: not found
+     [null] 		:: com.jcraft#jsch.agentproxy.jsch;0.0.6: not found
+     [null] 		:: org.apache.ant#ant;1.7.1: not found
+     [null] 		:: org.apache.ant#ant-nodeps;1.7.1: not found
+     [null] 		:: org.apache.ant#ant-trax;1.7.1: not found
+     [null] 		:: org.bouncycastle#bcpg-jdk15on;1.52: not found
+     [null] 		:: org.bouncycastle#bcprov-jdk15on;1.52: not found
+     [null] 		:: junit#junit;3.8.2: not found
+     [null] 		:: commons-lang#commons-lang;2.6: not found
+     [null] 		:: org.apache.ant#ant-testutil;1.7.0: not found
+     [null] 		:: ant#ant-launcher;1.6.2: not found
+     [null] 		:: ant-contrib#ant-contrib;1.0b3: not found
+     [null] 		:: xmlunit#xmlunit;1.6: not found
+     [null] 		:: xerces#xercesImpl;2.6.2: not found
+     [null] 		:: xerces#xmlParserAPIs;2.6.2: not found
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 
+     [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-latest;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;1.1 in 1
+     [null] 	[1.1] org1#mod1.2;1+
+     [null] 	found org6#mod6.1;2.0 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org6#mod6.1;2.0!mod6.1.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (0ms)
+     [null] :: resolution report :: resolve 39ms :: artifacts dl 4ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.2;1.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] Dependency tree for apache-resolve-latest
+     [null] +- org6#mod6.1;2.0
+     [null]    \- org1#mod1.2;2.2
+     [null] \- org1#mod1.2;2.2
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: apache#resolve-simple;1.0
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 9ms :: artifacts dl 4ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] Dependency tree for apache-resolve-simple
+     [null] \- org1#mod1.2;2.0
+------------- ---------------- ---------------
+
+Testcase: testWithResolveId took 0.459 sec
+Testcase: testShowEvictedModule took 0.087 sec
+Testcase: testWithResolveIdWithoutResolve took 0.147 sec
+Testcase: testWithEvictedModule took 0.073 sec
+Testcase: testSimple took 0.032 sec

@@ -1,0 +1,91 @@
+Testsuite: org.apache.ivy.plugins.conflict.StrictConflictManagerTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.465 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+
+:: problems summary ::
+:::: ERRORS
+	org1#mod1.2;2.0.0 (needed by [apache#resolve-noconflict;1.0]) conflicts with org1#mod1.2;2.1.0 (needed by [apache#resolve-noconflict;1.0])
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+	found org1#mod1.2;2.0 in test
+	found org2#mod2.2;0.5 in test
+	found org1#mod1.3;3.0 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.5.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.2;0.5!mod2.2.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-B-3.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.3;3.0!mod1.3-B.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-A-3.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.3;3.0!mod1.3-A.jar (2ms)
+:: resolution report :: resolve 72ms :: artifacts dl 11ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   1   |   0   ||   4   |   4   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+	found org1#mod1.2;2.0 in test
+	[2.0] org1#mod1.2;[2.0,2.1[
+	found org2#mod2.1;0.3 in test
+	found org1#mod1.1;1.0 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21A-0.3.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.1;0.3!art21A.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21B-0.3.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org2#mod2.1;0.3!art21B.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+:: resolution report :: resolve 40ms :: artifacts dl 8ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   2   |   0   ||   4   |   4   |
+	---------------------------------------------------------------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-strict-test.xml)
+:: resolving dependencies :: apache#resolve-noconflict;1.0
+	confs: [default]
+	found org1#mod1.2;2.2 in test
+	[2.2] org1#mod1.2;2.+
+	found org2#mod2.1;0.3 in test
+	found org1#mod1.1;1.0 in test
+
+:: problems summary ::
+:::: ERRORS
+	org1#mod1.2;2.0 (needed by [org1#mod1.1;1.0]) conflicts with org1#mod1.2;2.2 (needed by [apache#resolve-noconflict;1.0])
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+------------- ---------------- ---------------
+
+Testcase: testConflictResolve took 0.236 sec
+Testcase: testInitFromConf took 0.013 sec
+Testcase: testNoConflictResolve took 0.101 sec
+Testcase: testNoConflictWithDynamicRevisionResolve took 0.064 sec
+Testcase: testConflictWithDynamicRevisionResolve took 0.039 sec

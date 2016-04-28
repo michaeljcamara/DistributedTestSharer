@@ -1,0 +1,4 @@
+Testsuite: org.apache.ivy.plugins.namespace.NameSpaceHelperTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.019 sec
+
+Testcase: testTransformArtifactWithExtraAttributes took 0.013 sec

@@ -1,0 +1,9 @@
+Testsuite: org.apache.ivy.util.url.ApacheURLListerTest
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.112 sec
+
+Testcase: testRetrieveListing took 0.089 sec
+Testcase: testRetrieveListingWithSpaces took 0.002 sec
+Testcase: testRetrieveArtifactoryListing took 0.004 sec
+Testcase: testRetrieveArchivaListing took 0.001 sec
+Testcase: testRetrieveFixedArchivaListing took 0.002 sec
+Testcase: testRetrieveMavenProxyListing took 0.002 sec

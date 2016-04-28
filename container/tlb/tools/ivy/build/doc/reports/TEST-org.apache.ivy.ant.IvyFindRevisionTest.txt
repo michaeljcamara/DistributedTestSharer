@@ -1,0 +1,12 @@
+Testsuite: org.apache.ivy.ant.IvyFindRevisionTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testProperty took 0.305 sec
+Testcase: testLatest took 0.03 sec
+Testcase: testLatestSubversion took 0.028 sec

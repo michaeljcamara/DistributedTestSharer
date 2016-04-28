@@ -1,0 +1,15 @@
+Testsuite: org.apache.ivy.plugins.version.LatestVersionMatcherTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.311 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testAcceptForStandardStatus took 0.213 sec
+Testcase: testAcceptForSameBranches took 0.028 sec
+Testcase: testAcceptForDifferentBranches took 0.022 sec
+Testcase: testNeedModuleDescriptorCustomStatus took 0.023 sec
+Testcase: testNeedModuleDescriptorStandardStatus took 0.014 sec

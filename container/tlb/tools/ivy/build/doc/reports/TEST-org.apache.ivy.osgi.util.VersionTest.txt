@@ -1,0 +1,5 @@
+Testsuite: org.apache.ivy.osgi.util.VersionTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.014 sec
+
+Testcase: testCompareTo took 0.004 sec
+Testcase: testParsing took 0 sec

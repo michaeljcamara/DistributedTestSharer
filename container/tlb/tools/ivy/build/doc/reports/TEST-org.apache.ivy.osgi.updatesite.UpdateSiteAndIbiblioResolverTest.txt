@@ -1,0 +1,17 @@
+Testsuite: org.apache.ivy.osgi.updatesite.UpdateSiteAndIbiblioResolverTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.357 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testArtifactRef took 1.347 sec

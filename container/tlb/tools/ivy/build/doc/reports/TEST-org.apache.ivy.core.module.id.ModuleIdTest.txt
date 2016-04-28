@@ -1,0 +1,19 @@
+Testsuite: org.apache.ivy.core.module.id.ModuleIdTest
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.014 sec
+------------- Standard Output ---------------
+apache#some-new-module
+apache#the-new-module
+apache#some-new-module
+apache#the-new-module
+------------- ---------------- ---------------
+
+Testcase: testEqualsObjectFalse took 0.002 sec
+Testcase: testCompareToEqual took 0.001 sec
+Testcase: testCompareToNullObject took 0 sec
+Testcase: testCompareToLessThan took 0.001 sec
+Testcase: testEncodeToString took 0 sec
+Testcase: testDecode took 0.001 sec
+Testcase: testCompareToGreatherThan took 0 sec
+Testcase: testModuleId took 0.001 sec
+Testcase: testModuleIdIllegalArgumentException took 0 sec
+Testcase: testEqualsObjectTrue took 0 sec

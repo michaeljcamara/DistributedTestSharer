@@ -1,0 +1,458 @@
+Testsuite: org.apache.ivy.ant.IvyInstallTest
+Tests run: 15, Failures: 0, Errors: 0, Time elapsed: 1.676 sec
+------------- Standard Output ---------------
+     [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/ivysettings.xml
+     [null] :: installing org1#mod1;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org1#mod1;1.0 in default
+     [null] 	found org1#mod2;1.0 in default
+     [null] 	found org1#mod3;1.0 in default
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod1/sources/mod1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1;1.0!mod1.jar(source) (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod1/jars/mod1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1;1.0!mod1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod2/jars/mod2-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod2;1.0!mod2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod3/jars/mod3-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod3;1.0!mod3.jar (2ms)
+     [null] :: installing in install ::
+     [null] 	published mod1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1/sources/mod1-1.0.jar
+     [null] 	published mod1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1/jars/mod1-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1/ivys/ivy-1.0.xml
+     [null] 	published mod2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod2/jars/mod2-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod2/ivys/ivy-1.0.xml
+     [null] 	published mod3 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod3/jars/mod3-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod3/ivys/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 13ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   3   |   0   ||   4   |   4   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-IVY843.xml
+     [null] :: installing org1#mod1.4;1.0.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org1#mod1.4;1.0.1 in 1
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install ::
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] :: installing org1#mod1.4;1.0.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org1#mod1.4;1.0.1 in install
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install2 ::
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install2/org1/mod1.4/ivy-1.0.1.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-dummydefaultresolver.xml
+     [null] :: installing org8#mod8.1;1.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org8#mod8.1;1.1 in 2-ivy
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/mod8.1/a-private-1.1.txt ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org8#mod8.1;1.1!a-private.txt (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/mod8.1/a-1.1.txt ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org8#mod8.1;1.1!a.txt (2ms)
+     [null] :: installing in install ::
+     [null] 	published a-private to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/a-private-1.1.txt
+     [null] 	published a to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/a-1.1.txt
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/ivy-1.1.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 6ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/branches/ivysettings.xml
+     [null] :: installing foo#foo1#branch1;2 ::
+     [null] :: resolving dependencies ::
+     [null] 	found foo#foo1#branch1;2 in default
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/branches/foo/foo1/branch1/2/foo1.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] foo#foo1#branch1;2!foo1.jar (1ms)
+     [null] :: installing in install ::
+     [null] 	published foo1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/foo/foo1/branch1/foo1-2.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/foo/foo1/branch1/ivy-2.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-dummydefaultresolver.xml
+     [null] :: installing org1#mod1.4;1.0.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org1#mod1.4;1.0.1 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] 	found org1#mod1.1;2.0 in 1
+     [null] 	[2.0] org1#mod1.1;latest.integration
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (2ms)
+     [null] :: installing in install ::
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
+     [null] 	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
+     [null] 	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 5ms
+     [null] 	:: evicted modules:
+     [null] 	org1#mod1.2;2.1 by [org1#mod1.2;2.2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   3   |   2   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-dummydefaultresolver.xml
+     [null] :: installing org8#mod8.1;1.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org8#mod8.1;1.1 in 2-ivy
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/mod8.1/a-private-1.1.txt ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org8#mod8.1;1.1!a-private.txt (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/mod8.1/a-1.1.txt ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org8#mod8.1;1.1!a.txt (3ms)
+     [null] :: installing in install ::
+     [null] 	published a-private to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/a-private-1.1.txt
+     [null] 	published a to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/a-1.1.txt
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/ivy-1.1.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 6ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/ivysettings.xml
+     [null] :: installing org1#mod1;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org1#mod1;1.0 in default
+     [null] 	found org1#mod2;1.0 in default
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod1/jars/mod1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1;1.0!mod1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1313/repo/org1/mod2/jars/mod2-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod2;1.0!mod2.jar (4ms)
+     [null] :: installing in install ::
+     [null] 	published mod1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1/jars/mod1-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1/ivys/ivy-1.0.xml
+     [null] 	published mod2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod2/jars/mod2-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod2/ivys/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml)
+     [null] :: installing org.apache#test-sources;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org.apache#test-sources;1.0 in m2
+     [null] :: downloading artifacts to cache ::
+     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/test-sources/1.0/test-sources-1.0-sources.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org.apache#test-sources;1.0!test-sources.jar(source) (2ms)
+     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/test-sources/1.0/test-sources-1.0-javadoc.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org.apache#test-sources;1.0!test-sources.jar(javadoc) (3ms)
+     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/test-sources/1.0/test-sources-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org.apache#test-sources;1.0!test-sources.jar (2ms)
+     [null] :: installing in IVY-1324 ::
+     [null] 	published test-sources to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test-sources/test-sources-1.0-sources.jar
+     [null] 	published test-sources to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test-sources/test-sources-1.0-javadoc.jar
+     [null] 	published test-sources to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test-sources/test-sources-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test-sources/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 10ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: installing xxx#yyy;zzz ::
+     [null] :: resolving dependencies ::
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in 1 ::
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] 
+     [null] :: problems summary ::
+     [null] :::: WARNINGS
+     [null] 		module not found: xxx#yyy;zzz
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xxx/yyy/ivys/ivy-zzz.xml
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xxx/yyy/jars/yyy-zzz.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/ivy-zzz.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/yyy-zzz.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/yyy.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xxx/yyy/zzz/yyy-zzz.pom
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xxx/yyy/zzz/yyy-zzz.jar
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		::          UNRESOLVED DEPENDENCIES         ::
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		:: xxx#yyy;zzz: not found
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 
+     [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-dummydefaultresolver.xml
+     [null] :: installing org8#mod8.1;1.1 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org8#mod8.1;1.1 in 2-ivy
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install ::
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org8/mod8.1/ivy-1.1.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 1ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: installing org.apache#test;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org.apache#test;1.0 in m2
+     [null] :: downloading artifacts to cache ::
+     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/test/1.0/test-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org.apache#test;1.0!test.jar (2ms)
+     [null] :: installing in install ::
+     [null] 	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: installing org.apache#test;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found org.apache#test;1.0 in test
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install ::
+     [null] 	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
+     [null] 	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.pom
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 1ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml)
+     [null] :: installing systemorg#systemmod2;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] 	found systemorg#systemmod2;1.0 in ns
+     [null] 	found systemorg#systemmod;1.0 in ns
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/B/1.0/B.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg#systemmod2;1.0!B.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/A/1.0/A.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg#systemmod;1.0!A.jar (3ms)
+     [null] :: installing in install ::
+     [null] 	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod2/B-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod2/ivy-1.0.xml
+     [null] 	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod/A-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml)
+     [null] :: installing A#B;1.0 ::
+     [null] :: resolving dependencies ::
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install ::
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] 
+     [null] :: problems summary ::
+     [null] :::: WARNINGS
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		::          UNRESOLVED DEPENDENCIES         ::
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		:: A#B;1.0: java.text.ParseException: inconsistent module descriptor file found in '/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/B/1.0/ivy.xml': bad organisation: expected='A' found='systemorg'; bad module name: expected='B' found='systemmod2'; 
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] :::: ERRORS
+     [null] 		ns: bad organisation found in /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/B/1.0/ivy.xml: expected='A' found='systemorg'
+     [null] 		ns: bad module name found in /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/B/1.0/ivy.xml: expected='B found='systemmod2'
+     [null] 
+     [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/ivysettings.xml)
+     [null] :: installing *#*;* ::
+     [null] 	found systemorg#systemmod;1.0 to install: adding to the list
+     [null] 	found systemorg#systemmod2;1.0 to install: adding to the list
+     [null] 	found systemorg3#systemmod3;1.0 to install: adding to the list
+     [null] 	found systemorg2#system-1;1.0 to install: adding to the list
+     [null] 	found systemorg2#system-2;1.0 to install: adding to the list
+     [null] :: resolving dependencies ::
+     [null] 	found systemorg#systemmod;1.0 in ns
+     [null] 	found systemorg#systemmod2;1.0 in ns
+     [null] 	found systemorg3#systemmod3;1.0 in ns
+     [null] 	found systemorg2#system-1;1.0 in ns
+     [null] 	found systemorg2#system-2;1.0 in ns
+     [null] :: downloading artifacts to cache ::
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/A/1.0/A.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg#systemmod;1.0!A.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/A/B/1.0/B.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg#systemmod2;1.0!B.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/B/1/1.0/1.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg2#system-1;1.0!1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/namespace/B/2/1.0/2.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] systemorg2#system-2;1.0!2.jar (2ms)
+     [null] :: installing in install ::
+     [null] 	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod/A-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod/ivy-1.0.xml
+     [null] 	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod2/B-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg/systemmod2/ivy-1.0.xml
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg3/systemmod3/ivy-1.0.xml
+     [null] 	published 1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg2/system-1/1-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg2/system-1/ivy-1.0.xml
+     [null] 	published 2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg2/system-2/2-1.0.jar
+     [null] 	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/systemorg2/system-2/ivy-1.0.xml
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 10ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   5   |   5   |   0   ||   4   |   4   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: installing xxx#yyy;zzz ::
+     [null] :: resolving dependencies ::
+     [null] :: downloading artifacts to cache ::
+     [null] :: installing in install ::
+     [null] :: install resolution report ::
+     [null] :: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+     [null] 
+     [null] :: problems summary ::
+     [null] :::: WARNINGS
+     [null] 		module not found: xxx#yyy;zzz
+     [null] 	==== 1: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xxx/yyy/ivys/ivy-zzz.xml
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/xxx/yyy/jars/yyy-zzz.jar
+     [null] 	==== 2-ivy: tried
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/ivy-zzz.xml
+     [null] 	==== 2-artifact: tried
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/yyy-zzz.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/yyy/yyy.jar
+     [null] 	==== m2: tried
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xxx/yyy/zzz/yyy-zzz.pom
+     [null] 	  -- artifact xxx#yyy;zzz!yyy.jar:
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/xxx/yyy/zzz/yyy-zzz.jar
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		::          UNRESOLVED DEPENDENCIES         ::
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 		:: xxx#yyy;zzz: not found
+     [null] 		::::::::::::::::::::::::::::::::::::::::::::::
+     [null] 
+     [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+------------- ---------------- ---------------
+
+Testcase: testInstallWithConfsDefaultSettings took 0.582 sec
+Testcase: testIVY843 took 0.097 sec
+Testcase: testInstallWithMultipleType took 0.088 sec
+Testcase: testInstallWithBranch took 0.045 sec
+Testcase: testInstallDummyDefault took 0.086 sec
+Testcase: testInstallWithAnyType took 0.052 sec
+Testcase: testInstallWithConfsRuntimeOnly took 0.077 sec
+Testcase: testInstallWithClassifiers took 0.145 sec
+Testcase: testDependencyNotFoundSuccess took 0.015 sec
+Testcase: testInstallWithUnusedType took 0.043 sec
+Testcase: testInstallWithOriginalMetadata took 0.061 sec
+Testcase: testInstallWithNamespace took 0.125 sec
+Testcase: testInstallWithNamespace2 took 0.03 sec
+Testcase: testInstallWithNamespace3 took 0.199 sec
+Testcase: testDependencyNotFoundFailure took 0.013 sec

@@ -1,0 +1,16 @@
+Testsuite: org.apache.ivy.plugins.report.XmlReportParserTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
+------------- Standard Output ---------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: resolving dependencies :: org1#mod1;1.0
+	confs: [default]
+:: resolution report :: resolve 34ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   0   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+------------- ---------------- ---------------
+
+Testcase: testGetResolvedModule took 0.311 sec

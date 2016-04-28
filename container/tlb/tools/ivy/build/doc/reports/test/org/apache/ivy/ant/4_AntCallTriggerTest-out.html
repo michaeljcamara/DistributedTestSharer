@@ -1,0 +1,50 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from AntCallTriggerTest</title>
+</head>
+<body>
+<pre>
+resolve:
+[ivy:configure] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
+[ivy:configure] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/ivysettings.xml
+[ivy:configure] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/ivysettings.xml)
+[ivy:resolve] :: resolving dependencies :: apache#A;working@Coltons-MacBook-Pro.local
+[ivy:resolve] 	confs: [default]
+[ivy:resolve] 	found apache#foo;1.0 in local
+[ivy:resolve] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/local/foo/foo.jar ...
+[ivy:resolve] .. (0kB)
+[ivy:resolve] 	[SUCCESSFUL ] apache#foo;1.0!foo.jar (2ms)
+[ivy:resolve] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/local/foo/foo.zip ...
+[ivy:resolve] .. (0kB)
+
+unzip:
+     [echo] 
+     [echo] 			unzipping artifact: 
+     [echo] 			organisation=apache 
+     [echo] 			module=foo 
+     [echo] 			revision=1.0
+     [echo] 			artifact=foo
+     [echo] 			type=zip
+     [echo] 			ext=zip
+     [echo] 			origin=/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/local/foo/foo.zip
+     [echo] 			local=true
+     [echo] 			size=127
+     [echo] 			file=/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/cache/apache/foo/zips/foo-1.0.zip
+     [echo] 		
+    [mkdir] Created dir: /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/A/out
+    [unzip] Expanding: /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/cache/apache/foo/zips/foo-1.0.zip into /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-call/A/out
+[ivy:resolve] 	[SUCCESSFUL ] apache#foo;1.0!foo.zip (3ms)
+[ivy:resolve] :: resolution report :: resolve 85ms :: artifacts dl 48ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+</pre>
+</body>
+</html>

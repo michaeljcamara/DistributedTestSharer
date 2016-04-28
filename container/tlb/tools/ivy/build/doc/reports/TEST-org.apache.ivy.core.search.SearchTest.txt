@@ -1,0 +1,13 @@
+Testsuite: org.apache.ivy.core.search.SearchTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.236 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml)
+:: loading settings :: file = test/repositories/IVY-1128/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/ivysettings.xml)
+------------- ---------------- ---------------
+
+Testcase: testListInMavenRepo2 took 0.185 sec
+Testcase: testListModulesWithExtraAttributes took 0.032 sec
+Testcase: testListInMavenRepo took 0.012 sec

@@ -1,0 +1,80 @@
+Testsuite: org.apache.ivy.plugins.resolver.FileSystemResolverTest
+Tests run: 25, Failures: 0, Errors: 0, Time elapsed: 1.145 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (19ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/allright/allright-1.0.jar ...
+	[SUCCESSFUL ] test#allright;1.0!allright.jar (4ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/allright/allright-IVY-1155-1.0.jar ...
+	[SUCCESSFUL ] test#allright;1.0!allright-IVY-1155.jar (5ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/allright/allright-with-path-1.0.jar ...
+	[SUCCESSFUL ] test#allright;1.0!allright-with-path.jar (3ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/allright/allright-with-openssl-1.0.jar ...
+	[SUCCESSFUL ] test#allright;1.0!allright-with-openssl.jar (4ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/badivycs/badivycs-1.0.jar ...
+	[SUCCESSFUL ] test#badivycs;1.0!badivycs.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/badartcs/badartcs-1.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checksums/badartcs/badartcs-1.0.jar ...
+	[SUCCESSFUL ] test#badartcs;1.0!badartcs.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/norevision/mod1.1.jar ...
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/norevision/mod1.1.jar ...
+	[SUCCESSFUL ] org1#mod1.1;1.1!mod1.1.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checkmodified/mod1.1-1.0.jar ...
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/checkmodified/mod1.1-1.0.jar ...
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (1ms)
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/mytypes/myartifact-myrevision.myext
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision/myartifact-myrevision.myext
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/myartifact-myrevision.myext
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part 
+		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/mybranch/myrevision.part/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/mybranch/myrevision.part/myartifact-myrevision.myext
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/mybranch/myrevision.part 
+		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/mybranch/myrevision
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/ivy/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/mytype/myartifact-myrevision.myext
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part 
+		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/mymodule/myrevision.part/ivy-myrevision.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/mymodule/myrevision.part/myartifact-myrevision.myext
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/mymodule/myrevision.part 
+		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/mymodule/myrevision
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part/myartifact-myrevision.myext
+	publish aborted: deleted /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision.part
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision/ivy.xml
+	published myartifact to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/myorg/mymodule/myrevision/myartifact-myrevision.myext
+------------- ---------------- ---------------
+
+Testcase: testFixedRevision took 0.427 sec
+Testcase: testFindIvyFileRefWithMultipleIvyPatterns took 0.007 sec
+Testcase: testMaven2 took 0.018 sec
+Testcase: testChecksum took 0.174 sec
+Testcase: testCheckModified took 0.076 sec
+Testcase: testNoRevision took 0.058 sec
+Testcase: testChanging took 0.05 sec
+Testcase: testLatestTime took 0.031 sec
+Testcase: testLatestRevision took 0.032 sec
+Testcase: testRelativePath took 0.025 sec
+Testcase: testFormattedLatestTime took 0.017 sec
+Testcase: testFormattedLatestRevision took 0.026 sec
+Testcase: testPublish took 0.004 sec
+Testcase: testPublishOverwrite took 0.004 sec
+Testcase: testPublishTransaction took 0.004 sec
+Testcase: testPublishTransactionWithBranch took 0.005 sec
+Testcase: testPublishTransactionWithSubDirectories took 0.005 sec
+Testcase: testPublishTransactionWithDottedOrganisation took 0.004 sec
+Testcase: testAbortTransaction took 0.004 sec
+Testcase: testUnsupportedTransaction took 0.002 sec
+Testcase: testUnsupportedTransaction2 took 0.001 sec
+Testcase: testUnsupportedTransaction3 took 0.001 sec
+Testcase: testDisableTransaction took 0.004 sec
+Testcase: testListing took 0.034 sec
+Testcase: testDownloadWithUseOriginIsTrue took 0.112 sec

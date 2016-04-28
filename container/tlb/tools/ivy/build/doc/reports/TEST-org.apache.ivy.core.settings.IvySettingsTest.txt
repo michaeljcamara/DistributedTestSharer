@@ -1,0 +1,9 @@
+Testsuite: org.apache.ivy.core.settings.IvySettingsTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.228 sec
+------------- Standard Output ---------------
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+------------- ---------------- ---------------
+
+Testcase: testChangeDefaultResolver took 0.193 sec
+Testcase: testVariables took 0.023 sec

@@ -1,0 +1,43 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from XmlModuleUpdaterTest</title>
+</head>
+<body>
+<pre>:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+--&gt;
+&lt;ivy-module version="1.0"&gt;
+	&lt;info organisation="myorg" module="mymodule" revision="mynewrev" status="release" publication="20160423120804"&gt;
+	       &lt;!-- &lt;extends organisation="myorg" module="myparent" revision="myrev" location="test-extends-parent.xml" extendType="dependencies"/&gt; --&gt;
+	&lt;/info&gt;
+	&lt;dependencies&gt;
+		&lt;dependency name="mymodule2" rev="2.0" conf="default"/&gt;
+		
+		&lt;!-- dependencies inherited from myorg#myparent;myrev --&gt;
+		&lt;dependency org="myorg" name="mymodule1" rev="1.0" conf="default-&gt;default"/&gt;
+		
+		&lt;exclude org="myorg" module="mymodule3"/&gt;
+	&lt;/dependencies&gt;
+&lt;/ivy-module&gt;
+
+</pre>
+</body>
+</html>

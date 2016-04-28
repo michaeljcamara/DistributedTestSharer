@@ -1,0 +1,30 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from ManifestHeaderTest</title>
+</head>
+<body>
+<pre>Empty parameter value
+   value1=
+         ^
+Early end of a parameter
+   value1;version=1;value2
+                         ^
+Empty parameter value
+   value1;version=
+                 ^
+Expecting '='
+   value1;version:
+                 ^
+Empty parameter value
+   value1;version:=
+                  ^
+Empty parameter name
+   value1;=1
+          ^
+Expecting the end of a parameter value
+   value1;att=''value
+                ^
+</pre>
+</body>
+</html>

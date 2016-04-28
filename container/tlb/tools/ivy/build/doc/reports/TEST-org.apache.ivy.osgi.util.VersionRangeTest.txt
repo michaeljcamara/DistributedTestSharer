@@ -1,0 +1,5 @@
+Testsuite: org.apache.ivy.osgi.util.VersionRangeTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.015 sec
+
+Testcase: testContains took 0.005 sec
+Testcase: testParse took 0 sec

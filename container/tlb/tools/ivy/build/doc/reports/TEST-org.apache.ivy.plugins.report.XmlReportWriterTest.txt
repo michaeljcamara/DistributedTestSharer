@@ -1,0 +1,47 @@
+Testsuite: org.apache.ivy.plugins.report.XmlReportWriterTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.602 sec
+------------- Standard Output ---------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: resolving dependencies :: spécial#accünt;1.0
+	confs: [default]
+	found org1#mod1.2;2.0 in 1
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+. (0kB)
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (4ms)
+:: resolution report :: resolve 62ms :: artifacts dl 8ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: loading settings :: file = test/repositories/IVY-635/ivysettings.xml
+:: resolving dependencies :: apache#ivy-635;working@Coltons-MacBook-Pro.local
+	confs: [default]
+	found apache#mod1;1.0 in myresolver
+downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-635/mod1/art1&_.txt ...
+. (0kB)
+	[SUCCESSFUL ] apache#mod1;1.0!art1&_.txt(jar) (2ms)
+:: resolution report :: resolve 43ms :: artifacts dl 4ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: resolving dependencies :: org1#mod1;1.0
+	confs: [default]
+:: resolution report :: resolve 3ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   0   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+------------- ---------------- ---------------
+
+Testcase: testWriteOrigin took 0.454 sec
+Testcase: testEscapeXml took 0.113 sec
+Testcase: testWriteModuleInfo took 0.025 sec

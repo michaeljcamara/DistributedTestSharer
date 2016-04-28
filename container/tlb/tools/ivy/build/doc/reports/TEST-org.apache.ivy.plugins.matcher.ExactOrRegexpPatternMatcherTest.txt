@@ -1,0 +1,10 @@
+Testsuite: org.apache.ivy.plugins.matcher.ExactOrRegexpPatternMatcherTest
+Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0.197 sec
+
+Testcase: testImplementation took 0.008 sec
+Testcase: testAnyExpression took 0.001 sec
+Testcase: testIsExact took 0.001 sec
+Testcase: testNullExpression took 0.001 sec
+Testcase: testLoadTestMatches took 0.06 sec
+Testcase: testNullInput took 0 sec
+Testcase: testLoadTestGetMatcher took 0.108 sec

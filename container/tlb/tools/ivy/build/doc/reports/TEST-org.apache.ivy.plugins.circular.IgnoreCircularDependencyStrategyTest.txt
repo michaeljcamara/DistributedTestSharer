@@ -1,0 +1,5 @@
+Testsuite: org.apache.ivy.plugins.circular.IgnoreCircularDependencyStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.032 sec
+
+Testcase: testRemoveDuplicates took 0.021 sec
+Testcase: testLog took 0 sec
