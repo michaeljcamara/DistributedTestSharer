@@ -21,33 +21,27 @@ import delegator.SimpleClassLoader;
 
 public class CustomServer extends UnicastRemoteObject implements CustomServerInterface {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3247691930817118343L;
-
 	private static String host, ftpClassDir, ftpJarDir, ftpRootDir, userName, userPassword;
-
 	private static int registryPort, ftpServerPort;
-
 	private static FTPClient client;
-
-	protected CustomServer() throws RemoteException {
-		super();
-	}
 
 	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
 
+		// Immediately set the default class path to a new CustomClassLoader
 		System.setProperty("java.system.class.loader", "server.CustomClassLoader");
 
-		// host = "192.168.0.103";
+		// Get the IP address for the delegator from the command line
 		host = args[0];
 
+		// Some nodes may need to assign their own rmi server hostname with their
+		// ip address to allow communication with Delegator
 		if (args.length > 1) {
 			String thisRMIhost = args[1];
 			System.setProperty("java.rmi.server.hostname", thisRMIhost);
 		}
 
+		// Initialize various vars
 		System.out.println("Using host address: " + host);
 		registryPort = 12345;
 		ftpServerPort = 12346;
@@ -57,41 +51,52 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		userName = "user";
 		userPassword = "user";
 
+		// Set a very permissive RMI policy
 		System.setProperty("java.security.policy", "rmi.policy");
-		// System.setProperty("java.rmi.server.disableHttp", "false");
 
+		// Retrieve a remote reference to the Delegator stored in the registry
 		DelegatorInterface delegator = (DelegatorInterface) Naming.lookup("//" + host + ":" + registryPort + "/Delegator");
-		// DelegatorInterface delegator = (DelegatorInterface) registry.lookup("Delegator");
-		CustomServer server = new CustomServer();
 
+		// PING the delegator to ensure patent communication
 		System.out.println(delegator.ping());
+
+		// Bind an instance of a CustomServer to the Delegator's registry
+		CustomServer server = new CustomServer();
 		delegator.rebindServer((CustomServerInterface) server);
-		// delegator.rebindServer(server);
 	}
 
+	protected CustomServer() throws RemoteException {
+		super();
+	}
+
+	/** Update this server's CustomClassLoader to points to the files on the Delegator,
+	 * accessed through its FTP server
+	 */
 	public void updateClassLoader() {
 
 		System.out.println("BEGIN UPDATECLASSLOADER");
 		try {
+			// Use the Apache Commons Net library to facilitate FTP communication
 			client = new FTPClient();
 			client.connect(host, ftpServerPort);
 			client.login(userName, userPassword);
 			client.setKeepAlive(true);
 
+			// Set classpath to the class directory for the resources on the Delegator
 			CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpClassDir));
-			System.out.println(ftpJarDir);
 
+			// Set classpath to each jar file for the resources on the Delegator
 			FTPFile[] jarFiles = client.listFiles(ftpJarDir);
-
 			for (int i = 0; i < jarFiles.length; i++) {
 				CustomClassLoader.addURLToSystemClassLoader(new URL("ftp://" + userName + ":" + userPassword + "@" + host + ":" + ftpServerPort + "/" + ftpJarDir + jarFiles[i].getName()));
 			}
 
+			// Add any supplemental configuration files needed to run subsequent tests
+			// (located immediately in the ftpserver/ directory on the Delegator node)
 			FTPFile[] files = client.listFiles();
-
 			for (int i = 0; i < files.length; i++) {
-				FTPFile file = files[i];
 
+				FTPFile file = files[i];
 				if (!file.getName().equals("resources")) {
 					createResources(file, "");
 				}
@@ -103,11 +108,14 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		System.out.println("END UPDATECLASSLOADER");
 	}
 
+	/** This method will recursively go through the home directory from the FTP server
+	 * and retrieve and recreate the directory structure for all files (NOT in the main
+	 * resources directory; ie only supplemental, non-class files needed to execute the
+	 * given test cases)
+	 */
 	private void createResources(FTPFile file, String parentDir) {
 		try {
-			String currentDir = System.getProperty("user.dir");
 			if (file.isDirectory()) {
-				// File targetFile = new File(currentDir + "/" + parentDir + file.getName() + "/");
 				File targetFile = new File(parentDir + file.getName() + "/");
 				targetFile.mkdir();
 				for (FTPFile subDir : client.listFiles(file.getName())) {
@@ -115,11 +123,7 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 				}
 			}
 			else {
-
-				// boolean done = client.retrieveFile(parentDir + file.getName(), new
-				// FileOutputStream(currentDir + "/" + parentDir + file.getName()));
-				boolean done = client.retrieveFile(parentDir + file.getName(), new FileOutputStream(parentDir + file.getName()));
-				// System.out.println("Done?: " + done);
+				client.retrieveFile(parentDir + file.getName(), new FileOutputStream(parentDir + file.getName()));
 			}
 
 		} catch (IOException e) {
@@ -127,31 +131,13 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		}
 	}
 
-	public String ping() throws RemoteException {
-		return "==========PING FROM SERVER==============";
-	}
-
+	/** Execute the test case (formatted as a Class object) retrieved from the Delegator */
 	public Result runTest(Class testClass) {
 
 		System.out.println("**Running test: " + testClass.getName());
-
 		try {
-
+			// Run the test case using JUnit, storing and sending the result back to the Delegator
 			Result result = JUnitCore.runClasses(testClass);
-
-			// Indicate overall results of testing
-			// System.out.println("Total tests run: " + result.getRunCount());
-			// System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-			// System.out.println("Number of failures: " + result.getFailureCount());
-			//
-			// // List all failures that have been generated
-			// for (Failure failure : result.getFailures()) {
-			// System.out.println("EXCEPTION" + failure.getException());
-			// System.out.println("TRACE: " + failure.getTrace());
-			// System.out.println("MESSAGE: " + failure.getMessage());
-			// System.out.println("HEADER: " + failure.getTestHeader());
-			// System.out.println("DESCRIPTION: " + failure.getDescription());
-			// }
 
 			return result;
 		} catch (Exception e) {
@@ -160,34 +146,21 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 		}
 	}
 
+	/** Execute the test case (formatted as a File object) retrieved from the Delegator */
 	public Result runTest(File testFile) {
 
 		System.out.println("**Running test: " + testFile.getName());
 
 		try {
+			// Convert the File to bytes, and then to a Class object
 			FileInputStream in = new FileInputStream(testFile);
 			byte[] classBytes = new byte[(int) testFile.length()];
 			in.read(classBytes);
-
 			SimpleClassLoader loader = new SimpleClassLoader();
 			Class convertedClass = loader.convertToClass(classBytes);
-			System.out.println("ConvertedClass: " + convertedClass);
 
+			// Run the test case using JUnit, storing and sending the result back to the Delegator
 			Result result = JUnitCore.runClasses(convertedClass);
-
-			// Indicate overall results of testing
-			// System.out.println("Total tests run: " + result.getRunCount());
-			// System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-			// System.out.println("Number of failures: " + result.getFailureCount());
-
-			// List all failures that have been generated
-			// for (Failure failure : result.getFailures()) {
-			// System.out.println("EXCEPTION" + failure.getException());
-			// System.out.println("TRACE: " + failure.getTrace());
-			// System.out.println("MESSAGE: " + failure.getMessage());
-			// System.out.println("HEADER: " + failure.getTestHeader());
-			// System.out.println("DESCRIPTION: " + failure.getDescription());
-			// }
 
 			return result;
 
@@ -196,129 +169,9 @@ public class CustomServer extends UnicastRemoteObject implements CustomServerInt
 			return null;
 		}
 	}
-}
 
-// public Result runTest(byte[] testBytes) {
-//
-// System.out.println("**BEGINNING runTest(BYTES)**");
-//
-// try {
-//
-// for (URL url : ((URLClassLoader) URLClassLoader.getSystemClassLoader()).getURLs()) {
-// System.out.println(url);
-// }
-//
-// // Thread.sleep(1000);
-//
-// // ((URLClassLoader) URLClassLoader.getSystemClassLoader()).defineClass("aa", testBytes,
-// // 0, testBytes.length-1);
-// // ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
-// // Class<ClassLoader> classLoaderClass = ClassLoader.class;
-// //
-// // for(Method m : classLoaderClass.getDeclaredMethods()) {
-// // System.out.print(m.getName() + " ");
-// //
-// // for(Class c : m.getParameterTypes()) {
-// // System.out.print(c.getName() + " ");
-// // }
-// //
-// // System.out.println(", return: " + m.getReturnType().getName());
-// //
-// // }
-// //
-// // Method method = classLoaderClass.getDeclaredMethod("defineClass", new
-// // Class[]{byte[].class, int.class, int.class});
-// // method.setAccessible(true);
-// // System.out.println("CUSTOMMETHOD: " + method.getName());
-// // for(Class c : method.getParameterTypes()) {
-// // System.out.print(c.getName() + " ");
-// // }
-// // System.out.println(", return: " + method.getReturnType().getName());
-// // Class convertedClass = (Class) method.invoke(systemClassLoader, new
-// // Object[]{testBytes, 0, testBytes.length-1});
-//
-// // FTPClient client = new FTPClient();
-// //
-// // System.out.println("1");
-// // client.connect(host, ftpServerPort);
-// // System.out.println("1");
-// // client.login(userName, userPassword);
-// // System.out.println("1");
-//
-// // System.setProperty("user.dir", "ftp://user:user@" + host + ":" + ftpServerPort +
-// // "/");
-// // System.setProperty("java.class.path", "ftp://user:user@" + host + ":" + port +
-// // "/bin/");
-// // System.setProperty("user.dir", ftpRootDir);
-//
-// // CustomClassLoader loader = (CustomClassLoader) URLClassLoader.getSystemClassLoader();
-// // Class convertedClass = CustomClassLoader.convertToClass(testFile.getName(),
-// // classBytes, 0, classBytes.length, null);
-//
-// // Class convertedClass =
-// // CustomClassLoader.findClassWithSystemClassLoader("testsuite.CorrectnessTest");
-// // Class convertedClass =
-// // CustomClassLoader.findClassWithSystemClassLoader("org.schemaanalyst.unittest.AllTests");
-//
-// // client.retrieveFile("resources/tests/AllTests.class", local)
-//
-// // CustomClassLoader loader2 = new
-// // CustomClassLoader(ClassLoader.getSystemClassLoader());
-// CustomClassLoader loader2 = new CustomClassLoader(((URLClassLoader) ClassLoader.getSystemClassLoader()).getURLs());
-//
-// FileOutputStream out = null;
-// client.retrieveFile(ftpClassDir + "testSuite/CorrectnessTest.class", out);
-// byte[] testBytes2 = new byte[] {};
-// out.write(testBytes2);
-// Class convertedClass = loader2.convertToClass(testBytes2);
-//
-// System.out.println(convertedClass.getComponentType());
-// System.out.println(convertedClass.getName());
-// System.out.println(convertedClass.getSimpleName());
-// System.out.println(convertedClass.getTypeName());
-// System.out.println(convertedClass.getPackage());
-// System.out.println(convertedClass.getSuperclass());
-//
-// // SimpleClassLoader loader = new SimpleClassLoader();
-// // Class convertedClass = loader.convertToClass(testBytes);
-// // Class convertedClass = loader2.convertToClass(testBytes);
-// System.out.println("ConvertedClass: " + convertedClass);
-// System.out.println("convertedClass CL: " + convertedClass.getClassLoader().toString());
-// System.out.println("system CL: " + CustomClassLoader.getSystemClassLoader().toString());
-//
-// System.out.println("Current dir: " + System.getProperty("user.dir"));
-//
-// Result result = JUnitCore.runClasses(convertedClass);
-// System.out.println("Result: ");
-// System.out.println(result);
-//
-// // Indicate overall results of testing
-// System.out.println("Total tests run: " + result.getRunCount());
-// System.out.println("Number of successes: " + (result.getRunCount() - result.getFailureCount()));
-// System.out.println("Number of failures: " + result.getFailureCount());
-//
-// // List all failures that have been generated
-// for (Failure failure : result.getFailures()) {
-// System.out.println("EXCEPTION" + failure.getException());
-// System.out.println("\t" + failure.toString());
-// System.out.println("MESSAGE: " + failure.getMessage());
-// System.out.println("HEADER: " + failure.getTestHeader());
-// // System.out.println("TRACE: " + failure.getTrace());
-// System.out.println("DESCRIPTION: " + failure.getDescription());
-// }
-//
-// System.out.println("============================");
-//
-// // client.disconnect();
-//
-// // return result;
-// return null;
-//
-// } catch (Exception e) {
-// e.printStackTrace();
-// System.out.println("EXCEPTION!!!");
-// System.out.println(e.getCause());
-// return null;
-// }
-// }
-// }
+	/** Debugging method to ensure patent communication between server and delegator*/
+	public String ping() throws RemoteException {
+		return "==========PING FROM SERVER==============";
+	}
+}
