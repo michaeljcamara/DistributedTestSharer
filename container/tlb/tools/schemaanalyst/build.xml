@@ -1,4 +1,7 @@
-<project default="compile">
+<project name="schemaanalyst" default="" basedir=".">
+
+    <property name="tlb.project.dir" location="${basedir}/../../../tlb"/><!-- used in dev box -->
+    <property name="tlb.dist.dir" location="${basedir}/../../java"/><!-- used in packaged distribution(s) -->
 
     <!-- Target directories -->
     <property name="lib_dir" value="lib" />
@@ -22,12 +25,17 @@
 	<path id="run_classpath">
             <pathelement path="ftpserver/resources/bin/"/>
             <fileset dir="ftpserver/resources/lib/" includes="*.jar"/>
-            <fileset dir="${config_dir}" includes="*.properties"/>
 	</path>
 
     <!-- CLEANING TASK - "ant clean" -->
     <target name="clean">
         <delete dir="${build_dir}"/>
+    </target>
+
+    <!-- INIT TASK - "ant init" -->
+    <target name="init">
+        <classpath refid="build_classpath"/>
+        <classpath refid="run_classpath"/>
     </target>
 
     <!-- COMPILING TASK - "ant compile" -->  
@@ -39,6 +47,36 @@
 	<rmic classname="delegator.Delegator" base="${build_dir}"/>
     </target>
 
+    <path id="load.balanced.classpath">
+        <fileset dir="${tlb.project.dir}/java/lib" includes="*.jar" erroronmissingdir="false"/>
+        <fileset dir="${tlb.project.dir}/target" includes="tlb-java*.jar" erroronmissingdir="false"/>
+        <fileset dir="${tlb.dist.dir}/lib" includes="*.jar" erroronmissingdir="false"/>
+        <fileset dir="${tlb.dist.dir}" includes="tlb-java*.jar" erroronmissingdir="false"/>
+    </path>
+
+    <target name="test.balanced">
+        <!-- <typedef name="load-balanced-fileset" classname="tlb.ant.LoadBalancedFileSet" classpathref="${tlb.project.dir}/target/java/classes/tlb/ant"/> -->
+        <typedef name="load-balanced-fileset" classname="tlb.ant.LoadBalancedFileSet" classpathref="load.balanced.classpath"/>
+        <!-- <junit failureproperty="test.failure" printsummary="no" haltonfailure="false" haltonerror="false" showoutput="false" fork="true"> -->
+            <junit fork="true" dir = "ftpserver/" forkmode = "once">
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+                <test name="org.schemaanalyst.unittest.AllTests" />
+			          <classpath refid="run_classpath" />
+			          <formatter type="brief" usefile="true" />
+            <!-- <classpath refid="load.balanced.classpath"/> -->
+			      <!-- <classpath refid="run_classpath" /> -->
+            <!-- <batchtest todir="${reports.dir}"> -->
+                <!-- <load-balanced-fileset dir="${basedir}/ftpserver/resources/test_suites" includes="**/*.class"/> -->
+                <!-- <load-balanced-fileset dir="${test-classes.dir}" includes="**/*Test.class"/> -->
+                <!-- <formatter classname="tlb.ant.JunitDataRecorder"/> -->
+                <!-- <formatter type="plain"/> -->
+            <!-- </batchtest> -->
+        </junit>
+    </target>
+
     <!-- TESTING TASK - "ant test" -->
 	<target name="test">
             <junit fork="true" dir = "ftpserver/" forkmode = "once">
@@ -48,7 +86,7 @@
                 <test name="org.schemaanalyst.unittest.AllTests" />
                 <test name="org.schemaanalyst.unittest.AllTests" />
 			<classpath refid="run_classpath" />
-			<formatter type="brief" usefile="false" />
+			<formatter type="brief" usefile="true" />
 		</junit>
             </target>
 </project>
