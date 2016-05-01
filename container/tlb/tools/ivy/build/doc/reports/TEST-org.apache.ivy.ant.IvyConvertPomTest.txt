@@ -1,8 +1,8 @@
 Testsuite: org.apache.ivy.ant.IvyConvertPomTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.006 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.593 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testSimple took 0.997 sec
+Testcase: testSimple took 1.558 sec

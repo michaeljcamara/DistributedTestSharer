@@ -1,39 +1,39 @@
 Testsuite: org.apache.ivy.core.settings.XmlSettingsParserTest
-Tests run: 25, Failures: 0, Errors: 0, Time elapsed: 0.431 sec
+Tests run: 25, Failures: 0, Errors: 0, Time elapsed: 1.118 sec
 ------------- Standard Output ---------------
-DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-test.xml)
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-ref.xml)
+DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-test.xml)
 DEPRECATED: allownomd is deprecated, please use descriptor="required" instead
-DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-properties-missing-file.xml)
-DEPRECATED: 'conf' is deprecated, use 'settings' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
-DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
-DEPRECATED: 'cacheIvyPattern' is deprecated, use 'caches[@ivyPattern]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
-DEPRECATED: 'cacheArtifactPattern' is deprecated, use 'caches[@artifactPattern]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-properties-missing-file.xml)
+DEPRECATED: 'conf' is deprecated, use 'settings' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'checkUpToDate' is deprecated, use the 'overwriteMode' on the 'ivy:retrieve' task instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'cacheIvyPattern' is deprecated, use 'caches[@ivyPattern]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'cacheArtifactPattern' is deprecated, use 'caches[@artifactPattern]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivyconf-properties-relative-to-ivyconf.xml)
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/core/settings/ivysettings-ref.xml)
 ------------- ---------------- ---------------
 
-Testcase: test took 0.203 sec
-Testcase: testTypedef took 0.006 sec
-Testcase: testStatuses took 0.005 sec
-Testcase: testConflictManager took 0.005 sec
-Testcase: testResolveMode took 0.004 sec
-Testcase: testExtraModuleAttribute took 0.004 sec
-Testcase: testCache took 0.021 sec
-Testcase: testInvalidCache took 0.005 sec
-Testcase: testVersionMatchers1 took 0.029 sec
-Testcase: testVersionMatchers2 took 0.006 sec
-Testcase: testRef took 0.007 sec
-Testcase: testMacro took 0.011 sec
-Testcase: testMacroAndRef took 0.004 sec
-Testcase: testMacroAndRef2 took 0.005 sec
-Testcase: testPropertiesMissingFile took 0.01 sec
-Testcase: testInclude took 0.01 sec
-Testcase: testIncludeAbsoluteFile took 0.009 sec
+Testcase: test took 0.642 sec
+Testcase: testVersionMatchers1 took 0.04 sec
+Testcase: testVersionMatchers2 took 0.013 sec
+Testcase: testMacro took 0.028 sec
+Testcase: testMacroAndRef took 0.006 sec
+Testcase: testMacroAndRef2 took 0.007 sec
+Testcase: testPropertiesMissingFile took 0.009 sec
+Testcase: testInclude took 0.012 sec
+Testcase: testIncludeAbsoluteFile took 0.011 sec
 Testcase: testIncludeMissingFile took 0.004 sec
-Testcase: testIncludeSpecialCharInName took 0.009 sec
-Testcase: testRelativePropertiesFile took 0.004 sec
-Testcase: testParser took 0.03 sec
-Testcase: testOutputter took 0.004 sec
+Testcase: testIncludeSpecialCharInName took 0.01 sec
+Testcase: testRelativePropertiesFile took 0.006 sec
+Testcase: testParser took 0.012 sec
+Testcase: testOutputter took 0.005 sec
 Testcase: testLockingStrategies took 0.004 sec
-Testcase: testFileAttribute took 0.018 sec
-Testcase: testBaseDirVariables took 0.002 sec
+Testcase: testFileAttribute took 0.034 sec
+Testcase: testBaseDirVariables took 0.001 sec
+Testcase: testTypedef took 0.023 sec
+Testcase: testStatuses took 0.014 sec
+Testcase: testConflictManager took 0.004 sec
+Testcase: testResolveMode took 0.003 sec
+Testcase: testExtraModuleAttribute took 0.002 sec
+Testcase: testCache took 0.025 sec
+Testcase: testInvalidCache took 0.003 sec
+Testcase: testRef took 0.004 sec

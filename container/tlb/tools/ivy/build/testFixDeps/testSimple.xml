@@ -4,7 +4,7 @@
 		module="resolve-simple"
 		revision="1.0"
 		status="release"
-		publication="20160425142908"
+		publication="20160501112123"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

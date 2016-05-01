@@ -1,45 +1,45 @@
 Testsuite: org.apache.ivy.osgi.core.AggregatedOSGiResolverTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.568 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.985 sec
 ------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
-downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo//plugins/org.apache.ivy_2.0.0.final_20090108225011.jar ...
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-	[SUCCESSFUL ] bundle#org.apache.ivy;2.0.0.final_20090108225011!org.apache.ivy.jar (37ms)
-Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
-downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-repo/bundlerepo/org.apache.ivy.osgi.testbundle_1.2.3.jar ...
-	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle;1.2.3!org.apache.ivy.osgi.testbundle.jar (2ms)
-Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/content.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
-	downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
-downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-repo/multi-osgi/repo1/org.apache.ivy.osgi.testbundle1_1.2.3.jar ...
-	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle1;1.2.3!org.apache.ivy.osgi.testbundle1.jar (2ms)
-downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-repo/multi-osgi/repo2/org.apache.ivy.osgi.testbundle2_1.2.3.jar ...
-	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle2;1.2.3!org.apache.ivy.osgi.testbundle2.jar (2ms)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
+downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo//plugins/org.apache.ivy_2.0.0.final_20090108225011.jar ...
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	[SUCCESSFUL ] bundle#org.apache.ivy;2.0.0.final_20090108225011!org.apache.ivy.jar (31ms)
+Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
+downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-repo/bundlerepo/org.apache.ivy.osgi.testbundle_1.2.3.jar ...
+	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle;1.2.3!org.apache.ivy.osgi.testbundle.jar (4ms)
+Loading the update site file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeContent.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/content.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/compositeArtifacts.xml
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.jar
+	downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-p2/ivyde-repo/artifacts.xml
+downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-repo/multi-osgi/repo1/org.apache.ivy.osgi.testbundle1_1.2.3.jar ...
+	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle1;1.2.3!org.apache.ivy.osgi.testbundle1.jar (6ms)
+downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-repo/multi-osgi/repo2/org.apache.ivy.osgi.testbundle2_1.2.3.jar ...
+	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle2;1.2.3!org.apache.ivy.osgi.testbundle2.jar (3ms)
 ------------- ---------------- ---------------
 
-Testcase: testResolveInUpdatesite took 0.436 sec
-Testcase: testResolveInObr took 0.066 sec
-Testcase: testCrossResolve took 0.057 sec
+Testcase: testResolveInUpdatesite took 0.705 sec
+Testcase: testResolveInObr took 0.128 sec
+Testcase: testCrossResolve took 0.108 sec

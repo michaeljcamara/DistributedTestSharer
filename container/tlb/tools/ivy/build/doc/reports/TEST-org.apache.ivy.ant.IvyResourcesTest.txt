@@ -1,11 +1,164 @@
 Testsuite: org.apache.ivy.ant.IvyResourcesTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.959 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.469 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
      [null] 	confs: [default]
-     [null] :: resolution report :: resolve 32ms :: artifacts dl 0ms
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (10ms)
+     [null] :: resolution report :: resolve 70ms :: artifacts dl 14ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.3;0.7 in 1
+     [null] 	found org2#mod2.1;0.3 in 1
+     [null] 	found org1#mod1.1;1.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.3/jars/mod2.3-0.7.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.3;0.7!mod2.3.jar (4ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21A-0.3.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.3!art21A.jar (5ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21B-0.3.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.3!art21B.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+     [null] :: resolution report :: resolve 271ms :: artifacts dl 25ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   4   |   3   |   0   ||   5   |   5   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.2;0.10 in 1
+     [null] 	found org2#mod2.1;0.7 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (3ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
+     [null] :: resolution report :: resolve 80ms :: artifacts dl 21ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.2;0.10 in 1
+     [null] 	found org2#mod2.1;0.7 in 1
+     [null] 	found org1#mod1.1;1.0 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (4ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (3ms)
+     [null] :: resolution report :: resolve 148ms :: artifacts dl 20ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   4   |   3   |   0   ||   4   |   4   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.2;0.10 in 1
+     [null] 	found org2#mod2.1;0.7 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (3ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (1ms)
+     [null] :: resolution report :: resolve 94ms :: artifacts dl 9ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.2;0.10 in 1
+     [null] 	found org2#mod2.1;0.7 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (3ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
+     [null] :: resolution report :: resolve 50ms :: artifacts dl 11ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org1#mod1.2;2.0 in 1
+     [null] 	found org2#mod2.2;0.9 in 1
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org2/mod2.2/jars/art22-1-0.9.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org2#mod2.2;0.9!art22-1.jar (2ms)
+     [null] :: resolution report :: resolve 37ms :: artifacts dl 5ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   1   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: #;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] :: resolution report :: resolve 5ms :: artifacts dl 0ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -17,19 +170,19 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.959 sec
      [null] :::: WARNINGS
      [null] 		module not found: org1#noexisting;2.0
      [null] 	==== 1: tried
-     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/noexisting/ivys/ivy-2.0.xml
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/noexisting/ivys/ivy-2.0.xml
      [null] 	  -- artifact org1#noexisting;2.0!noexisting.jar:
-     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/noexisting/jars/noexisting-2.0.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/noexisting/jars/noexisting-2.0.jar
      [null] 	==== 2-ivy: tried
-     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/noexisting/ivy-2.0.xml
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/2/noexisting/ivy-2.0.xml
      [null] 	==== 2-artifact: tried
      [null] 	  -- artifact org1#noexisting;2.0!noexisting.jar:
-     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/noexisting/noexisting-2.0.jar
-     [null] 	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/noexisting/noexisting.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/2/noexisting/noexisting-2.0.jar
+     [null] 	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/2/noexisting/noexisting.jar
      [null] 	==== m2: tried
-     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org1/noexisting/2.0/noexisting-2.0.pom
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/m2/org1/noexisting/2.0/noexisting-2.0.pom
      [null] 	  -- artifact org1#noexisting;2.0!noexisting.jar:
-     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org1/noexisting/2.0/noexisting-2.0.jar
+     [null] 	  file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/m2/org1/noexisting/2.0/noexisting-2.0.jar
      [null] 		::::::::::::::::::::::::::::::::::::::::::::::
      [null] 		::          UNRESOLVED DEPENDENCIES         ::
      [null] 		::::::::::::::::::::::::::::::::::::::::::::::
@@ -37,166 +190,13 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.959 sec
      [null] 		::::::::::::::::::::::::::::::::::::::::::::::
      [null] 
      [null] :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
-     [null] :: resolution report :: resolve 16ms :: artifacts dl 5ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.3;0.7 in 1
-     [null] 	found org2#mod2.1;0.3 in 1
-     [null] 	found org1#mod1.1;1.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.3/jars/mod2.3-0.7.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.3;0.7!mod2.3.jar (1ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21A-0.3.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.3!art21A.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/art21B-0.3.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.3!art21B.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
-     [null] :: resolution report :: resolve 182ms :: artifacts dl 14ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   4   |   4   |   3   |   0   ||   5   |   5   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.2;0.10 in 1
-     [null] 	found org2#mod2.1;0.7 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (5ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
-     [null] :: resolution report :: resolve 43ms :: artifacts dl 12ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.2;0.10 in 1
-     [null] 	found org2#mod2.1;0.7 in 1
-     [null] 	found org1#mod1.1;1.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (1ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (3ms)
-     [null] :: resolution report :: resolve 72ms :: artifacts dl 12ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   4   |   4   |   3   |   0   ||   4   |   4   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.2;0.10 in 1
-     [null] 	found org2#mod2.1;0.7 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (4ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (1ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
-     [null] :: resolution report :: resolve 47ms :: artifacts dl 11ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.2;0.10 in 1
-     [null] 	found org2#mod2.1;0.7 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (4ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/mod2.2-0.10.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.2;0.10!mod2.2.jar (1ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.1/jars/mod2.1-0.7.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.1;0.7!mod2.1.jar (2ms)
-     [null] :: resolution report :: resolve 44ms :: artifacts dl 10ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   3   |   3   |   2   |   0   ||   3   |   3   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: #;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org1#mod1.2;2.0 in 1
-     [null] 	found org2#mod2.2;0.9 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (4ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org2/mod2.2/jars/art22-1-0.9.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org2#mod2.2;0.9!art22-1.jar (2ms)
-     [null] :: resolution report :: resolve 20ms :: artifacts dl 8ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   2   |   2   |   1   |   0   ||   2   |   2   |
-	---------------------------------------------------------------------
 ------------- ---------------- ---------------
 
-Testcase: testFail took 0.294 sec
-Testcase: testSimple took 0.04 sec
-Testcase: testMultiple took 0.221 sec
-Testcase: testMultipleWithConf took 0.076 sec
-Testcase: testMultipleWithConf2 took 0.108 sec
-Testcase: testExclude took 0.082 sec
-Testcase: testDependencyExclude took 0.076 sec
-Testcase: testDependencyInclude took 0.048 sec
+Testcase: testSimple took 0.48 sec
+Testcase: testMultiple took 0.336 sec
+Testcase: testMultipleWithConf took 0.134 sec
+Testcase: testMultipleWithConf2 took 0.195 sec
+Testcase: testExclude took 0.13 sec
+Testcase: testDependencyExclude took 0.084 sec
+Testcase: testDependencyInclude took 0.072 sec
+Testcase: testFail took 0.02 sec

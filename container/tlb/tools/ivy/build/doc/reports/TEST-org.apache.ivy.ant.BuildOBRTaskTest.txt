@@ -1,16 +1,16 @@
 Testsuite: org.apache.ivy.ant.BuildOBRTaskTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.564 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.631 sec
 ------------- Standard Output ---------------
      [null] 14 bundles added, 0 bundle rejected.
      [null] 0 bundle added, 0 bundle rejected.
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-repo/bundlerepo/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy#test-buildobr;working@Coltons-MacBook-Pro.local
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-repo/bundlerepo/ivysettings.xml
+     [null] :: resolving dependencies :: org.apache.ivy#test-buildobr;working@Coltons-MBP
      [null] 	confs: [default]
      [null] 	found bundle#org.apache.ivy.osgi.testbundle;1.2.3 in obr
-     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/test-repo/bundlerepo/org.apache.ivy.osgi.testbundle_1.2.3.jar ...
-     [null] 	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle;1.2.3!org.apache.ivy.osgi.testbundle.jar (2ms)
-     [null] :: resolution report :: resolve 46ms :: artifacts dl 4ms
+     [null] downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/test-repo/bundlerepo/org.apache.ivy.osgi.testbundle_1.2.3.jar ...
+     [null] 	[SUCCESSFUL ] bundle#org.apache.ivy.osgi.testbundle;1.2.3!org.apache.ivy.osgi.testbundle.jar (3ms)
+     [null] :: resolution report :: resolve 62ms :: artifacts dl 5ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -20,6 +20,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.564 sec
      [null] 1 bundle added, 0 bundle rejected.
 ------------- ---------------- ---------------
 
-Testcase: testDir took 0.238 sec
-Testcase: testEmptyDir took 0.017 sec
-Testcase: testResolve took 0.301 sec
+Testcase: testDir took 0.261 sec
+Testcase: testEmptyDir took 0.03 sec
+Testcase: testResolve took 0.325 sec

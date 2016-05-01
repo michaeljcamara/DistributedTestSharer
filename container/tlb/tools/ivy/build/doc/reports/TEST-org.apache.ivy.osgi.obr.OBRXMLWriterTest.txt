@@ -1,7 +1,0 @@
-Testsuite: org.apache.ivy.osgi.obr.OBRXMLWriterTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.3 sec
-------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-------------- ---------------- ---------------
-
-Testcase: testWriteWithSource took 0.292 sec

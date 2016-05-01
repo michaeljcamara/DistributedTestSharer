@@ -1,4 +1,0 @@
-Testsuite: org.apache.ivy.plugins.namespace.MRIDTransformationRuleTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.037 sec
-
-Testcase: testTransformation took 0.025 sec

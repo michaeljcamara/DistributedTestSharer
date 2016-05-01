@@ -1,32 +1,32 @@
 Testsuite: org.apache.ivy.ant.IvyBuildNumberTest
-Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 0.481 sec
+Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 1.071 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-checksums.xml
-     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-checksums.xml)
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1037/ivysettings.xml
-     [null] DEPRECATED: 'ivyconf' element is deprecated, use 'ivysettings' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/IVY-1037/ivysettings.xml)
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings-checksums.xml
+     [null] DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings-checksums.xml)
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/IVY-1037/ivysettings.xml
+     [null] DEPRECATED: 'ivyconf' element is deprecated, use 'ivysettings' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/IVY-1037/ivysettings.xml)
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testBuildNumber4 took 0.262 sec
-Testcase: testWithBadChecksum took 0.061 sec
-Testcase: testChainResolver took 0.036 sec
-Testcase: testDefault took 0.014 sec
-Testcase: testDefault2 took 0.016 sec
-Testcase: testDefault3 took 0.011 sec
-Testcase: testLatest took 0.015 sec
-Testcase: testLatest2 took 0.01 sec
-Testcase: testPrefix took 0.011 sec
-Testcase: testBuildNumber took 0.013 sec
-Testcase: testBuildNumber2 took 0.013 sec
-Testcase: testBuildNumber3 took 0.009 sec
+Testcase: testDefault3 took 0.82 sec
+Testcase: testLatest took 0.04 sec
+Testcase: testWithBadChecksum took 0.047 sec
+Testcase: testChainResolver took 0.027 sec
+Testcase: testBuildNumber took 0.018 sec
+Testcase: testBuildNumber2 took 0.016 sec
+Testcase: testDefault took 0.01 sec
+Testcase: testBuildNumber3 took 0.01 sec
+Testcase: testBuildNumber4 took 0.011 sec
+Testcase: testDefault2 took 0.01 sec
+Testcase: testLatest2 took 0.011 sec
+Testcase: testPrefix took 0.012 sec

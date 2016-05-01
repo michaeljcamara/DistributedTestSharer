@@ -1,7 +1,7 @@
 Testsuite: org.apache.ivy.IvyTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.128 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.209 sec
 ------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testMultipleInstances took 1.121 sec
+Testcase: testMultipleInstances took 1.201 sec

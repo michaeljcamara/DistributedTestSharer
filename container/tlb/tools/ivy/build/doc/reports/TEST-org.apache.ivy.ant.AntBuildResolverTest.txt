@@ -1,15 +1,15 @@
 Testsuite: org.apache.ivy.ant.AntBuildResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.101 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.451 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
      [null] :: loading settings :: file = test/workspace/ivysettings.xml
      [null] :: resolving dependencies :: org.apache.ivy.test#project1;0.1
      [null] 	confs: [default]
      [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (2ms)
-     [null] :: resolution report :: resolve 145ms :: artifacts dl 4ms
+     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (3ms)
+     [null] :: resolution report :: resolve 207ms :: artifacts dl 5ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -17,31 +17,15 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.101 sec
 	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
      [null] :: loading settings :: file = test/workspace/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MacBook-Pro.local
+     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MBP
      [null] 	confs: [default]
      [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
      [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
      [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (1ms)
-     [null] :: resolution report :: resolve 50ms :: artifacts dl 3ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = test/workspace/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
-     [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
-     [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
      [null] . (0kB)
      [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (2ms)
-     [null] :: resolution report :: resolve 43ms :: artifacts dl 3ms
+     [null] :: resolution report :: resolve 81ms :: artifacts dl 4ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -49,31 +33,15 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.101 sec
 	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
 	---------------------------------------------------------------------
      [null] :: loading settings :: file = test/workspace/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy.test#project3;working@Coltons-MacBook-Pro.local
+     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MBP
      [null] 	confs: [default]
      [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
      [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
      [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (1ms)
-     [null] :: resolution report :: resolve 53ms :: artifacts dl 3ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
-	---------------------------------------------------------------------
-     [null] :: loading settings :: file = test/workspace/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MacBook-Pro.local
-     [null] 	confs: [default]
-     [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
-     [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
-     [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
      [null] . (0kB)
      [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (2ms)
-     [null] :: resolution report :: resolve 45ms :: artifacts dl 3ms
+     [null] :: resolution report :: resolve 55ms :: artifacts dl 7ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -81,15 +49,47 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.101 sec
 	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
 	---------------------------------------------------------------------
      [null] :: loading settings :: file = test/workspace/ivysettings.xml
-     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MacBook-Pro.local
+     [null] :: resolving dependencies :: org.apache.ivy.test#project3;working@Coltons-MBP
      [null] 	confs: [default]
      [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
      [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
      [null] 	found org.acme#module1;1.1 in repo
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (1ms)
-     [null] :: resolution report :: resolve 38ms :: artifacts dl 3ms
+     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (2ms)
+     [null] :: resolution report :: resolve 90ms :: artifacts dl 3ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = test/workspace/ivysettings.xml
+     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
+     [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
+     [null] 	found org.acme#module1;1.1 in repo
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (2ms)
+     [null] :: resolution report :: resolve 50ms :: artifacts dl 5ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
+	---------------------------------------------------------------------
+     [null] :: loading settings :: file = test/workspace/ivysettings.xml
+     [null] :: resolving dependencies :: org.apache.ivy.test#project2;working@Coltons-MBP
+     [null] 	confs: [default]
+     [null] 	found org.apache.ivy.test#project1;0.1 in test-workspace
+     [null] 	[0.1] org.apache.ivy.test#project1;latest.integration
+     [null] 	found org.acme#module1;1.1 in repo
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/workspace/repo/org.acme/module1/1.1/module1.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org.acme#module1;1.1!module1.jar (3ms)
+     [null] :: resolution report :: resolve 59ms :: artifacts dl 6ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -98,9 +98,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.101 sec
 	---------------------------------------------------------------------
 ------------- ---------------- ---------------
 
-Testcase: testNoProject took 0.653 sec
-Testcase: testProject took 0.08 sec
-Testcase: testProjectFolder took 0.08 sec
-Testcase: testDependencyArtifact took 0.076 sec
-Testcase: testCachePath took 0.146 sec
-Testcase: testCachePathFolder took 0.058 sec
+Testcase: testNoProject took 0.841 sec
+Testcase: testProject took 0.128 sec
+Testcase: testProjectFolder took 0.101 sec
+Testcase: testDependencyArtifact took 0.125 sec
+Testcase: testCachePath took 0.143 sec
+Testcase: testCachePathFolder took 0.102 sec

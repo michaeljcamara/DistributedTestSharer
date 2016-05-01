@@ -1,5 +1,5 @@
 Testsuite: org.apache.ivy.MainTest
-Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.536 sec
+Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.523 sec
 ------------- Standard Output ---------------
 usage: ivy
 ==== settings options
@@ -66,7 +66,7 @@ usage: ivy
 :: resolving dependencies :: org1#mod1.1;1.0
 	confs: [default]
 	found org1#mod1.2;2.0 in 1
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
 :: resolution report :: resolve 49ms :: artifacts dl 4ms
@@ -80,10 +80,10 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 :: resolving dependencies :: org1#mod1.1;1.0
 	confs: [default]
 	found org1#mod1.2;2.0 in 1
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
-	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-:: resolution report :: resolve 10ms :: artifacts dl 2ms
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+:: resolution report :: resolve 9ms :: artifacts dl 3ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -94,10 +94,10 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 :: resolving dependencies :: org1#mod1.1;1.0
 	confs: [default]
 	found org1#mod1.2;2.0 in 1
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
-	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-:: resolution report :: resolve 9ms :: artifacts dl 3ms
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+:: resolution report :: resolve 8ms :: artifacts dl 2ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -106,12 +106,12 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 	---------------------------------------------------------------------
 ------------- ---------------- ---------------
 
-Testcase: testHelp took 0.052 sec
+Testcase: testHelp took 0.033 sec
 Testcase: testBadOption took 0.001 sec
-Testcase: testMissingParameter took 0.001 sec
-Testcase: testResolveSimple took 0.392 sec
-Testcase: testResolveSimpleWithConfs took 0.039 sec
-Testcase: testResolveSimpleWithConfs2 took 0.042 sec
-Testcase: testExtraParams1 took 0 sec
+Testcase: testMissingParameter took 0 sec
+Testcase: testResolveSimple took 0.398 sec
+Testcase: testResolveSimpleWithConfs took 0.043 sec
+Testcase: testExtraParams1 took 0.001 sec
+Testcase: testResolveSimpleWithConfs2 took 0.038 sec
 Testcase: testExtraParams2 took 0 sec
-Testcase: testExtraParams3 took 0 sec
+Testcase: testExtraParams3 took 0.001 sec

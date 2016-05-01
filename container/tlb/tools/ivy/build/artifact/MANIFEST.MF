@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Main-Class: org.apache.ivy.Main
-Bundle-Version: 2.5.0.alpha_20160423114247
+Bundle-Version: 2.5.0.alpha_20160429214242
 Bundle-Name: Ivy
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.apache.ivy

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><repository><resource symbolicname="org.apache.ivy.test" version="1.2.3" uri="file:///test.jar"><source>file:///test-sources.jar</source></resource>
-<resource symbolicname="org.apache.ivy.test2" version="1.2.3" uri="file:///test2.jar"/>
-</repository>

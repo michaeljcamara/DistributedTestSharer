@@ -1,50 +1,72 @@
 Testsuite: org.apache.ivy.ant.IvyReportTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.626 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 2.705 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: resolving dependencies :: org6#mod6.2;0.7
+     [null] 	confs: [default]
+     [null] 	found org6#mod6.1;0.6 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	found org1#mod1.2;2.2 in 1
+     [null] 	[2.2] org1#mod1.2;latest.integration
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-0.6.jar ...
+     [null] .. (0kB)
+     [null] 	[SUCCESSFUL ] org6#mod6.1;0.6!mod6.1.jar (2ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+     [null] . (0kB)
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 126ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   1   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org6-mod6.2-default.xml to build/cache/report/org6-mod6.2-default.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org6-mod6.2-default.xml to build/cache/report/org6-mod6.2-default.graphml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: apache#resolve-simple;1.0
      [null] 	confs: [default]
      [null] 	found org1#mod1.2;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
-     [null] :: resolution report :: resolve 50ms :: artifacts dl 5ms
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 17ms :: artifacts dl 3ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
 	---------------------------------------------------------------------
 	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/apache-resolve-simple-default.html
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/apache-resolve-simple-default.html
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: apache#resolve-simple;1.0
      [null] 	confs: [default]
      [null] 	found org1#mod1.2;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
-     [null] :: resolution report :: resolve 9ms :: artifacts dl 2ms
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
+     [null] :: resolution report :: resolve 16ms :: artifacts dl 4ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
 	---------------------------------------------------------------------
 	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-1.0.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-1.0.graphml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-1.0.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-1.0.graphml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: apache#resolve-simple;1.0
      [null] 	confs: [default, compile]
      [null] 	found org1#mod1.2;2.0 in 1
      [null] 	found org1#mod1.1;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
      [null] .. (0kB)
      [null] 	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (2ms)
-     [null] :: resolution report :: resolve 38ms :: artifacts dl 5ms
+     [null] :: resolution report :: resolve 37ms :: artifacts dl 7ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -52,18 +74,18 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.626 sec
 	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
 	|      compile     |   1   |   1   |   1   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-compile.xml to build/cache/report/apache-resolve-simple-compile.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.graphml
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-compile.xml to build/cache/report/apache-resolve-simple-compile.graphml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-compile.xml to build/cache/report/apache-resolve-simple-compile.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.graphml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-compile.xml to build/cache/report/apache-resolve-simple-compile.graphml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: org11#mod11.1;1.0
      [null] 	confs: [compile, test]
      [null] 	found org11#mod11.2;1.0 in 2-ivy
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/2/mod11.2/mod11.2-1.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/2/mod11.2/mod11.2-1.0.jar ...
      [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org11#mod11.2;1.0!mod11.2.jar (2ms)
-     [null] :: resolution report :: resolve 27ms :: artifacts dl 3ms
+     [null] 	[SUCCESSFUL ] org11#mod11.2;1.0!mod11.2.jar (3ms)
+     [null] :: resolution report :: resolve 29ms :: artifacts dl 4ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -71,48 +93,26 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.626 sec
 	|      compile     |   0   |   0   |   0   |   0   ||   0   |   0   |
 	|       test       |   1   |   1   |   1   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org11-mod11.1-compile.xml to build/cache/report/org11-mod11.1-compile.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org11-mod11.1-test.xml to build/cache/report/org11-mod11.1-test.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org11-mod11.1-compile.xml to build/cache/report/org11-mod11.1-compile.graphml
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org11-mod11.1-test.xml to build/cache/report/org11-mod11.1-test.graphml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: resolving dependencies :: org6#mod6.2;0.7
-     [null] 	confs: [default]
-     [null] 	found org6#mod6.1;0.6 in 1
-     [null] 	found org1#mod1.2;2.2 in 1
-     [null] 	found org1#mod1.2;2.2 in 1
-     [null] 	[2.2] org1#mod1.2;latest.integration
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org6/mod6.1/jars/mod6.1-0.6.jar ...
-     [null] .. (0kB)
-     [null] 	[SUCCESSFUL ] org6#mod6.1;0.6!mod6.1.jar (2ms)
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
-     [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
-     [null] :: resolution report :: resolve 38ms :: artifacts dl 5ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   2   |   2   |   1   |   0   ||   2   |   2   |
-	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org6-mod6.2-default.xml to build/cache/report/org6-mod6.2-default.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/org6-mod6.2-default.xml to build/cache/report/org6-mod6.2-default.graphml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org11-mod11.1-compile.xml to build/cache/report/org11-mod11.1-compile.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org11-mod11.1-test.xml to build/cache/report/org11-mod11.1-test.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org11-mod11.1-compile.xml to build/cache/report/org11-mod11.1-compile.graphml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/org11-mod11.1-test.xml to build/cache/report/org11-mod11.1-test.graphml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: apache#resolve-simple;1.0
      [null] 	confs: [default]
      [null] 	found org1#mod1.2;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (2ms)
-     [null] :: resolution report :: resolve 10ms :: artifacts dl 4ms
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
+     [null] :: resolution report :: resolve 12ms :: artifacts dl 3ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
 	---------------------------------------------------------------------
 	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.html
-   [report] Processing /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.graphml
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.html
+   [report] Processing /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/apache-resolve-simple-default.xml to build/cache/report/apache-resolve-simple-default.graphml
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
@@ -136,6 +136,16 @@ Compiler warnings:
   WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+Compiler warnings:
+  WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+Compiler warnings:
+  WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
+Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
@@ -157,16 +167,6 @@ Compiler warnings:
   WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
-Compiler warnings:
-  WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
-Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
-Compiler warnings:
-  WARNING:  'org.apache.xerces.jaxp.SAXParserImpl: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.'
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLConstants/property/accessExternalDTD' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
@@ -181,9 +181,9 @@ Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://javax.xml.XMLCon
 Warning:  org.apache.xerces.parsers.SAXParser: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
 ------------- ---------------- ---------------
 
-Testcase: testCopyCssIfTodirNotSet took 0.804 sec
-Testcase: testNoRevisionInOutputPattern took 0.191 sec
-Testcase: testMultipleConfigurations took 0.191 sec
-Testcase: testRegularCircular took 0.171 sec
-Testcase: testWithLatest took 0.137 sec
-Testcase: testSimple took 0.118 sec
+Testcase: testWithLatest took 1.65 sec
+Testcase: testCopyCssIfTodirNotSet took 0.219 sec
+Testcase: testNoRevisionInOutputPattern took 0.196 sec
+Testcase: testMultipleConfigurations took 0.188 sec
+Testcase: testRegularCircular took 0.21 sec
+Testcase: testSimple took 0.226 sec

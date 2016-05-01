@@ -1,58 +1,58 @@
 Testsuite: org.apache.ivy.ant.IvyBuildListTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.534 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 2.485 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on roots [C]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on roots [F]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on roots [C, E]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on roots [C]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on roots [A]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on leafs [C]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on leafs [F]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on leafs [C, E]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on leafs [C]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
      [null] Filtering modules based on leafs [C]
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testNoParents took 0.469 sec
-Testcase: testOneParent took 0.104 sec
-Testcase: testTwoParents took 0.079 sec
-Testcase: testRelativePathToParent took 0.078 sec
-Testcase: testAbsolutePathToParent took 0.068 sec
-Testcase: testSimple took 0.052 sec
-Testcase: testReverse took 0.045 sec
-Testcase: testWithRoot took 0.051 sec
-Testcase: testWithRootCircular took 0.072 sec
-Testcase: testWithTwoRoots took 0.043 sec
-Testcase: testWithRootExclude took 0.041 sec
-Testcase: testWithRootAndOnlyDirectDep took 0.043 sec
-Testcase: testWithLeaf took 0.048 sec
-Testcase: testWithLeafCircular took 0.045 sec
-Testcase: testWithTwoLeafs took 0.038 sec
-Testcase: testWithLeafExclude took 0.046 sec
-Testcase: testWithLeafAndOnlyDirectDep took 0.039 sec
-Testcase: testRestartFrom took 0.029 sec
-Testcase: testOnMissingDescriptor took 0.038 sec
-Testcase: testOnMissingDescriptor2 took 0.044 sec
-Testcase: testWithModuleWithSameNameAndDifferentOrg took 0.043 sec
+Testcase: testSimple took 0.867 sec
+Testcase: testReverse took 0.1 sec
+Testcase: testWithRoot took 0.129 sec
+Testcase: testWithRootCircular took 0.173 sec
+Testcase: testWithTwoRoots took 0.098 sec
+Testcase: testWithRootExclude took 0.08 sec
+Testcase: testWithRootAndOnlyDirectDep took 0.075 sec
+Testcase: testWithLeaf took 0.088 sec
+Testcase: testWithLeafCircular took 0.089 sec
+Testcase: testWithTwoLeafs took 0.079 sec
+Testcase: testWithLeafExclude took 0.072 sec
+Testcase: testWithLeafAndOnlyDirectDep took 0.059 sec
+Testcase: testRestartFrom took 0.053 sec
+Testcase: testOnMissingDescriptor took 0.04 sec
+Testcase: testOnMissingDescriptor2 took 0.035 sec
+Testcase: testWithModuleWithSameNameAndDifferentOrg took 0.063 sec
+Testcase: testNoParents took 0.081 sec
+Testcase: testOneParent took 0.088 sec
+Testcase: testTwoParents took 0.054 sec
+Testcase: testRelativePathToParent took 0.06 sec
+Testcase: testAbsolutePathToParent took 0.065 sec

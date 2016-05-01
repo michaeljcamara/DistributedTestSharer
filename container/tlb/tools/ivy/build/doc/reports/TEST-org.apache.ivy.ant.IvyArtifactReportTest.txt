@@ -1,15 +1,15 @@
 Testsuite: org.apache.ivy.ant.IvyArtifactReportTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.476 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.793 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
      [null] :: resolving dependencies :: apache#resolve-simple;1.0
      [null] 	confs: [default]
      [null] 	found org1#mod1.2;2.0 in 1
-     [null] downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+     [null] downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
      [null] . (0kB)
-     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (3ms)
-     [null] :: resolution report :: resolve 51ms :: artifacts dl 6ms
+     [null] 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (5ms)
+     [null] :: resolution report :: resolve 62ms :: artifacts dl 20ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -19,4 +19,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.476 sec
      [null] 	found org1#mod1.2;2.0 in 1
 ------------- ---------------- ---------------
 
-Testcase: testSimple took 0.468 sec
+Testcase: testSimple took 0.781 sec

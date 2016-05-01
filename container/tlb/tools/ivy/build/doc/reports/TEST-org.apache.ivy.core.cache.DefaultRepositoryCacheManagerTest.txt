@@ -1,10 +1,10 @@
 Testsuite: org.apache.ivy.core.cache.DefaultRepositoryCacheManagerTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.354 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 ------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-	no ivy file in cache for org#module#trunk;1.1: tried /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache6369023645242302663.dir/org/module/trunk/ivy-1.1.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	no ivy file in cache for org#module#trunk;1.1: tried /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache2878933615940158311.dir/org/module/trunk/ivy-1.1.xml
 	[SUCCESSFUL ] org#module#trunk;1.1!module-1.1.ivy.ivy(ivy.original) (1ms)
 Execution environment profile JavaSE-1.2 loaded
 Execution environment profile JavaSE-1.3 loaded
@@ -47,8 +47,8 @@ java.net.MalformedURLException: no protocol: /module-1-1.ivy
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 
 found resolved revision in cache: org#module#trunk;latest.integration => 1.1
-Entry is found in the ModuleDescriptorCache : /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache6369023645242302663.dir/org/module/trunk/ivy-1.1.xml
-	found ivy file in cache for org#module#trunk;1.1 (resolved by resolver1): /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache6369023645242302663.dir/org/module/trunk/ivy-1.1.xml
+Entry is found in the ModuleDescriptorCache : /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache2878933615940158311.dir/org/module/trunk/ivy-1.1.xml
+	found ivy file in cache for org#module#trunk;1.1 (resolved by resolver1): /var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/ivycache2878933615940158311.dir/org/module/trunk/ivy-1.1.xml
 java.net.MalformedURLException: no protocol: /module-1-1.ivy
 	at java.net.URL.<init>(URL.java:586)
 	at java.net.URL.<init>(URL.java:483)
@@ -104,6 +104,6 @@ java.net.MalformedURLException: no protocol: /module-1-1.ivy
 
 ------------- ---------------- ---------------
 
-Testcase: testArtifactOrigin took 0.23 sec
-Testcase: testUniqueness took 0.031 sec
-Testcase: testLatestIntegrationIsCachedPerResolver took 0.085 sec
+Testcase: testArtifactOrigin took 0.249 sec
+Testcase: testUniqueness took 0.032 sec
+Testcase: testLatestIntegrationIsCachedPerResolver took 0.082 sec

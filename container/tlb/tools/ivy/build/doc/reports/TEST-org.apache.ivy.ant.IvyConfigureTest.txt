@@ -1,34 +1,34 @@
 Testsuite: org.apache.ivy.ant.IvyConfigureTest
-Tests run: 13, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
+Tests run: 13, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-defaultCacheDir.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+     [null] :: loading settings :: file = test/repositories/ivysettings.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings-1.4.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-defaultCacheDir.xml
      [null] :: loading settings :: file = test/java/org/apache/ivy/ant/ivysettings-defaultCacheDir.xml
      [null] :: loading settings :: file = test/java/org/apache/ivy/ant/ivysettings-noDefaultCacheDir.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings-1.4.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-url.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-test.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-props.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-props.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-test.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-props.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings-url.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-props.xml
      [null] :: loading settings :: file = test/java/org/apache/ivy/ant/ivysettings-include-twice.xml
-     [null] :: loading settings :: file = test/repositories/ivysettings.xml
      [null] :: loading settings :: file = test/repositories/ivysettings.xml
      [null] :: loading settings :: file = test/repositories/ivysettings.xml
      [null] :: loading settings :: file = test/repositories/ivysettings.xml
      [null] :: loading settings :: file = test/repositories/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testDefaultCacheDir took 0.208 sec
-Testcase: testDefault took 0.049 sec
-Testcase: testDefault14 took 0.044 sec
-Testcase: testURL took 0.016 sec
-Testcase: testAntProperties took 0.007 sec
-Testcase: testOverrideVariables took 0.005 sec
+Testcase: testDefault took 0.463 sec
+Testcase: testFile took 0.02 sec
+Testcase: testDefault14 took 0.051 sec
+Testcase: testDefaultCacheDir took 0.036 sec
+Testcase: testAntProperties took 0.008 sec
+Testcase: testOverrideVariables took 0.012 sec
+Testcase: testURL took 0.024 sec
 Testcase: testExposeAntProperties took 0.005 sec
-Testcase: testIncludeTwice took 0.029 sec
-Testcase: testOverrideTrue took 0.019 sec
-Testcase: testOverrideFalse took 0.007 sec
+Testcase: testIncludeTwice took 0.028 sec
+Testcase: testOverrideTrue took 0.025 sec
+Testcase: testOverrideFalse took 0.01 sec
 Testcase: testOverrideNotAllowed took 0.008 sec
-Testcase: testInvalidOverride took 0.001 sec
-Testcase: testFile took 0.008 sec
+Testcase: testInvalidOverride took 0 sec

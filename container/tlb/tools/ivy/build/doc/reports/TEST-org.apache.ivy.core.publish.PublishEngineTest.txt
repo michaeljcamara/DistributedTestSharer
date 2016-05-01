@@ -1,12 +1,12 @@
 Testsuite: org.apache.ivy.core.publish.PublishEngineTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.489 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.53 sec
 ------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/publish/repo/A/1.0.part/A.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/publish/repo/A/1.0.part/ivy.xml
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/publish/repo/A/1.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/publish/repo/A/1.0
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/publish/repo/A/1.0.part/A.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/publish/repo/A/1.0.part/ivy.xml
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/publish/repo/A/1.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/publish/repo/A/1.0
 ------------- ---------------- ---------------
 
-Testcase: testAtomicity took 0.481 sec
+Testcase: testAtomicity took 0.514 sec

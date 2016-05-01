@@ -1,15 +1,15 @@
 Testsuite: org.apache.ivy.core.cache.ModuleDescriptorMemoryCacheTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.02 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.062 sec
 ------------- Standard Output ---------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
 ------------- ---------------- ---------------
 
 Testcase: testUseModuleDescriptorProviderWhenModuleNotCached took 0.004 sec
 Testcase: testCacheResultOfModuleDescriptorProvider took 0 sec
 Testcase: testValidationClearInvalidatedCache took 0 sec
-Testcase: testValidationDontClearvalidatedCache took 0 sec
+Testcase: testValidationDontClearvalidatedCache took 0.001 sec
 Testcase: testSizeIsLimitied took 0 sec
-Testcase: testLastRecentlyUsedIsFlushedWhenSizeExceed took 0.001 sec
+Testcase: testLastRecentlyUsedIsFlushedWhenSizeExceed took 0 sec
 Testcase: testVariableChangeInvalidateEntry took 0 sec
 Testcase: testGetStaleDontReadFromCache took 0 sec
 Testcase: testGetStaleStoreResultInCache took 0 sec

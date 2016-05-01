@@ -4,7 +4,7 @@
 #uncomment statements to override variable values, comments show the default
 
 #The port the TLB server would listen to
-#TLB_SERVER_PORT=7019 
+# export TLB_SERVER_PORT=12345
 
 #Store is the directory under which the test information(running-time, results etc) are stored
 #TLB_DATA_DIR=tlb_store #in current working directory

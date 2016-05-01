@@ -65,14 +65,14 @@
                 <test name="org.schemaanalyst.unittest.AllTests" />
                 <test name="org.schemaanalyst.unittest.AllTests" />
 			          <classpath refid="run_classpath" />
+                <classpath refid="load.balanced.classpath"/>
 			          <formatter type="brief" usefile="true" />
-            <!-- <classpath refid="load.balanced.classpath"/> -->
 			      <!-- <classpath refid="run_classpath" /> -->
             <!-- <batchtest todir="${reports.dir}"> -->
                 <!-- <load-balanced-fileset dir="${basedir}/ftpserver/resources/test_suites" includes="**/*.class"/> -->
                 <!-- <load-balanced-fileset dir="${test-classes.dir}" includes="**/*Test.class"/> -->
-                <!-- <formatter classname="tlb.ant.JunitDataRecorder"/> -->
-                <!-- <formatter type="plain"/> -->
+                <formatter classname="tlb.ant.JunitDataRecorder"/>
+                <formatter type="plain"/>
             <!-- </batchtest> -->
         </junit>
     </target>

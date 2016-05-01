@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Coltons-MacBook-Pro.local" name="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" skipped="0" tests="12" time="2.184" timestamp="2016-04-23T16:07:48">
+<testsuite errors="0" failures="0" hostname="Coltons-MacBook-Pro.local" name="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" skipped="0" tests="12" time="2.692" timestamp="2016-05-01T15:23:57">
   <properties>
     <property name="java.home.ivy.instance" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre" />
     <property name="source.." value="src/java/" />
@@ -12,14 +12,14 @@
     <property name="java.vm.info.ivy.instance" value="mixed mode" />
     <property name="env.rvm_bin_path" value="/usr/local/rvm/bin" />
     <property name="ivy.report.output.pattern.ivy.instance" value="[organisation]-[module]-[conf].[ext]" />
-    <property name="user.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="user.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="java.vm.version" value="25.66-b17" />
-    <property name="ivy.lib.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib" />
+    <property name="ivy.lib.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib" />
     <property name="env.HISTFILESIZE" value="1000000" />
     <property name="path.separator.ivy.instance" value=":" />
-    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.9wlgBydeto/Render" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.hdd4oeXi4N/Render" />
     <property name="env.HISTSIZE" value="1000000" />
-    <property name="lib.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib" />
+    <property name="lib.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib" />
     <property name="env.GEM_HOME" value="/usr/local/rvm/gems/ruby-2.0.0-p353" />
     <property name="java.library.path.ivy.instance" value="/Users/ColtonMcCurdy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
     <property name="ant.file.type.ivy" value="file" />
@@ -30,7 +30,6 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ivy.shared.default.artifact.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="debug.mode" value="on" />
-    <property name="env.TMUX_PWD_37" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
     <property name="file.separator.ivy.instance" value="/" />
     <property name="env.HAS_256_COLORS" value="yes" />
     <property name="os.name" value="Mac OS X" />
@@ -41,19 +40,21 @@
     <property name="env.XPC_FLAGS" value="0x0" />
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
     <property name="env.POWERLINE_COMMAND" value="powerline" />
-    <property name="env.TMUX_PWD_26" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
     <property name="env.TODOTXT_DEFAULT_ACTION" value="ls" />
     <property name="os.arch" value="x86_64" />
     <property name="user.name" value="ColtonMcCurdy" />
-    <property name="ivy.retrieve.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/[artifact]-[revision](-[classifier]).[ext]" />
-    <property name="doc.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test-report/TEST-org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest.xml crashfile=/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/junitvmwatcher1410056001319133499.properties propsfile=/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/junit2773735265525484774.properties" />
+    <property name="ivy.retrieve.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="doc.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test-report/TEST-org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest.xml crashfile=/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/junitvmwatcher5970690473759404256.properties propsfile=/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/junit4095925005121121239.properties" />
     <property name="env.USER" value="ColtonMcCurdy" />
     <property name="ivy.shared.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="env.LOGNAME" value="ColtonMcCurdy" />
     <property name="sun.arch.data.model.ivy.instance" value="64" />
     <property name="ivy.default.conf.dir" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings" />
-    <property name="build.version" value="2.5.0-local-20160423120551" />
+    <property name="build.version" value="2.5.0-local-20160501112111" />
+    <property name="env.TMUX_PWD_17" value="/Users/ColtonMcCurdy/computer_science/cs580s2016/cs580s2016-mccurdyc/final-project/proposal" />
+    <property name="env.TMUX_PWD_16" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs580s2016/cs580s2016-mccurdyc/final-project" />
+    <property name="env.TMUX_PWD_15" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
     <property name="user.country" value="US" />
     <property name="java.vm.specification.version.ivy.instance" value="1.8" />
     <property name="ivy.default.always.check.exact.revision" value="false" />
@@ -61,22 +62,22 @@
     <property name="os.name.ivy.instance" value="Mac OS X" />
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/endorsed" />
     <property name="java.endorsed.dirs.ivy.instance" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/endorsed" />
-    <property name="ivy.lib.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib" />
+    <property name="ivy.lib.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib" />
     <property name="java.vm.specification.version" value="1.8" />
     <property name="env.IRBRC" value="/usr/local/rvm/rubies/ruby-2.0.0-p353/.irbrc" />
-    <property name="optional.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/optional" />
+    <property name="optional.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/optional" />
     <property name="env._system_version" value="10.11" />
     <property name="gopherProxySet.ivy.instance" value="false" />
     <property name="ivy.settings.url" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml" />
     <property name="env.SHLVL" value="4" />
     <property name="java.vendor" value="Oracle Corporation" />
-    <property name="user.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="user.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="ivy.default.settings.dir" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings" />
     <property name="user.region" value="TR" />
     <property name="ivy.settings.file" value="ivysettings.xml" />
     <property name="java.runtime.name.ivy.instance" value="Java(TM) SE Runtime Environment" />
     <property name="env.CLICOLOR" value="1" />
-    <property name="test.xml.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test-report" />
+    <property name="test.xml.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test-report" />
     <property name="file.separator" value="/" />
     <property name="ivy.local.default.artifact.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="ivy.cache.dir.ivy.instance" value="/Users/ColtonMcCurdy/.ivy2/cache" />
@@ -85,20 +86,20 @@
     <property name="ivy.shared.default.ivy.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="env.PAGER" value="less" />
     <property name="java.io.tmpdir.ivy.instance" value="/var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/" />
-    <property name="rat.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/rat" />
+    <property name="rat.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/rat" />
     <property name="env.GHC_DOT_APP" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/ghc-7.10.2.app" />
     <property name="ant.home" value="/usr/local/Cellar/ant/1.9.4/libexec" />
-    <property name="ivy.resolved.file" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/ivy.xml" />
+    <property name="ivy.resolved.file" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/ivy.xml" />
     <property name="ant.java.version" value="1.8" />
     <property name="java.library.path" value="/Users/ColtonMcCurdy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
-    <property name="artifacts.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/artifact" />
+    <property name="artifacts.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/artifact" />
     <property name="env._system_type" value="Darwin" />
-    <property name="classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes" />
-    <property name="javadoc.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/api" />
-    <property name="DSTAMP" value="20160423" />
+    <property name="classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes" />
+    <property name="javadoc.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/api" />
+    <property name="DSTAMP" value="20160501" />
     <property name="ivy.resolved.configurations" value="default, test" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="basedir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="java.vendor.url.ivy.instance" value="http://java.oracle.com/" />
     <property name="java.ext.dirs.ivy.instance" value="/Users/ColtonMcCurdy/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
     <property name="ivy.version" value="2.2.0" />
@@ -108,69 +109,67 @@
     <property name="env.TERM_PROGRAM" value="Apple_Terminal" />
     <property name="sun.io.unicode.encoding" value="UnicodeBig" />
     <property name="ivy.conf.dir" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings" />
-    <property name="TSTAMP" value="1205" />
+    <property name="TSTAMP" value="1121" />
     <property name="user.language" value="tr" />
-    <property name="env.TMUX_COLUMNS_6" value="230" />
-    <property name="env.TMUX_COLUMNS_5" value="114" />
-    <property name="env.TMUX_COLUMNS_4" value="114" />
+    <property name="env.TMUX_COLUMNS_6" value="61" />
+    <property name="env.TMUX_COLUMNS_4" value="253" />
     <property name="java.vm.specification.vendor.ivy.instance" value="Oracle Corporation" />
-    <property name="env.TMUX_COLUMNS_3" value="114" />
+    <property name="env.TMUX_COLUMNS_3" value="253" />
     <property name="env.rvm_path" value="/usr/local/rvm" />
-    <property name="env.TMUX_COLUMNS_1" value="114" />
+    <property name="env.TMUX_COLUMNS_1" value="230" />
     <property name="env.TMUX_COLUMNS_0" value="114" />
-    <property name="ant.project.invoked-targets" value="test-report" />
+    <property name="ant.project.invoked-targets" value="test" />
     <property name="env.TMUX_PWD_6" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
-    <property name="env.TMUX_PWD_5" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
+    <property name="env.TMUX_PWD_4" value="/Users/ColtonMcCurdy/computer_science/research/spring_2016/selectms" />
     <property name="env.TMUX_PWD_3" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/research/spring_2016/selectms" />
     <property name="awt.toolkit.ivy.instance" value="sun.lwawt.macosx.LWCToolkit" />
-    <property name="env.TMUX_PWD_1" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1" />
-    <property name="env.TMUX_PWD_0" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1" />
+    <property name="env.TMUX_PWD_0" value="/Users/ColtonMcCurdy/computer_science/cs580s2016/cs580s2016-mccurdyc/assignment27" />
     <property name="gopherProxySet" value="false" />
     <property name="ivy.report.output.pattern" value="[organisation]-[module]-[conf].[ext]" />
     <property name="java.class.version" value="52.0" />
     <property name="sun.boot.library.path.ivy.instance" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib" />
     <property name="os.version.ivy.instance" value="10.11.4" />
-    <property name="ivy.project.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="ivy.project.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="file.encoding.pkg" value="sun.io" />
     <property name="sun.cpu.endian" value="little" />
     <property name="ivy.configurations.ivy.instance" value="*" />
     <property name="ivy.home.ivy.instance" value="/Users/ColtonMcCurdy/.ivy2" />
     <property name="env.SHELL" value="/bin/bash" />
     <property name="env.rvm_version" value="1.26.11 (latest)" />
-    <property name="doc.src.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/doc" />
+    <property name="doc.src.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/doc" />
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre" />
     <property name="ant.project.default-target" value="coverage-report" />
     <property name="target.ivy.bundle.version" value="2.5.0" />
     <property name="ivy.status.ivy.instance" value="integration" />
     <property name="ant.library.dir.ivy.instance" value="/usr/local/Cellar/ant/1.9.4/libexec/lib" />
     <property name="sun.java.launcher.ivy.instance" value="SUN_STANDARD" />
-    <property name="ivy.basedir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="ivy.basedir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="java.vm.vendor.ivy.instance" value="Oracle Corporation" />
     <property name="ivy.cache.ttl.default.ivy.instance" value="10s" />
     <property name="ivy.default.conf.dir.ivy.instance" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings" />
     <property name="ivy.settings.url.ivy.instance" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml" />
-    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.6KgC4020rB/Listeners" />
-    <property name="test.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test" />
+    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.kEvTsYQnkC/Listeners" />
+    <property name="test.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test" />
     <property name="target.ivy.version" value="2.5.0" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="ivy.local.default.ivy.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
-    <property name="env.DISPLAY" value="/private/tmp/com.apple.launchd.VVkZtuXN7c/org.macosforge.xquartz:0" />
+    <property name="env.DISPLAY" value="/private/tmp/com.apple.launchd.pHEABFBXWy/org.macosforge.xquartz:0" />
     <property name="env.RUBY_VERSION" value="ruby-2.0.0-p353" />
     <property name="env.MY_RUBY_HOME" value="/usr/local/rvm/rubies/ruby-2.0.0-p353" />
     <property name="env.XPC_SERVICE_NAME" value="0" />
-    <property name="ant.file" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build.xml" />
+    <property name="ant.file" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build.xml" />
     <property name="ivy.buildlist.ivyfilepath.ivy.instance" value="ivy.xml" />
     <property name="env._system_name" value="OSX" />
     <property name="user.country.ivy.instance" value="US" />
     <property name="ivy.minimum.javaversion" value="1.5" />
     <property name="env.PYTHONPATH" value="/usr/local/lib/python2.7/site-packages" />
     <property name="ivy.local.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
-    <property name="core.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core" />
+    <property name="core.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core" />
     <property name="ivy.default.always.check.exact.revision.ivy.instance" value="false" />
     <property name="sun.cpu.isalist.ivy.instance" value="" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="distrib.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/distrib" />
+    <property name="distrib.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/distrib" />
     <property name="env._system_arch" value="x86_64" />
     <property name="java.io.tmpdir" value="/var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/" />
     <property name="file.encoding.ivy.instance" value="UTF-8" />
@@ -180,8 +179,8 @@
     <property name="ivy.settings.file.ivy.instance" value="ivysettings.xml" />
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib" />
     <property name="env.GEM_PATH" value="/usr/local/rvm/gems/ruby-2.0.0-p353:/usr/local/rvm/gems/ruby-2.0.0-p353@global" />
-    <property name="checkstyle.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/checkstyle" />
-    <property name="test.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/test" />
+    <property name="checkstyle.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/checkstyle" />
+    <property name="test.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/test" />
     <property name="file.encoding.pkg.ivy.instance" value="sun.io" />
     <property name="ivy.local.default.root" value="/Users/ColtonMcCurdy/.ivy2/local" />
     <property name="ivy.resolver.default.check.modified" value="false" />
@@ -202,7 +201,7 @@
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="ivy.dep.file" value="ivy.xml" />
     <property name="user.timezone.ivy.instance" value="America/New_York" />
-    <property name="ivy.deliver.ivy.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.deliver.ivy.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
     <property name="ivy.conf.url" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="ivy.deps.changed" value="false" />
@@ -211,81 +210,82 @@
     <property name="sun.jnu.encoding.ivy.instance" value="UTF-8" />
     <property name="sun.io.unicode.encoding.ivy.instance" value="UnicodeBig" />
     <property name="output.." value="bin/" />
-    <property name="bootstrap.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/bootstrap" />
-    <property name="sun.java.command.ivy.instance" value="org.apache.tools.ant.launch.Launcher -cp  test-report" />
+    <property name="bootstrap.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/bootstrap" />
+    <property name="sun.java.command.ivy.instance" value="org.apache.tools.ant.launch.Launcher -cp  test" />
     <property name="env.LESS" value="-niSR" />
-    <property name="basedir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
-    <property name="ant.file.ivy" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build.xml" />
+    <property name="basedir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
+    <property name="ant.file.ivy" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build.xml" />
     <property name="ivy.conf.url.ivy.instance" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml" />
     <property name="version.prefix" value="2.5.0-local-" />
     <property name="java.specification.vendor.ivy.instance" value="Oracle Corporation" />
-    <property name="test.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/java" />
-    <property name="ivy.build.artifacts.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/artifacts" />
+    <property name="test.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/java" />
+    <property name="ivy.build.artifacts.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/artifacts" />
     <property name="ivy.cache.dir" value="/Users/ColtonMcCurdy/.ivy2/cache" />
     <property name="user.language.ivy.instance" value="en" />
     <property name="java.class.path.ivy.instance" value="/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/Users/ColtonMcCurdy/.ant/lib/ivy.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-antlr.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-bcel.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-bsf.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-log4j.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-oro.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-regexp.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-resolver.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-apache-xalan2.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-commons-logging.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-commons-net.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-jai.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-javamail.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-jdepend.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-jmf.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-jsch.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-netrexx.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-swing.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-testutil.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/lib/tools.jar" />
-    <property name="env.PWD" value="/Users/ColtonMcCurdy/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="env.PWD" value="/Users/ColtonMcCurdy/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="env.TMPDIR" value="/var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/" />
     <property name="sun.cpu.endian.ivy.instance" value="little" />
     <property name="line.separator" value="&#xa;" />
     <property name="java.specification.version" value="1.8" />
-    <property name="ivy.publish.src.artifacts.pattern" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
-    <property name="all.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/all" />
+    <property name="ivy.publish.src.artifacts.pattern" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="all.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/all" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="bin.includes" value="META-INF/,." />
     <property name="env.TERM_PROGRAM_VERSION" value="361.1" />
-    <property name="ivy.retrieve.pattern" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.retrieve.pattern" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/[artifact]-[revision](-[classifier]).[ext]" />
     <property name="ivy.organisation" value="org.apache.ivy" />
     <property name="ivy.targets.copied" value="false" />
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/classes" />
-    <property name="env.TMUX_COLUMNS_37" value="57" />
     <property name="ivy.resolve.default.type.filter" value="*" />
     <property name="java.specification.version.ivy.instance" value="1.8" />
-    <property name="src.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/src/java" />
-    <property name="ivy.basedir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="src.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/src/java" />
+    <property name="ivy.basedir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="ivy.log.modules.in.use.ivy.instance" value="false" />
     <property name="env.rvm_prefix" value="/usr/local" />
     <property name="java.specification.name.ivy.instance" value="Java Platform API Specification" />
     <property name="env.HOME" value="/Users/ColtonMcCurdy" />
     <property name="line.separator.ivy.instance" value="&#xa;" />
     <property name="user.home.ivy.instance" value="/Users/ColtonMcCurdy" />
-    <property name="ivy.publish.src.artifacts.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
-    <property name="ivy.deliver.ivy.pattern" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.publish.src.artifacts.pattern.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.deliver.ivy.pattern" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
     <property name="ivy.shared.default.root.ivy.instance" value="/Users/ColtonMcCurdy/.ivy2/shared" />
-    <property name="env.TMUX_COLUMNS_26" value="56" />
     <property name="ivy.checksums.ivy.instance" value="sha1,md5" />
-    <property name="bundle.version" value="2.5.0.alpha_20160423120551" />
+    <property name="bundle.version" value="2.5.0.alpha_20160501112111" />
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
-    <property name="env.TMUX_PANE" value="%50" />
-    <property name="TODAY" value="April 23 2016" />
+    <property name="env.TMUX_PANE" value="%52" />
+    <property name="TODAY" value="May 1 2016" />
     <property name="sun.jnu.encoding" value="UTF-8" />
     <property name="ivy.default.ivy.user.dir.ivy.instance" value="/Users/ColtonMcCurdy/.ivy2" />
-    <property name="reports.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports" />
-    <property name="ant.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/ant" />
-    <property name="ivy.project.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy" />
+    <property name="reports.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports" />
+    <property name="ant.classes.build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/ant" />
+    <property name="ivy.project.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy" />
     <property name="ivy.revision" value="working@Coltons-MacBook-Pro.local" />
     <property name="java.runtime.version" value="1.8.0_66-b17" />
-    <property name="checkstyle.src.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/src/etc/checkstyle" />
+    <property name="checkstyle.src.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/src/etc/checkstyle" />
     <property name="sun.boot.class.path.ivy.instance" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/classes" />
     <property name="ivy.home" value="/Users/ColtonMcCurdy/.ivy2" />
     <property name="java.vendor.ivy.instance" value="Oracle Corporation" />
-    <property name="ivy.distrib.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib" />
-    <property name="tlb.dist.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/java" />
+    <property name="ivy.distrib.dir.ivy.instance" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib" />
+    <property name="tlb.dist.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/java" />
     <property name="user.timezone" value="" />
+    <property name="env.TMUX_COLUMNS_17" value="253" />
+    <property name="env.TMUX_COLUMNS_16" value="125" />
+    <property name="env.TMUX_COLUMNS_15" value="125" />
     <property name="java.vm.specification.name.ivy.instance" value="Java Virtual Machine Specification" />
-    <property name="env.TMUX" value="/private/var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/tmux-501/default,1024,2" />
+    <property name="env.TMUX" value="/private/var/folders/63/3rz5g1g93kl56014nnctmg6w0000gn/T/tmux-501/default,978,3" />
     <property name="ivy.dep.file.ivy.instance" value="ivy.xml" />
     <property name="java.ext.dirs" value="/Users/ColtonMcCurdy/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
-    <property name="java.class.path" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/ant-contrib.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/ant-testutil.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/bcpg-jdk15on.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/bcprov-jdk15on.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/commons-codec.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/commons-httpclient.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/commons-lang.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/commons-logging.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/commons-vfs.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jna.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.connector-factory.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.core.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.jsch.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.pageant.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.sshagent.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.usocket-jna.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.agentproxy.usocket-nc.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/jsch.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/junit.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/mod1.2-2.0.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/oro.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/platform.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/xercesImpl.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/xmlParserAPIs.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/lib/xmlunit.jar:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/ant:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/optional:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar" />
+    <property name="java.class.path" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/ant-contrib.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/ant-testutil.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/bcpg-jdk15on.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/bcprov-jdk15on.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/commons-codec.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/commons-httpclient.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/commons-lang.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/commons-logging.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/commons-vfs.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jna.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.connector-factory.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.core.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.jsch.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.pageant.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.sshagent.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.usocket-jna.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.agentproxy.usocket-nc.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/jsch.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/junit.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/mod1.2-2.0.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/oro.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/platform.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/xercesImpl.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/xmlParserAPIs.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/lib/xmlunit.jar:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/ant:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/optional:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar" />
     <property name="ivy.settings.dir" value="jar:file:/Users/ColtonMcCurdy/.ant/lib/ivy.jar!/org/apache/ivy/core/settings" />
-    <property name="tlb.project.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tlb" />
-    <property name="example.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/src/example" />
+    <property name="tlb.project.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tlb" />
+    <property name="example.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/src/example" />
     <property name="os.version" value="10.11.4" />
-    <property name="coverage.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/coverage" />
+    <property name="coverage.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/coverage" />
     <property name="java.class.version.ivy.instance" value="52.0" />
     <property name="ivy.module" value="ivy" />
     <property name="os.arch.ivy.instance" value="x86_64" />
-    <property name="env.TERM_SESSION_ID" value="4A239604-06C0-4C75-82B4-8A1D80F9C9E9" />
+    <property name="env.TERM_SESSION_ID" value="460B8599-A3D8-4C9F-ADDB-733C593ED77F" />
     <property name="env.LANG" value="en_US.UTF-8" />
     <property name="ivy.nb.targets.copied" value="0" />
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
@@ -295,60 +295,641 @@
     <property name="ivy.log.modules.in.use" value="false" />
     <property name="test.class.pattern" value="*Test" />
     <property name="ant.file.type" value="file" />
-    <property name="pubdate" value="20160423120551" />
-    <property name="ivy.build.artifacts.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/artifacts" />
+    <property name="pubdate" value="20160501112111" />
+    <property name="ivy.build.artifacts.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/artifacts" />
     <property name="ivy.checksums" value="sha1,md5" />
     <property name="sun.os.patch.level.ivy.instance" value="unknown" />
-    <property name="build.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build" />
+    <property name="build.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build" />
     <property name="ivy.configurations" value="*" />
     <property name="final.name" value="ivy.jar" />
-    <property name="env.JAVA_MAIN_CLASS_36901" value="org.apache.tools.ant.launch.Launcher" />
-    <property name="ivy.distrib.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/distrib" />
+    <property name="ivy.distrib.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/distrib" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
-    <property name="ivy.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/doc/reports/ivy" />
+    <property name="ivy.report.dir" value="/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/doc/reports/ivy" />
     <property name="file.encoding" value="UTF-8" />
     <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0x0:0x0" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
     <property name="emma.coverage.out.merge" value="true" />
+    <property name="env.JAVA_MAIN_CLASS_11586" value="org.apache.tools.ant.launch.Launcher" />
     <property name="user.name.ivy.instance" value="ColtonMcCurdy" />
   </properties>
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency1" time="0.566" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency2" time="0.121" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency3" time="0.138" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testConflict" time="0.141" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testDynamicRootConflict" time="0.103" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve2" time="0.15" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve3" time="0.268" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve4" time="0.196" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve5" time="0.162" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve6" time="0.121" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve1" time="0.091" />
-  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testInitFromSettings" time="0.007" />
-  <system-out><![CDATA[:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/6.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/6.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/4.6.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/4.6.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/4.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/4.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/3.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/3.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/3.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/3.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.5
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testInitFromSettings" time="0.133" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency2" time="0.36" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency3" time="0.178" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testConflict" time="0.16" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testDynamicRootConflict" time="0.143" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve1" time="0.14" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve2" time="0.205" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve3" time="0.338" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve4" time="0.253" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve5" time="0.202" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolve6" time="0.154" />
+  <testcase classname="org.apache.ivy.plugins.conflict.LatestCompatibleConflictManagerTest" name="testCompatibilityResolveCircularDependency1" time="0.245" />
+  <system-out><![CDATA[:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-compatible.xml
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-compatible.xml)
+:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/classes/core/org/apache/ivy/core/settings/ivysettings.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3
+:: resolving dependencies :: #A;1
+	confs: [default]
+	found #C;2 in test
+	found #B;2 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2/C.jar ...
+	[SUCCESSFUL ] #C;2!C.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2/B.jar ...
+	[SUCCESSFUL ] #B;2!B.jar (3ms)
+:: resolution report :: resolve 106ms :: artifacts dl 7ms
+	:: evicted modules:
+	#C;latest.integration by [#C;2] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   2   |   2   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+
+:: problems summary ::
+:::: WARNINGS
+	circular dependency found: #C;2->#B;2->#C;latest.integration
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3
+:: resolving dependencies :: #A;1
+	confs: [default]
+	found #B;2 in test
+	found #C;3 in test
+	[3] #C;latest.integration
+BLACKLISTING [#C;3 blacklisted to evict #B;3 in favor of #B;2 in #A;1 for default]
+	found #C;2 in test
+	[2] #C;latest.integration
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2/B.jar ...
+	[SUCCESSFUL ] #B;2!B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2/C.jar ...
+	[SUCCESSFUL ] #C;2!C.jar (2ms)
+:: resolution report :: resolve 95ms :: artifacts dl 6ms
+	:: evicted modules:
+	#B;3 by [#B;2 with blacklisting of #C;3] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   2   |   2   |   1   ||   2   |   2   |
+	---------------------------------------------------------------------
+
+:: problems summary ::
+:::: WARNINGS
+	circular dependency found: #B;2->#C;latest.integration->#B;3
+
+	circular dependency found: #B;2->#C;latest.integration->...
+
+	circular dependency found: #C;latest.integration->#B;2->...
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.6.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.6.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0
+:: resolving dependencies :: #A;conflict
+	confs: [default]
+	found #B;1.6 in test
+	[1.6] #B;[1.5,1.6]
+	found #D;2.0 in test
+	found #C;2.5 in test
+BLACKLISTING [#B;1.6 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;conflict for default]
+	found #B;1.5 in test
+	[1.5] #B;[1.5,1.6]
+BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;conflict for default]
+
+:: problems summary ::
+:::: ERRORS
+	#D;2.0 (needed by []) conflicts with #D;[1.0,1.6] (needed by [#C;2.5])
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/conflict
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.0.0.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.0.0.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.0.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.0.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.1.0.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.1.0.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.1.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.1.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/pCC.main.0.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.0.0.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.0.0.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.0.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.0.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.1.0.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.1.0.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.1.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/1.1.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/pCC.main.1.9
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.1.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.1.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.1
+:: resolving dependencies :: #A;conflict
+	confs: [default]
+	found #C;pCC.main.1.9 in test
+	[pCC.main.1.9] #C;pCC.main.+
+	found #B;pCC.main.0.0 in test
+	[pCC.main.0.0] #B;pCC.main.+
+BLACKLISTING [#B;[1.2,2.0[ blacklisted to evict #B;[1.2,2.0[ in favor of #B;pCC.main.0.0 in #A;conflict for default]
+BLACKLISTING [#B;pCC.main.0.0 blacklisted to evict #B;pCC.main.0.0 in favor of #B;[1.2,2.0[ in #A;conflict for default]
+BLACKLISTING [#B;pCC.main.0.0 blacklisted to evict #B;pCC.main.0.0 in favor of #B;[1.2,2.0[ in #A;conflict for default]
+
+:: problems summary ::
+:::: WARNINGS
+		module not found: #B;[1.2,2.0[
+
+	==== test: tried
+
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo//B/[revision]/ivy.xml
+
+	  [1.1.0, 1.0.0, pCC.main.0.0]
+
+	  -- artifact #B;[1.2,2.0[!B.jar:
+
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo//B/[revision]/B.jar
+
+	  [1.1.0, 1.0.0, pCC.main.0.0]
+
+:::: ERRORS
+	#B;pCC.main.0.0 (needed by []) conflicts with #B;[1.2,2.0[ (needed by [])
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+:: resolving dependencies :: #A;1
+	confs: [default]
+	found #B;1.4 in test
+	found #D;1.5 in test
+	found #C;2.5 in test
+	[2.5] #C;[2.0,2.5]
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
+	[SUCCESSFUL ] #B;1.4!B.jar (3ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
+	[SUCCESSFUL ] #C;2.5!C.jar (4ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
+	[SUCCESSFUL ] #D;1.5!D.jar (3ms)
+:: resolution report :: resolve 69ms :: artifacts dl 12ms
+	:: evicted modules:
+	#D;[1.0,1.6] by [#D;1.5] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   3   |   3   |   1   ||   3   |   3   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/2.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/2.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/2.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/2
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0
+:: resolving dependencies :: #A;2
+	confs: [default]
+	found #B;1.5 in test
+	[1.5] #B;[1.0,1.5]
+	found #D;2.0 in test
+	found #C;2.5 in test
+	[2.5] #C;[2.0,2.5]
+BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;2 for default]
+	found #B;1.4 in test
+	[1.4] #B;[1.0,1.5]
+	found #D;1.5 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
+	[SUCCESSFUL ] #C;2.5!C.jar (3ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
+	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
+	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
+:: resolution report :: resolve 120ms :: artifacts dl 9ms
+	:: evicted modules:
+	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;1.5] in [default]
+	#D;[1.0,1.6] by [#D;1.5] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   4   |   4   |   2   ||   3   |   3   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/3.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/3.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/3
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.3.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.3.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.3
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.4.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.4.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.0.part/ivy.xml
+	published E to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.0.part/E.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.9.part/ivy.xml
+	published E to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.9.part/E.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.9.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.9
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/2.0.part/ivy.xml
+	published E to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/2.0.part/E.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/2.0
+:: resolving dependencies :: #A;3
+	confs: [default]
+	found #B;2.5 in test
+	[2.5] #B;[2.0,2.5]
+	found #D;2.0 in test
+	found #C;3.5 in test
+	[3.5] #C;[3.0,3.5]
+BLACKLISTING [#B;2.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;3 for default]
+	found #B;2.4 in test
+	[2.4] #B;[2.0,2.5]
+	found #D;1.5 in test
+	found #E;2.0 in test
+BLACKLISTING [#B;2.4 blacklisted to evict #E;2.0 in favor of #E;1.9 in #A;3 for default]
+	found #B;2.3 in test
+	[2.3] #B;[2.0,2.5]
+BLACKLISTING [#C;3.5 blacklisted to evict #E;1.9 in favor of #E;1.0 in #A;3 for default]
+	found #E;1.0 in test
+	found #C;3.4 in test
+	[3.4] #C;[3.0,3.5]
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
+	[SUCCESSFUL ] #D;1.5!D.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/2.3/B.jar ...
+	[SUCCESSFUL ] #B;2.3!B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/E/1.0/E.jar ...
+	[SUCCESSFUL ] #E;1.0!E.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/3.4/C.jar ...
+	[SUCCESSFUL ] #C;3.4!C.jar (2ms)
+:: resolution report :: resolve 236ms :: artifacts dl 10ms
+	:: evicted modules:
+	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;2.5] in [default]
+	#E;2.0 by [#E;1.9 with blacklisting of #B;2.4] in [default]
+	#D;[1.0,1.6] by [#D;1.5] in [default]
+	#E;1.9 by [#E;1.0 with blacklisting of #C;3.5] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   8   |   6   |   6   |   4   ||   4   |   4   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/4.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/4.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.0.part/ivy.xml
+	published F to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.0.part/F.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.1.part/ivy.xml
+	published F to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.1.part/F.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0
+:: resolving dependencies :: #A;4
+	confs: [default]
+	found #B;1.5 in test
+	[1.5] #B;[1.0,1.5]
+	found #D;2.0 in test
+	found #C;2.5 in test
+	[2.5] #C;[2.0,2.5]
+BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;4 for default]
+	found #B;1.4 in test
+	[1.4] #B;[1.0,1.5]
+	found #D;1.5 in test
+	found #F;1.1 in test
+	[1.1] #F;[1.0,1.1]
+BLACKLISTING [#F;1.1 blacklisted to evict #D;1.6 in favor of #D;1.5 in #A;4 for default]
+	found #F;1.0 in test
+	[1.0] #F;[1.0,1.1]
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
+	[SUCCESSFUL ] #C;2.5!C.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
+	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
+	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/F/1.0/F.jar ...
+	[SUCCESSFUL ] #F;1.0!F.jar (2ms)
+:: resolution report :: resolve 161ms :: artifacts dl 10ms
+	:: evicted modules:
+	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;1.5] in [default]
+	#D;[1.0,1.6] by [#D;1.5] in [default]
+	#D;1.6 by [#D;1.5 with blacklisting of #F;1.1] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   7   |   5   |   5   |   3   ||   4   |   4   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/5.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/5.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.3.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.3.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.3.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.3
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.6.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.6.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.0
+:: resolving dependencies :: #A;5
+	confs: [default]
+	found #B;1.5 in test
+	[1.5] #B;[1.0,1.5]
+	found #D;2.0 in test
+	found #C;2.6 in test
+BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;1.6 in #A;5 for default]
+	found #B;1.4 in test
+	[1.4] #B;[1.0,1.5]
+BLACKLISTING [#B;1.4 blacklisted to evict #D;1.5 in favor of #D;1.6 in #A;5 for default]
+	found #B;1.3 in test
+	[1.3] #B;[1.0,1.5]
+	found #D;1.6 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.6/C.jar ...
+	[SUCCESSFUL ] #C;2.6!C.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6/D.jar ...
+	[SUCCESSFUL ] #D;1.6!D.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.3/B.jar ...
+	[SUCCESSFUL ] #B;1.3!B.jar (2ms)
+:: resolution report :: resolve 132ms :: artifacts dl 6ms
+	:: evicted modules:
+	#D;2.0 by [#D;1.6 with blacklisting of #B;1.5] in [default]
+	#D;1.5 by [#D;1.6 with blacklisting of #B;1.4] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   4   |   4   |   2   ||   3   |   3   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/1
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.6
+:: resolving dependencies :: #A;1
+	confs: [default]
+	found #C;2.5 in test
+	[2.5] #C;[2.0,2.5]
+	found #D;1.6 in test
+	[1.6] #D;[1.0,1.6]
+	found #B;1.4 in test
+BLACKLISTING [#D;1.6 blacklisted to evict #D;1.6 in favor of #D;1.5 in #A;1 for default]
+	found #D;1.5 in test
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
+	[SUCCESSFUL ] #C;2.5!C.jar (10ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
+	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
+	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
+:: resolution report :: resolve 91ms :: artifacts dl 15ms
+	:: evicted modules:
+	#D;[1.0,1.6] by [#D;1.5] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   3   |   3   |   1   ||   3   |   3   |
+	---------------------------------------------------------------------
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/6.part/ivy.xml
+	published A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/6.part/A.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/A/6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.4.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.4.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.4.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.4
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.5.part/ivy.xml
+	published B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.5.part/B.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.5
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/4.6.part/ivy.xml
+	published C to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/4.6.part/C.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/4.6.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/4.6
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/3.0.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/3.0.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/3.0.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/3.0
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.5.part/ivy.xml
+	published D to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.5.part/D.jar
+	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.5.part 
+		to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.5
 :: resolving dependencies :: #A;6
 	confs: [default]
 	found #B;3.5 in test
@@ -359,13 +940,13 @@ BLACKLISTING [#B;3.5 blacklisted to evict #D;3.0 in favor of #D;2.5 in #A;6 for 
 	found #B;3.4 in test
 	[3.4] #B;[3.0,3.5]
 	found #D;2.5 in test
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/4.6/C.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/C/4.6/C.jar ...
 	[SUCCESSFUL ] #C;4.6!C.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.5/D.jar ...
-	[SUCCESSFUL ] #D;2.5!D.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.4/B.jar ...
-	[SUCCESSFUL ] #B;3.4!B.jar (3ms)
-:: resolution report :: resolve 199ms :: artifacts dl 10ms
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/D/2.5/D.jar ...
+	[SUCCESSFUL ] #D;2.5!D.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/test-repo/B/3.4/B.jar ...
+	[SUCCESSFUL ] #B;3.4!B.jar (2ms)
+:: resolution report :: resolve 112ms :: artifacts dl 8ms
 	:: evicted modules:
 	#D;3.0 by [#D;2.5 with blacklisting of #B;3.5] in [default]
 	---------------------------------------------------------------------
@@ -387,587 +968,6 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 
 
 :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3
-:: resolving dependencies :: #A;1
-	confs: [default]
-	found #C;2 in test
-	found #B;2 in test
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2/C.jar ...
-	[SUCCESSFUL ] #C;2!C.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2/B.jar ...
-	[SUCCESSFUL ] #B;2!B.jar (2ms)
-:: resolution report :: resolve 44ms :: artifacts dl 6ms
-	:: evicted modules:
-	#C;latest.integration by [#C;2] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   3   |   2   |   2   |   1   ||   2   |   2   |
-	---------------------------------------------------------------------
-
-:: problems summary ::
-:::: WARNINGS
-	circular dependency found: #C;2->#B;2->#C;latest.integration
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/3
-:: resolving dependencies :: #A;1
-	confs: [default]
-	found #B;2 in test
-	found #C;3 in test
-	[3] #C;latest.integration
-BLACKLISTING [#C;3 blacklisted to evict #B;3 in favor of #B;2 in #A;1 for default]
-	found #C;2 in test
-	[2] #C;latest.integration
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2/B.jar ...
-	[SUCCESSFUL ] #B;2!B.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2/C.jar ...
-	[SUCCESSFUL ] #C;2!C.jar (2ms)
-:: resolution report :: resolve 69ms :: artifacts dl 6ms
-	:: evicted modules:
-	#B;3 by [#B;2 with blacklisting of #C;3] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   3   |   2   |   2   |   1   ||   2   |   2   |
-	---------------------------------------------------------------------
-
-:: problems summary ::
-:::: WARNINGS
-	circular dependency found: #B;2->#C;latest.integration->#B;3
-
-	circular dependency found: #B;2->#C;latest.integration->...
-
-	circular dependency found: #C;latest.integration->#B;2->...
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.6.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.6.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0
-:: resolving dependencies :: #A;conflict
-	confs: [default]
-	found #B;1.6 in test
-	[1.6] #B;[1.5,1.6]
-	found #D;2.0 in test
-	found #C;2.5 in test
-BLACKLISTING [#B;1.6 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;conflict for default]
-	found #B;1.5 in test
-	[1.5] #B;[1.5,1.6]
-BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;conflict for default]
-
-:: problems summary ::
-:::: ERRORS
-	#D;2.0 (needed by []) conflicts with #D;[1.0,1.6] (needed by [#C;2.5])
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/conflict
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.0.0.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.0.0.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.0.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.0.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.1.0.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.1.0.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.1.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.1.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/pCC.main.0.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/pCC.main.0.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.0.0.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.0.0.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.0.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.0.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.1.0.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.1.0.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.1.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/1.1.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/pCC.main.1.9.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/pCC.main.1.9
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.1.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.1.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.1
-:: resolving dependencies :: #A;conflict
-	confs: [default]
-	found #C;pCC.main.1.9 in test
-	[pCC.main.1.9] #C;pCC.main.+
-	found #B;pCC.main.0.0 in test
-	[pCC.main.0.0] #B;pCC.main.+
-BLACKLISTING [#B;[1.2,2.0[ blacklisted to evict #B;[1.2,2.0[ in favor of #B;pCC.main.0.0 in #A;conflict for default]
-BLACKLISTING [#B;pCC.main.0.0 blacklisted to evict #B;pCC.main.0.0 in favor of #B;[1.2,2.0[ in #A;conflict for default]
-BLACKLISTING [#B;pCC.main.0.0 blacklisted to evict #B;pCC.main.0.0 in favor of #B;[1.2,2.0[ in #A;conflict for default]
-
-:: problems summary ::
-:::: WARNINGS
-		module not found: #B;[1.2,2.0[
-
-	==== test: tried
-
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo//B/[revision]/ivy.xml
-
-	  [1.1.0, 1.0.0, pCC.main.0.0]
-
-	  -- artifact #B;[1.2,2.0[!B.jar:
-
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo//B/[revision]/B.jar
-
-	  [1.1.0, 1.0.0, pCC.main.0.0]
-
-:::: ERRORS
-	#B;pCC.main.0.0 (needed by []) conflicts with #B;[1.2,2.0[ (needed by [])
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/2.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/2.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/2.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/2
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0
-:: resolving dependencies :: #A;2
-	confs: [default]
-	found #B;1.5 in test
-	[1.5] #B;[1.0,1.5]
-	found #D;2.0 in test
-	found #C;2.5 in test
-	[2.5] #C;[2.0,2.5]
-BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;2 for default]
-	found #B;1.4 in test
-	[1.4] #B;[1.0,1.5]
-	found #D;1.5 in test
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
-	[SUCCESSFUL ] #C;2.5!C.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
-	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
-	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
-:: resolution report :: resolve 81ms :: artifacts dl 8ms
-	:: evicted modules:
-	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;1.5] in [default]
-	#D;[1.0,1.6] by [#D;1.5] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   5   |   4   |   4   |   2   ||   3   |   3   |
-	---------------------------------------------------------------------
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/3.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/3.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/3
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.3.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.3.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.3
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.4.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.4.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.0.part/ivy.xml
-	published E to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.0.part/E.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.9.part/ivy.xml
-	published E to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.9.part/E.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.9.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.9
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/2.0.part/ivy.xml
-	published E to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/2.0.part/E.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/2.0
-:: resolving dependencies :: #A;3
-	confs: [default]
-	found #B;2.5 in test
-	[2.5] #B;[2.0,2.5]
-	found #D;2.0 in test
-	found #C;3.5 in test
-	[3.5] #C;[3.0,3.5]
-BLACKLISTING [#B;2.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;3 for default]
-	found #B;2.4 in test
-	[2.4] #B;[2.0,2.5]
-	found #D;1.5 in test
-	found #E;2.0 in test
-BLACKLISTING [#B;2.4 blacklisted to evict #E;2.0 in favor of #E;1.9 in #A;3 for default]
-	found #B;2.3 in test
-	[2.3] #B;[2.0,2.5]
-BLACKLISTING [#C;3.5 blacklisted to evict #E;1.9 in favor of #E;1.0 in #A;3 for default]
-	found #E;1.0 in test
-	found #C;3.4 in test
-	[3.4] #C;[3.0,3.5]
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
-	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/2.3/B.jar ...
-	[SUCCESSFUL ] #B;2.3!B.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/E/1.0/E.jar ...
-	[SUCCESSFUL ] #E;1.0!E.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/3.4/C.jar ...
-	[SUCCESSFUL ] #C;3.4!C.jar (2ms)
-:: resolution report :: resolve 153ms :: artifacts dl 11ms
-	:: evicted modules:
-	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;2.5] in [default]
-	#E;2.0 by [#E;1.9 with blacklisting of #B;2.4] in [default]
-	#D;[1.0,1.6] by [#D;1.5] in [default]
-	#E;1.9 by [#E;1.0 with blacklisting of #C;3.5] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   8   |   6   |   6   |   4   ||   4   |   4   |
-	---------------------------------------------------------------------
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/4.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/4.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.0.part/ivy.xml
-	published F to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.0.part/F.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.0
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.1.part/ivy.xml
-	published F to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.1.part/F.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0
-:: resolving dependencies :: #A;4
-	confs: [default]
-	found #B;1.5 in test
-	[1.5] #B;[1.0,1.5]
-	found #D;2.0 in test
-	found #C;2.5 in test
-	[2.5] #C;[2.0,2.5]
-BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;[1.0,1.6] in #A;4 for default]
-	found #B;1.4 in test
-	[1.4] #B;[1.0,1.5]
-	found #D;1.5 in test
-	found #F;1.1 in test
-	[1.1] #F;[1.0,1.1]
-BLACKLISTING [#F;1.1 blacklisted to evict #D;1.6 in favor of #D;1.5 in #A;4 for default]
-	found #F;1.0 in test
-	[1.0] #F;[1.0,1.1]
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
-	[SUCCESSFUL ] #C;2.5!C.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
-	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
-	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/F/1.0/F.jar ...
-	[SUCCESSFUL ] #F;1.0!F.jar (2ms)
-:: resolution report :: resolve 106ms :: artifacts dl 9ms
-	:: evicted modules:
-	#D;2.0 by [#D;[1.0,1.6] with blacklisting of #B;1.5] in [default]
-	#D;[1.0,1.6] by [#D;1.5] in [default]
-	#D;1.6 by [#D;1.5 with blacklisting of #F;1.1] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   7   |   5   |   5   |   3   ||   4   |   4   |
-	---------------------------------------------------------------------
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/5.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/5.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.3.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.3.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.3.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.3
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.6.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.6.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/2.0
-:: resolving dependencies :: #A;5
-	confs: [default]
-	found #B;1.5 in test
-	[1.5] #B;[1.0,1.5]
-	found #D;2.0 in test
-	found #C;2.6 in test
-BLACKLISTING [#B;1.5 blacklisted to evict #D;2.0 in favor of #D;1.6 in #A;5 for default]
-	found #B;1.4 in test
-	[1.4] #B;[1.0,1.5]
-BLACKLISTING [#B;1.4 blacklisted to evict #D;1.5 in favor of #D;1.6 in #A;5 for default]
-	found #B;1.3 in test
-	[1.3] #B;[1.0,1.5]
-	found #D;1.6 in test
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.6/C.jar ...
-	[SUCCESSFUL ] #C;2.6!C.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6/D.jar ...
-	[SUCCESSFUL ] #D;1.6!D.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.3/B.jar ...
-	[SUCCESSFUL ] #B;1.3!B.jar (2ms)
-:: resolution report :: resolve 85ms :: artifacts dl 8ms
-	:: evicted modules:
-	#D;2.0 by [#D;1.6 with blacklisting of #B;1.5] in [default]
-	#D;1.5 by [#D;1.6 with blacklisting of #B;1.4] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   5   |   4   |   4   |   2   ||   3   |   3   |
-	---------------------------------------------------------------------
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-:: resolving dependencies :: #A;1
-	confs: [default]
-	found #C;2.5 in test
-	[2.5] #C;[2.0,2.5]
-	found #D;1.6 in test
-	[1.6] #D;[1.0,1.6]
-	found #B;1.4 in test
-BLACKLISTING [#D;1.6 blacklisted to evict #D;1.6 in favor of #D;1.5 in #A;1 for default]
-	found #D;1.5 in test
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
-	[SUCCESSFUL ] #C;2.5!C.jar (5ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
-	[SUCCESSFUL ] #B;1.4!B.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
-	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
-:: resolution report :: resolve 55ms :: artifacts dl 10ms
-	:: evicted modules:
-	#D;[1.0,1.6] by [#D;1.5] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   4   |   3   |   3   |   1   ||   3   |   3   |
-	---------------------------------------------------------------------
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/ivy.xml
-	published A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part/A.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/A/1
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/ivy.xml
-	published B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part/B.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/ivy.xml
-	published C to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part/C.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/ivy.xml
-	published D to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part/D.jar
-	publish commited: moved /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6.part 
-		to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.6
-:: resolving dependencies :: #A;1
-	confs: [default]
-	found #B;1.4 in test
-	found #D;1.5 in test
-	found #C;2.5 in test
-	[2.5] #C;[2.0,2.5]
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/B/1.4/B.jar ...
-	[SUCCESSFUL ] #B;1.4!B.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/C/2.5/C.jar ...
-	[SUCCESSFUL ] #C;2.5!C.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/test-repo/D/1.5/D.jar ...
-	[SUCCESSFUL ] #D;1.5!D.jar (2ms)
-:: resolution report :: resolve 41ms :: artifacts dl 6ms
-	:: evicted modules:
-	#D;[1.0,1.6] by [#D;1.5] in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   4   |   3   |   3   |   1   ||   3   |   3   |
-	---------------------------------------------------------------------
-:: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-compatible.xml
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/plugins/conflict/ivysettings-latest-compatible.xml)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

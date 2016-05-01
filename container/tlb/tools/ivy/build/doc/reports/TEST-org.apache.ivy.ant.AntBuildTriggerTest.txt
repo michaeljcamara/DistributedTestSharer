@@ -1,15 +1,15 @@
 Testsuite: org.apache.ivy.ant.AntBuildTriggerTest
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.469 sec
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 1.22 sec
 ------------- Standard Output ---------------
 :: loading settings :: file = test/triggers/ant-build/ivysettings.xml
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-build/ivysettings.xml)
-:: resolving dependencies :: apache#B;working@Coltons-MacBook-Pro.local
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/triggers/ant-build/ivysettings.xml)
+:: resolving dependencies :: apache#B;working@Coltons-MBP
 	confs: [default]
 	found apache#foo;1.0 in local
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-build/local/foo/foo.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/triggers/ant-build/local/foo/foo.jar ...
 .. (0kB)
-	[SUCCESSFUL ] apache#foo;1.0!foo.jar (4ms)
-:: resolution report :: resolve 117ms :: artifacts dl 6ms
+	[SUCCESSFUL ] apache#foo;1.0!foo.jar (19ms)
+:: resolution report :: resolve 197ms :: artifacts dl 20ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -26,7 +26,7 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 		::::::::::::::::::::::::::::::::::::::::::::::
 
 		:: apache#A;latest.integration: The following error occurred while executing this line:
-/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/triggers/ant-build/A/build.xml:21: The following error occurred while executing this line:
+/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/triggers/ant-build/A/build.xml:21: The following error occurred while executing this line:
 jar:file:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar!/org/apache/tools/ant/antlib.xml:37: Problem: failed to create task or type componentdef
 Cause: The name is undefined.
 Action: Check the spelling.
@@ -41,7 +41,7 @@ Action: Check that any <presetdef>/<macrodef> declarations have taken place.
 :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
 ------------- ---------------- ---------------
 
-Testcase: test took 0.459 sec
+Testcase: test took 1.209 sec
 	FAILED
 null
 junit.framework.AssertionFailedError

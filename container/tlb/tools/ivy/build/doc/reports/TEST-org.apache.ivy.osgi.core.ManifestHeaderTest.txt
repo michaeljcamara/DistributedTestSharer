@@ -1,5 +1,5 @@
 Testsuite: org.apache.ivy.osgi.core.ManifestHeaderTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.017 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
 ------------- Standard Output ---------------
 Empty parameter value
    value1=
@@ -24,8 +24,8 @@ Expecting the end of a parameter value
                 ^
 ------------- ---------------- ---------------
 
-Testcase: testNormal took 0.004 sec
+Testcase: testNormal took 0.03 sec
 Testcase: testSpaceAndQuote took 0.001 sec
-Testcase: testReflexivity took 0 sec
-Testcase: testSyntaxError took 0.002 sec
+Testcase: testReflexivity took 0.002 sec
+Testcase: testSyntaxError took 0.003 sec
 Testcase: testSpaceInValue took 0 sec

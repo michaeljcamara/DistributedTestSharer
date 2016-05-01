@@ -1,16 +1,16 @@
 Testsuite: org.apache.ivy.ant.IvyCleanCacheTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.291 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
-     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
+     [null] :: loading settings :: url = file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/org/apache/ivy/ant/ivysettings-cleancache.xml
 ------------- ---------------- ---------------
 
-Testcase: testCleanAll took 0.232 sec
-Testcase: testResolutionOnly took 0.017 sec
-Testcase: testRepositoryOnly took 0.007 sec
-Testcase: testOneRepositoryOnly took 0.007 sec
-Testcase: testUnknownCache took 0.009 sec
+Testcase: testCleanAll took 0.242 sec
+Testcase: testResolutionOnly took 0.011 sec
+Testcase: testRepositoryOnly took 0.01 sec
+Testcase: testOneRepositoryOnly took 0.008 sec
+Testcase: testUnknownCache took 0.011 sec

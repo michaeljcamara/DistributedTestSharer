@@ -1,10 +1,10 @@
 Testsuite: org.apache.ivy.ant.IvyListModulesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.286 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.307 sec
 ------------- Standard Output ---------------
      [null] :: Apache Ivy non official version -  :: http://ant.apache.org/ivy/ ::
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
-     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
+     [null] :: loading settings :: file = /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings.xml
 ------------- ---------------- ---------------
 
-Testcase: testAllRevs took 0.256 sec
-Testcase: testExact took 0.021 sec
+Testcase: testExact took 0.275 sec
+Testcase: testAllRevs took 0.023 sec

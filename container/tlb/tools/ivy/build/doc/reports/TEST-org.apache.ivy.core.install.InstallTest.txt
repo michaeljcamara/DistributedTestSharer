@@ -1,39 +1,124 @@
 Testsuite: org.apache.ivy.core.install.InstallTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 1.497 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 2.165 sec
 ------------- Standard Output ---------------
 :: loading settings :: file = test/repositories/ivysettings.xml
 :: installing org1#mod1.2;2.0 ::
 :: resolving dependencies ::
 	found org1#mod1.2;2.0 in 1
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
-	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (6ms)
+	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (4ms)
 :: installing in install ::
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 8ms
+:: resolution report :: resolve 0ms :: artifacts dl 7ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
 	---------------------------------------------------------------------
 	|      default     |   1   |   1   |   0   |   0   ||   1   |   1   |
 	---------------------------------------------------------------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: installing orgfailure#modfailure;1.0 ::
+:: resolving dependencies ::
+:: downloading artifacts to cache ::
+:: installing in install ::
+:: install resolution report ::
+:: resolution report :: resolve 0ms :: artifacts dl 0ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+	---------------------------------------------------------------------
+
+:: problems summary ::
+:::: WARNINGS
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		::          UNRESOLVED DEPENDENCIES         ::
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+		:: orgfailure#modfailure;1.0: java.text.ParseException: [xml parsing: ivy-1.0.xml.original:25:11: cvc-complex-type.2.4.a: Invalid content was found starting with element 'badtag'. One of '{"":configurations, "":publications, "":dependencies, "":conflicts}' is expected. in file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/orgfailure/modfailure/ivy-1.0.xml.original
+, unknown tag badtag in file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/cache/orgfailure/modfailure/ivy-1.0.xml.original
+]
+
+		::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: installing org.apache#test;1.0 ::
+:: resolving dependencies ::
+	found org.apache#test;1.0 in m2
+:: downloading artifacts to cache ::
+downloading file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/m2/org/apache/test/1.0/test-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] org.apache#test;1.0!test.jar (2ms)
+:: installing in install ::
+	published test to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
+:: install resolution report ::
+:: resolution report :: resolve 0ms :: artifacts dl 3ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
+:: installing org.apache#test;1.0 ::
+:: resolving dependencies ::
+	found org.apache#test;1.0 in test
+:: downloading artifacts to cache ::
+:: installing in install ::
+	published test to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
+	published test to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org.apache/test/test-1.0.pom
+:: install resolution report ::
+:: resolution report :: resolve 0ms :: artifacts dl 1ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: loading settings :: file = test/repositories/ivysettings.xml
+:: installing orgfailure#modfailure;1.0 ::
+:: resolving dependencies ::
+	found orgfailure#modfailure;1.0 in 1
+:: downloading artifacts to cache ::
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/orgfailure/modfailure/jars/modfailure-1.0.jar ...
+.. (0kB)
+	[SUCCESSFUL ] orgfailure#modfailure;1.0!modfailure.jar (2ms)
+:: installing in install ::
+	published modfailure to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/orgfailure/modfailure/modfailure-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/orgfailure/modfailure/ivy-1.0.xml
+:: install resolution report ::
+:: resolution report :: resolve 0ms :: artifacts dl 3ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
+	---------------------------------------------------------------------
 :: loading settings :: file = test/repositories/ivysettings-nodefaultresolver.xml
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-nodefaultresolver.xml)
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings-nodefaultresolver.xml)
 :: installing org1#mod1.2;2.0 ::
 :: resolving dependencies ::
 	found org1#mod1.2;2.0 in 1
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
 :: installing in install ::
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 3ms
+:: resolution report :: resolve 0ms :: artifacts dl 2ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -46,19 +131,19 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 	found org1#mod1.1;1.0 in 1
 	found org1#mod1.2;2.0 in 1
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
 .. (0kB)
 	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
 :: installing in install ::
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 4ms
+:: resolution report :: resolve 0ms :: artifacts dl 5ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -66,7 +151,7 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 	|      default     |   2   |   2   |   1   |   0   ||   2   |   2   |
 	---------------------------------------------------------------------
 :: loading settings :: file = test/repositories/ivysettings-nodefaultresolver.xml
-DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/ivysettings-nodefaultresolver.xml)
+DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead (file:/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/ivysettings-nodefaultresolver.xml)
 :: installing org1#mod1.4;1.0.1 ::
 :: resolving dependencies ::
 	found org1#mod1.4;1.0.1 in 1
@@ -75,20 +160,20 @@ DEPRECATED: 'defaultCache' is deprecated, use 'caches[@defaultCacheDir]' instead
 	found org1#mod1.1;2.0 in 1
 	[2.0] org1#mod1.1;latest.integration
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (1ms)
+	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (2ms)
 :: installing in install ::
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 4ms
+:: resolution report :: resolve 0ms :: artifacts dl 5ms
 	:: evicted modules:
 	org1#mod1.2;2.1 by [org1#mod1.2;2.2] in [default]
 	---------------------------------------------------------------------
@@ -106,20 +191,20 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 	found org1#mod1.1;2.0 in 1
 	[2.0] org1#mod1.1;latest.integration
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (2ms)
+	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (1ms)
 :: installing in install ::
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 4ms
+:: resolution report :: resolve 0ms :: artifacts dl 5ms
 	:: evicted modules:
 	org1#mod1.2;2.1 by [org1#mod1.2;2.2] in [default]
 	---------------------------------------------------------------------
@@ -133,14 +218,14 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 :: resolving dependencies ::
 	found org1#mod1.1;1.0 in 1
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (1ms)
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
 :: installing in install ::
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 3ms
+:: resolution report :: resolve 0ms :: artifacts dl 2ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -209,89 +294,89 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 	found org1#mod1.3;B-3.0 in 1
 	found org1#mod1.3;C-3.1 in 1
 :: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.1.jar ...
+	[SUCCESSFUL ] org1#mod1.1;1.0!mod1.1.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.1.jar ...
 .. (0kB)
 	[SUCCESSFUL ] org1#mod1.1;1.1!mod1.1.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-2.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-0.9.jar ...
+	[SUCCESSFUL ] org1#mod1.1;2.0!mod1.1.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-0.9.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.2;0.9!mod1.2.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-1.0.jar ...
+	[SUCCESSFUL ] org1#mod1.2;0.9!mod1.2.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-1.0.jar ...
 .. (0kB)
 	[SUCCESSFUL ] org1#mod1.2;1.0!mod1.2.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-1.1.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-1.1.jar ...
 .. (0kB)
 	[SUCCESSFUL ] org1#mod1.2;1.1!mod1.2.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.0.jar ...
 . (0kB)
 	[SUCCESSFUL ] org1#mod1.2;2.0!mod1.2.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.1.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.1.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.2;2.1!mod1.2.jar (1ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
+	[SUCCESSFUL ] org1#mod1.2;2.1!mod1.2.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-2.2.jar ...
 . (0kB)
-	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (5ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-A-3.0.jar ...
+	[SUCCESSFUL ] org1#mod1.2;2.2!mod1.2.jar (1ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-A-3.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.3;A-3.0!mod1.3.jar (3ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-A-3.1.jar ...
+	[SUCCESSFUL ] org1#mod1.3;A-3.0!mod1.3.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-A-3.1.jar ...
 .. (0kB)
 	[SUCCESSFUL ] org1#mod1.3;A-3.1!mod1.3.jar (2ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-B-3.0.jar ...
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-B-3.0.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.3;B-3.0!mod1.3.jar (5ms)
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-C-3.1.jar ...
+	[SUCCESSFUL ] org1#mod1.3;B-3.0!mod1.3.jar (2ms)
+downloading /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.3/jars/mod1.3-C-3.1.jar ...
 .. (0kB)
-	[SUCCESSFUL ] org1#mod1.3;C-3.1!mod1.3.jar (3ms)
+	[SUCCESSFUL ] org1#mod1.3;C-3.1!mod1.3.jar (1ms)
 :: installing in install ::
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.1.xml
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.1.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-1.1.xml
-	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.2.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.3.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.1.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.2.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-1.3.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.4/ivy-2.0.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.5/ivy-1.0.1.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.5/ivy-1.0.2.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.6/ivy-1.0.3.xml
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.6/ivy-1.0.4.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-0.9.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-0.9.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-1.0.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-1.1.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-1.1.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.1.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.1.xml
-	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
-	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/ivy-A-3.0.xml
-	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.1.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/ivy-A-3.1.xml
-	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-B-3.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/ivy-B-3.0.xml
-	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-C-3.1.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/ivy-C-3.1.xml
-	published mod1.3-A to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.0.jar
-	published mod1.3-B to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/mod1.3-B-3.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org1/mod1.3/ivy-3.0.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.1.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-1.0.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-1.1.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-1.1.xml
+	published mod1.1 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/mod1.1-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.1/ivy-2.0.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.1.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.2.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.0.3.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.1.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.2.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-1.3.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.4/ivy-2.0.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.5/ivy-1.0.1.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.5/ivy-1.0.2.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.6/ivy-1.0.3.xml
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.6/ivy-1.0.4.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-0.9.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-0.9.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-1.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-1.0.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-1.1.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-1.1.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.0.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.1.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.1.xml
+	published mod1.2 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/mod1.2-2.2.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.2/ivy-2.2.xml
+	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/ivy-A-3.0.xml
+	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.1.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/ivy-A-3.1.xml
+	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-B-3.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/ivy-B-3.0.xml
+	published mod1.3 to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-C-3.1.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/ivy-C-3.1.xml
+	published mod1.3-B to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-B-3.0.jar
+	published mod1.3-A to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/mod1.3-A-3.0.jar
+	published ivy to /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/build/test/install/org1/mod1.3/ivy-3.0.xml
 :: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 52ms
+:: resolution report :: resolve 0ms :: artifacts dl 29ms
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
@@ -305,11 +390,11 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 
 	==== 1: tried
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/ivys/ivy-[revision].xml
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/ivys/ivy-[revision].xml
 
 	  -- artifact org1#mod1.2;[1.5,2.0[!mod1.2.jar:
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-[revision].jar
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.2/jars/mod1.2-[revision].jar
 
 	  [2.2, 2.1, 2.0, 1.1, 1.0, 0.9]
 
@@ -317,25 +402,25 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 
 	==== 1: tried
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.1.jar
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.1/jars/mod1.1-1.0.1.jar
 
 		[NOT FOUND  ] org1#mod1.4;1.1!mod1.4.jar (0ms)
 
 	==== 1: tried
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.4/jars/mod1.4-1.1.jar
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.4/jars/mod1.4-1.1.jar
 
 		[NOT FOUND  ] org1#mod1.4;1.2!mod1.4.jar (0ms)
 
 	==== 1: tried
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.4/jars/mod1.4-1.2.jar
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.4/jars/mod1.4-1.2.jar
 
 		[NOT FOUND  ] org1#mod1.6;1.0.3!mod1.6.jar (0ms)
 
 	==== 1: tried
 
-	  /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.6/jars/mod1.6-1.0.3.jar
+	  /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.6/jars/mod1.6-1.0.3.jar
 
 		::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -345,9 +430,9 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 
 		:: org1#mod1.2;[1.5,2.0[: not found
 
-		:: orgfailure#modfailure;1.1: java.text.ParseException: inconsistent module descriptor file found in '/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/orgfailure/modfailure/ivys/ivy-1.1.xml': bad status: 'badstatus'; 
+		:: orgfailure#modfailure;1.1: java.text.ParseException: inconsistent module descriptor file found in '/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/orgfailure/modfailure/ivys/ivy-1.1.xml': bad status: 'badstatus'; 
 
-		:: org1#mod1.6;1.0.2: java.text.ParseException: inconsistent module descriptor file found in '/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.6/ivys/ivy-1.0.2.xml': bad revision: expected='1.0.2' found='working@Coltons-MacBook-Pro.local'; 
+		:: org1#mod1.6;1.0.2: java.text.ParseException: inconsistent module descriptor file found in '/Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.6/ivys/ivy-1.0.2.xml': bad revision: expected='1.0.2' found='working@Coltons-MBP'; 
 
 		::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -372,106 +457,21 @@ downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/iv
 
 
 :::: ERRORS
-		1: bad status found in /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/orgfailure/modfailure/ivys/ivy-1.1.xml: 'badstatus'
+		1: bad status found in /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/orgfailure/modfailure/ivys/ivy-1.1.xml: 'badstatus'
 
-		1: bad revision found in /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/org1/mod1.6/ivys/ivy-1.0.2.xml: expected='1.0.2 found='working@Coltons-MacBook-Pro.local'
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-:: loading settings :: file = test/repositories/ivysettings.xml
-:: installing org.apache#test;1.0 ::
-:: resolving dependencies ::
-	found org.apache#test;1.0 in m2
-:: downloading artifacts to cache ::
-downloading file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/m2/org/apache/test/1.0/test-1.0.jar ...
-.. (0kB)
-	[SUCCESSFUL ] org.apache#test;1.0!test.jar (2ms)
-:: installing in install ::
-	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
-:: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 2ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
-	---------------------------------------------------------------------
-:: installing org.apache#test;1.0 ::
-:: resolving dependencies ::
-	found org.apache#test;1.0 in test
-:: downloading artifacts to cache ::
-:: installing in install ::
-	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/ivy-1.0.xml
-	published test to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/org.apache/test/test-1.0.pom
-:: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 1ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
-	---------------------------------------------------------------------
-:: loading settings :: file = test/repositories/ivysettings.xml
-:: installing orgfailure#modfailure;1.0 ::
-:: resolving dependencies ::
-	found orgfailure#modfailure;1.0 in 1
-:: downloading artifacts to cache ::
-downloading /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/test/repositories/1/orgfailure/modfailure/jars/modfailure-1.0.jar ...
-.. (0kB)
-	[SUCCESSFUL ] orgfailure#modfailure;1.0!modfailure.jar (2ms)
-:: installing in install ::
-	published modfailure to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/orgfailure/modfailure/modfailure-1.0.jar
-	published ivy to /Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/test/install/orgfailure/modfailure/ivy-1.0.xml
-:: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 2ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   1   |   1   |   1   |   0   ||   1   |   1   |
-	---------------------------------------------------------------------
-:: loading settings :: file = test/repositories/ivysettings.xml
-:: installing orgfailure#modfailure;1.0 ::
-:: resolving dependencies ::
-:: downloading artifacts to cache ::
-:: installing in install ::
-:: install resolution report ::
-:: resolution report :: resolve 0ms :: artifacts dl 0ms
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
-	---------------------------------------------------------------------
-
-:: problems summary ::
-:::: WARNINGS
-		::::::::::::::::::::::::::::::::::::::::::::::
-
-		::          UNRESOLVED DEPENDENCIES         ::
-
-		::::::::::::::::::::::::::::::::::::::::::::::
-
-		:: orgfailure#modfailure;1.0: java.text.ParseException: [xml parsing: ivy-1.0.xml.original:25:11: cvc-complex-type.2.4.a: Invalid content was found starting with element 'badtag'. One of '{"":configurations, "":publications, "":dependencies, "":conflicts}' is expected. in file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/orgfailure/modfailure/ivy-1.0.xml.original
-, unknown tag badtag in file:/Volumes/MacintoshHDD/mccurdyc/Downloads/tlb-complete-0.3.2/tools/ivy/build/cache/orgfailure/modfailure/ivy-1.0.xml.original
-]
-
-		::::::::::::::::::::::::::::::::::::::::::::::
-
+		1: bad revision found in /Volumes/MacintoshHDD/mccurdyc/computer_science/cs441s2016/cs441s2016-fp-team1/container/tlb/tools/ivy/test/repositories/1/org1/mod1.6/ivys/ivy-1.0.2.xml: expected='1.0.2 found='working@Coltons-MBP'
 
 
 :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
 ------------- ---------------- ---------------
 
-Testcase: testSimple took 0.299 sec
-Testcase: testSimpleWithoutDefaultResolver took 0.044 sec
-Testcase: testDependencies took 0.155 sec
-Testcase: testLatestDependenciesNoDefaultResolver took 0.105 sec
-Testcase: testLatestDependenciesDummyDefaultResolver took 0.095 sec
-Testcase: testNotTransitive took 0.039 sec
-Testcase: testRegexpMatcher took 0.572 sec
-Testcase: testMaven took 0.126 sec
-Testcase: testNoValidate took 0.026 sec
-Testcase: testValidate took 0.022 sec
+Testcase: testSimple took 0.9 sec
+Testcase: testValidate took 0.161 sec
+Testcase: testMaven took 0.138 sec
+Testcase: testNoValidate took 0.046 sec
+Testcase: testSimpleWithoutDefaultResolver took 0.023 sec
+Testcase: testDependencies took 0.065 sec
+Testcase: testLatestDependenciesNoDefaultResolver took 0.12 sec
+Testcase: testLatestDependenciesDummyDefaultResolver took 0.086 sec
+Testcase: testNotTransitive took 0.04 sec
+Testcase: testRegexpMatcher took 0.56 sec

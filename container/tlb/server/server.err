@@ -1,5 +1,15 @@
 Boot: Warning: Unable to locate main/main.jar in the JAR file tlb-server-0.3.2.jar
-Apr 25, 2016 8:54:51 PM com.noelios.restlet.http.StreamServerHelper start
+Apr 29, 2016 9:38:30 PM com.noelios.restlet.http.StreamServerHelper start
 INFO: Starting the internal HTTP server
-Apr 25, 2016 8:55:03 PM com.noelios.restlet.LogFilter afterHandle
-INFO: 2016-04-25	20:55:03	0:0:0:0:0:0:0:1	-	-	7019	GET	/	-	404	330	-	5	http://localhost:7019	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36	-
+Apr 29, 2016 9:38:36 PM com.noelios.restlet.LogFilter afterHandle
+INFO: 2016-04-29	21:38:36	141.195.23.99	-	-	12345	GET	/	-	404	330	-	7	http://141.195.23.99:12345	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36	-
+Apr 29, 2016 9:38:36 PM com.noelios.restlet.LogFilter afterHandle
+INFO: 2016-04-29	21:38:36	141.195.23.99	-	-	12345	GET	/favicon.ico	-	404	330	-	1	http://141.195.23.99:12345	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36	http://141.195.23.99:12345/
+Apr 29, 2016 9:41:33 PM com.noelios.restlet.LogFilter afterHandle
+INFO: 2016-04-29	21:41:33	141.195.23.99	-	-	12345	GET	/ant-ivy/suite_time/Fri-Apr-29-21:41:15-EDT-2016	-	200	0	-	22	http://141.195.23.99:12345	Apache-HttpClient/4.1 (java 1.5)	-
+Apr 29, 2016 9:41:33 PM com.noelios.restlet.http.HttpServerConverter commit
+WARNING: A response with an unavailable entity was returned. Ignoring the entity for resource "http://141.195.23.99:12345/ant-ivy/suite_time/Fri-Apr-29-21:41:15-EDT-2016.
+Apr 29, 2016 9:42:48 PM com.noelios.restlet.LogFilter afterHandle
+INFO: 2016-04-29	21:42:48	141.195.23.99	-	-	12345	GET	/ant-ivy/suite_time/Fri-Apr-29-21:42:32-EDT-2016	-	200	0	-	1	http://141.195.23.99:12345	Apache-HttpClient/4.1 (java 1.5)	-
+Apr 29, 2016 9:42:48 PM com.noelios.restlet.http.HttpServerConverter commit
+WARNING: A response with an unavailable entity was returned. Ignoring the entity for resource "http://141.195.23.99:12345/ant-ivy/suite_time/Fri-Apr-29-21:42:32-EDT-2016.
