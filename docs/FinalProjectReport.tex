@@ -29,24 +29,24 @@
 %
 % Set the title, author, and date.
 %
-\title{An Analysis of Distributed Test Suites: \\\Large{Comparing Load Balancing and Sharing}}
+\title{An Analysis of Distributing Test Suites: \\\Large{Comparing Load Balancing and Sharing}}
 \author{Michael Camara, Colton McCurdy, Gary Miller, \& Herbie Torrance}
 \date{}
 
-%
-% The document proper.
-%
 \begin{document}
 
 % Add the title section.
 \maketitle
 
 % Add an abstract.
-\abstract{
-This research focuses on the utilizing distributed testing to make the execution of large test suites more efficient. The key trade-offs for taking a distributed approach to testing are be identified and the impacts on using a distributed approach are analyzed. This paper will mainly focus on comparing two distributed test systems, Test Load Balancer (TLB), and our own system, Distributed Test Sharer (DTS).
+\abstract{This research focuses on the utilizing distributed testing
+    to make the execution of large test suites more efficient. The key
+    trade-offs for taking a distributed approach to testing are be identified
+    and the impacts on using a distributed approach are analyzed. This paper
+    will mainly focus on comparing two distributed test systems, Test Load
+    Balancer (TLB), and our own system, Distributed Test Sharer (DTS).
 
 % Add various lists on new pages.
-\pagebreak
 \tableofcontents
 
 % Start the paper on a new page.
@@ -61,6 +61,7 @@ This research focuses on the utilizing distributed testing to make the execution
 Testing is often considered to be one of the most important components of the software development cycle and therefore it is important to conduct a thorough and correct test suite on a software system. Many large software systems are subject to testing that can take several hours and potentially longer to execute, which can be very costly. For example, in situations where a system's test suite can take several hours or even days to execute, and one of the tests that is not executed early in the testing process fails, the cost of identifying this failure can be exceptionally high. For this reason, approaches to decreasing the cost of executing test suites is a very popular topic in software development. One of approaches to successfully reducing the cost associated with testing a system is to use distributed testing. This is an approach in which test cases are distributed or scattered across many different nodes in a network, executed locally on that given node, and the result of the test case is then returned across the network. The focus of this research is to identify, analyze, and report the results of experiments conducted on distributed testing using two different systems, Test Load Balancer (TLB) and Distributed Test Sharer (DTS). It is hypothesized that by distributing test cases and executing them in parallel on several independent nodes, the overall cost of executing a full test suite can be reduced due to the increase of computational resources and evaded the limitations experienced with computing on a single node.
 
 \section{Background On Distributed Testing}
+\label{background}
 
 In order to conduct an analysis on using a distributed approach to testing, more research on the trade-offs associated with the topic was conducted. First, it is important to understand situations in which distributed testing may be beneficial; the most obvious being when a test suite takes several hours or days to execute. It also may be necessary to conduct distributed testing if the the system of focus must be tested on different web browsers or sites, in the case of a web-based application, or even on different operating systems. In either case, it may be difficult or costly to executing these tests on a single node and therefore distributed the tests to other nodes may be beneficial. 
 
@@ -71,11 +72,14 @@ Though it is clear the distributed testing may be beneficial to use there certai
 Alongside the drawbacks of distributing testing, several challenges exist with this approach as well. One of the key challenges associated with distributed testing is the concept of load sharing versus load balancing. Load sharing occurs when the tests or load are sent to several nodes to be executed without any restrictions on how the load is allocated. Load balancing is a more complex approach in which the allocation of the load is sent to nodes such that each node is doing an equivalent amount of work. This allows the load to be executed more efficiently because it prevents situations in which a particular node is doing a significantly greater amount of work than others or a particular node is doing little to no work at all. It is quite evident that load balancer is a more favorable approach to take, but the complexity associated with it is much larger. For example, consider a situation in which a test case is dependent on another, in this case a load balancing system must not only consider the amount of load to allocate to each node, but also when certain components of the load need to be allocated. 
 
 \section{Overview of Related Work}
+\label{related}
 \subsection{Existing Systems}
+\label{existing}
 
 Though distributed testing is a popular and rapidly developing topic in the software industry, not many systems that use his approach exist and work correctly. This is due to the fact that it is not only a relatively new concept, but the complexity of building a system that can run tests on a system and efficiently distribute them to remote nodes is exceptionally high. One existing system that successfully does this is named Test Load Balancer (TLB). TLB claims to support testing of every language on every platform and partitions the tests into subsets that can be executed in parallel on different physical or virtual machines. These subsets are executed in such a way that they all start at the same time and finish at almost the same time as well, therefore the overall time is takes to execute all of the tests can be divided by the number of test subsets that are generated. TLB assures that a particular node will execute only a number of tests proportional to the total number of test divided by the number of available nodes and guarantees mutual exclusion and collective exhaustion of test execution, meaning that no test will be executed more than once and every test will be executed. The TLB system is comprised on two main components, the first of which is a server that is responsible for storing test data and the second is the balancer that partitions and orders the execution of tests. By storing test data, the TLB system will reorder the execution of tests with each run based on previous results. This is a extremely beneficial feature because tests that are known to fail will be executed earlier to avoid unnecessary downtime time resulting from failing tests being executed later. Though it is very important to note that this is only achievable by using tests that are independent of one another which is not always the cases. Unfortunately, large systems very often have test cases that are dependent on other tests and systems such as these are usually examples that would benefit from using distributed testing opposed to centralized testing. Also, this method can not guarantee the order in which tests are executed due to its fail early approach to executing test, therefore tests must not only be independent of other tests but also independent of the order in which they are executed.
 
 \subsection{Distributed Test Sharer}
+\label{sharer}
 In order to understand and further evaluate the trade-offs associated with distributed testing, we developed a novel system named the Distributed Test Sharer (DTS).  This system was created using the Java programming language and consists of two main classes: \texttt{Delegator} and \texttt{CustomServer}.  The relationship between these classes is illustrated in Figure \ref{dtsdiagram}, with communication facilitated by Java Remote Method Invocation (RMI) and use of an FTP server.  The following section will outline the steps performed by DTS to distribute JUnit tests located on the \texttt{Delegator} node to any number of \texttt{CustomServer} nodes, which run the tests and return the results obtained.
 
 \begin{figure}[H]
@@ -85,7 +89,6 @@ In order to understand and further evaluate the trade-offs associated with distr
 \end{figure}
 
 Before starting the system, the user is expected to furnish all of the JUnit test cases and any associated resources needed to run those test cases.  All files will be placed in the \texttt{ftpserver} directory, or one of its subdirectories.  The top level of this directory can be filled with any non-class files or directories that might be required for test suite execution.  For instance, the SchemaAnalyst test suite uses a \texttt{config} directory that contains various text files filled with different properties.  In this example, the user would place the entire \texttt{config} directory immediately inside the \texttt{ftpserver} directory.  Further nested in the \texttt{ftpserver} directory is a \texttt{resources} directory, which contains  \texttt{bin}, \texttt{lib}, \texttt{test\_singles} and \texttt{test\_suites} subdirectories.  For simplicity, the user should put the entirety of the directory containing their compiled classes in the \texttt{bin} directory.  Continuing with the SchemaAnalyst example, this would involve placing the \texttt{org}, \texttt{paper}, and \texttt{parsedcasestudy} directories into the \texttt{ftpserver/resources/bin} directory, which are usually located in that system's \texttt{build} directory.  All \texttt{jar} files used by the desired tests should be placed in the \texttt{lib} directory.  Finally, any individual JUnit test cases can be put in the \texttt{ftpserver/resources/test\_singles} directory, while any test suites (those that reference multiple JUnit test cases, like an \texttt{AllTests} class) can be put in the \texttt{ftpserver/resources/test\_suites} directory.
-
 
 DTS execution begins on the side of the \texttt{Delegator} with a few preliminary steps.  First, several system properties are programmatically altered. These include \texttt{java.security.policy}, which is set to a custom policy that grants all permissions to any nodes that attempt to connect to the \texttt{Delegator} through Java RMI.  Although a more stringent policy would generally be recommended to improve the security of the system, this was deemed appropriate for the purpose of prototyping the system with fewer obstacles.  Further, the \texttt{java.rmi.server.hostname} property is set to the internet protocol (IP) address of the \texttt{Delegator}, which is retrieved through the command line interface at program execution.  This specifies the given IP address for use with any registry that is subsequently created, allowing remote nodes to find it.
 
@@ -112,26 +115,81 @@ On the \texttt{CustomServer}, there are two \texttt{runTest()} methods: one has 
 The \texttt{Delegator} continues to perform load sharing, assigning test cases to \texttt{TestAgents}.  The agents continue to store the \texttt{Result} objects returned from the \texttt{runTest()} method of each \texttt{CustomServer} into the same \texttt{ConcurrentLinkedQueue}.  Once all tests have been assigned, and all \texttt{Results} have been retrieved, then the each \texttt{Result} is parsed and the total number of successes and failures are displayed for the user.  Each failure is further elaborated to show why a test case might have failed.  This completes the process used by the Distributed Test Sharer, with all tests located on the \texttt{Delegator} having been executed by separate, remote nodes.
 
 \section{Experimentation Protocol}
+\label{experiments}
 
-This section will explain the experimentation process that was followed for collecting data on the two systems.
+\subsection{Systems Specifications}
+\label{specs}
+\textbf{Colton's 13-inch, Mid 2012 MacBook Pro}
+\begin{itemize}
+    \item OS / Version: OS X El Capitan version 10.11.4
+    \item Processor: 2.9 GHz Intel Core i7
+    \item Memory: 8 GB 1600 MHz DDR3
+    \item Startup Disk: Samsung 850 Pro SSD
+\end{itemize}
 
+\subsection{Experimentation Protocol for TLB}
+For TLB we ran a Docker container with Java SE Development Kit 8u91 and Apache Ant version 1.9.4. These were both necessary
+for running the existing tool in the Test Load Balancer (TLB). TLB is compatible with JDK versions as old as version 6, but
+to keep our experiments as consistent as possible, we installed the latest version (8u91) on all of the machines being used for
+testing. Having the newest version of Apache Ant was not entirely necessary, but again, we wanted to have the most
+recent versions of software for this experiment due to possible optimizations in the newest versions.
+
+\subsubsection{Running TLB in a Distributed Fashion}
+We ran the TLB tool five times for all configurations (e.g. three nodes on the schema-analyst test suite). We decided
+to only run each configuration five times due to time constraints. We had it calculated that if we ran each configuration
+for the thiry trials suggested by Traeger et al. that our experiments combined would take approximately 20-hours
+to run, requiring us to sit at our computers and monitor the tests constantly for this amount of time \cite{traeger2008nine}.
+
+Also, for the TLB experimentation setup, we ran Docker containers on each node. There were three total nodes, all of which
+were the available personal laptops of a team member. The system specifications for the machines used in this experiment
+can be found in section \ref{specs}. We would have liked to run the experiments in a more controlled and consistent environment
+by running the Docker containers with TLB on the Alden lab machines, but were denied permission to install Docker for various
+potential security reasons. To read more about the challenges faced during this assignment, read section \ref{challenges}.
+
+The way TLB is designed requires a user to start the \texttt{TLBServer} on one node and start the clients with the \texttt{TLBBalancer}
+on other nodes. Therefore, to collect the data necessary, we started the server on the 13-inch, Mid 2012 MacBook Pro
+and ran the Docker containers on two other machines as well as on the MacBook Pro. This was the setup for running three
+clients with the TLB system. For two and a single client, we removed Michaels's older laptop which performed the
+worst when running the test suites in the Docker container. Specifically, for two nodes, we used Herbies's personal
+and most updated laptop as one client node and Colton's MacBook Pro as the other client as well as the server.
+Ideally, we would have liked to only run the server on Colton's MacBook Pro and the clients on their own
+individual machines, but again, Michael's laptop took substantially longer time to execute its portion of the test suite.
+However, for a single node, we did not have to worry about running a server on a different machine. We ran the Apache Ant
+task \texttt{test} which for SchemaAnalyst's test suite called five iterations of the test suite and for Apache Ivy
+ran the test suite provided with the system.
+
+It was the case that in order to make test suite execution time long enough to see substantial differences between
+number of nodes, we needed to run multiple iterations of the same test to artificially increase test suite execution
+time. Additionally, for comparison to a test-shairing system we needed to run this modified version of SchemaAnalyst's
+test suite.
+
+This is the protocol we followed throughout the experimentation phase of this final laboratory assignment. We acknowledge that
+there were a lot of places where we did not apply the industry-standard protocols for testing, however due to time constraints
+and availability of machines, this is the best protocol that we could follow to ensure that the data that we collect
+was as accurate and consistent as possible.
+
+\subsection{Experimentation Protocol for TLB}
+\subsubsection{Running DTS in a Distributed Fashion}
 
 \section{Analysis of Results}
+\label{analysis}
 
 This section will report and analyze the data that was collected from the experiment.
 
 \section{Challenges}
+\label{challenges}
 
 Various challenges were encountered while developing the Distributed Test Sharer, with many of these challenges revolving around the use of Java RMI for communication between nodes.  There were a variety of different settings and properties that I didn't originally know about, despite using this technique in a previous assignment.  These included either setting the RMI host name and security policy through the \texttt{-Djava} command line parameter, or using the \texttt{System.setProperty()} method programmatically.  Omitting these steps produced a variety of different, confusing errors, and required much troubleshooting to figure out how to fix them.  There were also problems getting the RMI to work on the computers in Alden Hall, which ultimately prevented those computers from being used in our experiments.  Originally, these problems arose from the fact that the Java RMI registry would occasionally use a random port number instead of the one specified in the source code.  This created much confusion originally, since the Java API includes various method signatures that require a port number parameter; yet it seemed as though such specification did not have the expected effect.  Ultimately, using a custom \texttt{SocketServerFactory} and adjusting the parameters for the \texttt{UnicastRemoteObject} constructor fixed those initial problems involving randomly assigned ports.  However, new problems arose with remote objects being removed from the registry after binding, perhaps due to some garbage collection issue.  These problems were not present during testing of DTS on personally owned computers, and unfortunately they could not be resolved despite significant time investment.
 
 Another challenge with DTS was getting the tests to run on a separate node without error, and specifically without needing to copy over any files to the servers.  I used a custom \texttt{URLClassLoader} to originally overcome this challenge, which is a vital component to the system.  Although this allows the JVM to access the FTP server for \texttt{class} and \texttt{jar} file, it doesn't redirect the paths used for other kinds of files.  For instance, the SchemaAnalyst test suite makes use of a \texttt{config} directory that contains various properties files.  Although I could specify the exact FTP URL for the class loader to locate this directory, the test cases would not find it when they ran on the server.  I tried to adjust the system property for the current working directory (\texttt{user.dir}), among other fixes, but could never bypass this error completely.  Ultimately, in order to get the tests to work as expected, I need to add a step to the \texttt{updateClassLoader()} method on the \texttt{CustomServers} to retrieve and store some files from the FTP server.  This was unfortunate, since a notable benefit of this system is the lack of resource overhead for the servers; but it was necessary in order to have a functional system within our time constraints.  This general issue with file dependencies further complicated running DTS on complex systems like \texttt{ant-ivy} and \texttt{tomcat}, despite the accommodations made to DTS.  The prevented DTS to be run on similar systems as TLB, and it would be one of the first areas of improvement if development on this system were to continue.
 
 \section{Conclusion}
+\label{conclusion}
 
 This section concludes the findings and topics outlined throughput the report.
 
 % Generate the bibliography.
-\bibliography{latex-sample}
+\bibliography{bibliography}
 \bibliographystyle{unsrt}
 
 \end{document}
