@@ -119,12 +119,36 @@ The \texttt{Delegator} continues to perform load sharing, assigning test cases t
 
 \subsection{Systems Specifications}
 \label{specs}
-\textbf{Colton's 13-inch, Mid 2012 MacBook Pro}
+
+\begin{itemize}
+\item \textbf{Colton's 13-inch, Mid 2012 MacBook Pro}
 \begin{itemize}
     \item OS / Version: OS X El Capitan version 10.11.4
     \item Processor: 2.9 GHz Intel Core i7
     \item Memory: 8 GB 1600 MHz DDR3
     \item Startup Disk: Samsung 850 Pro SSD
+\end{itemize}
+
+\item \textbf{Herbie's Hp Envy TS 17 Notebook PC}
+\begin{itemize}
+    \item OS / Version: 64-bit Windows 10
+    \item Processor: 2.4 GHz Intel Core i7-4700MQ
+    \item Memory: 16 GB
+\end{itemize}
+
+\item \textbf{Michael's HP Dv7-6c95dx Notebook PC}
+\begin{itemize}
+    \item OS / Version: 64-bit Windows 10
+    \item Processor: 2.20 GHz 2nd generation Intel Core i7-2670QM
+    \item Memory: 8 GB
+\end{itemize}
+
+\item \textbf{Herbie's Fujitsu lifebook t2020 (x2)}
+\begin{itemize}
+    \item OS / Version: 32-bit Ubuntu 14.04
+    \item Processor: 1.2 GHz Intel Core 2 Duo U9400
+    \item Memory: 3 GB
+\end{itemize}
 \end{itemize}
 
 \subsection{Experimentation Protocol for TLB}
@@ -149,9 +173,9 @@ potential security reasons. To read more about the challenges faced during this 
 The way TLB is designed requires a user to start the \texttt{TLBServer} on one node and start the clients with the \texttt{TLBBalancer}
 on other nodes. Therefore, to collect the data necessary, we started the server on the 13-inch, Mid 2012 MacBook Pro
 and ran the Docker containers on two other machines as well as on the MacBook Pro. This was the setup for running three
-clients with the TLB system. For two and a single client, we removed Michaels's older laptop which performed the
-worst when running the test suites in the Docker container. Specifically, for two nodes, we used Herbies's personal
-and most updated laptop as one client node and Colton's MacBook Pro as the other client as well as the server.
+clients with the TLB system. For two and a single client, we removed Michael's HP Dv7-6c95dx,  which performed the
+worst when running the test suites in the Docker container. Specifically, for two nodes, we used Herbie's HP Envy
+as one client node and Colton's MacBook Pro as the other client as well as the server.
 Ideally, we would have liked to only run the server on Colton's MacBook Pro and the clients on their own
 individual machines, but again, Michael's laptop took substantially longer time to execute its portion of the test suite.
 However, for a single node, we did not have to worry about running a server on a different machine. We ran the Apache Ant
@@ -160,7 +184,7 @@ ran the test suite provided with the system.
 
 It was the case that in order to make test suite execution time long enough to see substantial differences between
 number of nodes, we needed to run multiple iterations of the same test to artificially increase test suite execution
-time. Additionally, for comparison to a test-shairing system we needed to run this modified version of SchemaAnalyst's
+time. Additionally, for comparison to a test-sharing system we needed to run this modified version of SchemaAnalyst's
 test suite.
 
 This is the protocol we followed throughout the experimentation phase of this final laboratory assignment. We acknowledge that
