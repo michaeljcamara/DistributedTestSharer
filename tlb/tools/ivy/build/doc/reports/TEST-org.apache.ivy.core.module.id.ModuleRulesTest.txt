@@ -1,5 +1,0 @@
-Testsuite: org.apache.ivy.core.module.id.ModuleRulesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.022 sec
-
-Testcase: testGetRule took 0.011 sec
-Testcase: testGetRuleWithFilter took 0.002 sec

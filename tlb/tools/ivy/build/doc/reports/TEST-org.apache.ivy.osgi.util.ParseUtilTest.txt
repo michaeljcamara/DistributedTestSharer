@@ -1,4 +1,0 @@
-Testsuite: org.apache.ivy.osgi.util.ParseUtilTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.025 sec
-
-Testcase: testParse took 0.016 sec

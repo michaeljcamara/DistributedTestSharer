@@ -1,4 +1,0 @@
-Testsuite: org.apache.ivy.osgi.core.OSGiManifestParserTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.26 sec
-
-Testcase: testSimple took 0.249 sec

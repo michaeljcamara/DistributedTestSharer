@@ -1,5 +1,0 @@
-Testsuite: com.github.tlb.sampleprojects.DeepInTheBowels$DeepWithinTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 3.021 sec
-
-Testcase: shouldWorkFineEvenWhenStomachIsUpset took 1.005 sec
-Testcase: shouldBeCapableOfTestingDeepWithinTheBowels took 2.005 sec
