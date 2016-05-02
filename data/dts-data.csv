@@ -1,4 +1,4 @@
-title,number_nodes,trial,time
+tool,number_nodes,trial,time,average_time
 schema-analyst,4,1,153755
 schema-analyst,4,2,138035
 schema-analyst,4,3,150007
