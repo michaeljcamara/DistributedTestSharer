@@ -18,9 +18,11 @@
 
 % Package for formatting URLs.
 \usepackage{url}
+\usepackage{verbatim}
 
 % Packages and definitions for graphics files.
 \usepackage{graphicx}
+\usepackage{minted}
 \usepackage{epstopdf}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -357,13 +359,30 @@ ports to no avail. Finally, I decided to try the system at home once again and e
 flawlessly, therefore requiring me to haul all of the necessary machines for the experiment
 to my house.
 
-
-
-
 \section{Conclusion}
 \label{conclusion}
 
-This section concludes the findings and topics outlined throughput the report.
+\section{Appendix}
+\label{appendix}
+
+\subsection{Data}
+\newpage
+\verbatiminput{../data/tlb-data.csv}
+\newpage
+\verbatiminput{../data/dts-data.csv}
+
+\newpage
+\subsection{Representative Source Code}
+\verbatiminput{../container/Dockerfile}
+\newpage
+\inputminted{xml}{../container/tlb/tools/schemaanalyst/build.xml}
+\newpage
+\inputminted{bash}{../container/tlb/tools/schemaanalyst/run_balanced.sh}
+\inputminted{bash}{../container/tlb/tools/recipe.sh}
+\newpage
+\inputminted{xml}{../container/tlb/tools/ivy/build.xml}
+
+% \inputminted{java}{../simple-rmi/src/Simple.java}
 
 % Generate the bibliography.
 \bibliography{bibliography}
