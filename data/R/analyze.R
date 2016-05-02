@@ -83,7 +83,7 @@ visualize_nodes_versus_time_hist <- function(data) {
     ggplot2::theme(axis.text.y = ggplot2::element_text(angle = 45, hjust = 1, size = 20)) +
     ggplot2::ylab("Average Time (ms)") +
     ggplot2::xlab("Nodes (count)") +
-    ggplot2::labs(title = "SchemaAnalyst Test Suite (DTS)") +
+    ggplot2::labs(title = "SchemaAnalyst Test Suite (TLB)") +
     ggplot2::theme(title = ggplot2::element_text(size=20), legend.position = "top",
                                       panel.background = ggplot2::element_blank())
   return(p)
