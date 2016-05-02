@@ -198,7 +198,122 @@ was as accurate and consistent as possible.
 \section{Analysis of Results}
 \label{analysis}
 
-This section will report and analyze the data that was collected from the experiment.
+The first analysis will be of running Apache Ivy's test suite on the Test Load Balancer tool.
+On average, on one node, running the Apache Ivy test suite took approximately six minutes to
+execute. To clarify, when I refer to running on a single node, I am referring to running the
+test suite using the \texttt{ant test} task in the \texttt{build.xml} instead of the \texttt{ant test.load.balanced}
+task.
+
+Where we expected to see a significant performance increase---especially with the Apache Ivy test suite---
+was when adding additional nodes. However, we did not see this dramatic increase in performance
+and actually experienced a decrease in performance when adding the third node. I will note
+that the third node that was added was Michael's Dv7-6c95dx which we noticed took substantially
+longer to execute test suites than other nodes on average.
+
+Therefore, we see the greatest performance when balancing the work using the Test Load Balancer tool
+to two nodes. When executing the Apache Ivy test suite on two remote nodes, we notice that each
+node is able to complete their portion of the test in approximately 1.25 minutes. Refer to Figures
+\ref{ivybar} and \ref{ivybox}.
+
+
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/ivy_bar_tlb.pdf}
+    \caption{A bar chart displaying average time in milliseconds to run Apache Ivy's test suite on TLB}
+    \label{ivybar}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/ivy_boxplot_tlb.pdf}
+    \caption{A boxplot displaying average time in milliseconds to run Apache Ivy's test suite on TLB}
+    \label{ivybox}
+  \end{minipage}
+\end{figure}
+
+Secondly, and more importantly, we wanted to analyze the effectiveness of the Test Load Balancer tool
+at balancing SchemaAnalyst's test suite. This is more important to use in particular because
+the Distributed Test Sharing tool is---in its current state---only able to execute this test suite.
+With that said, we are able to compare direct performances of the tools. However, again, there are
+some inconsistencies such as which laptops were available for the systems to be run on.
+
+Similarly to the Apache Ivy's test suite for the Test Load Balancing tool, the TLB tool experiences
+its best performance with two nodes. We hypothesize that this is for the same reason as noted previously
+regarding to the performance of the one node. However, here when the third node is introduced, running the
+test suite locally, one a single node is more performant. This makes it not worth distributing tests to
+more than two nodes.
+
+SchemaAnalyst's test suite on a single node took on average 15 seconds to execute. We do note that there
+are a lot of failing tests and missing resources. This is why we hypothesize that this execution time
+is so minimal. A lot of the dependencies necessary for this test suite are database management systems
+that were not installed on many of the machines used in this experiment.
+
+In conlusion, for the TLB tool, it is not worth running either Apache Ivy's or SchemaAnalyst's test suite
+on more than two nodes. For both of these test suites, it is worth balancing the work to two
+remote nodes using the TLB tool communicating with the TLBServer to \texttt{POST, PUT} and \texttt{GET} historical
+test data for a given test suite.
+
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/sa_bar_tlb.pdf}
+    \caption{A bar chart displaying average time in milliseconds to run SchemaAnalyst's test suite on TLB}
+    \label{sabar}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/sa_boxplot_tlb.pdf}
+    \caption{A boxplot displaying average time in milliseconds to run SchemaAnalyst's test suite on TLB}
+    \label{sabox}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/sa_bar_dts.pdf}
+    \caption{A bar chart displaying average time in milliseconds to run SchemaAnalyst's test suite on DTS}
+    \label{sabardts}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{../data/graphs/sa_boxplot_dts.pdf}
+    \caption{A boxplot displaying average time in milliseconds to run SchemaAnalyst's test suite on DTS}
+    \label{saboxdts}
+  \end{minipage}
+\end{figure}
+
+Finally, we are interested in the performance of the system created by Michael, Distributed Test Sharer (DTS).
+As previously noted, we were only able to run SchemaAnalyst's test suite on DTS.
+
+First, in Figures \ref{sabardts} and \ref{saboxdts}, we see that running the test suite on a single node takes
+about 2.5 minutes to execute. Then, we notice that when sharing the work with another node, we see a pretty
+substantial performance increase, reducing the overall time to execute the test suite to a little
+over a minute and a half. This is a total reduction of about a whole minute.
+
+However, we see a trend when observing these visualizations. We notice that as we add more nodes to share work
+with there is a direct correlation to the increase in time to execute the test suite. This is due
+to the overwhelming communication costs between these larger number of nodes. We are able to eliminate
+the costs of actually transferring the files necessary for running the test suite by accessing them through
+a file transfer protocol. Had we added this additional cost on top of already expensive communication, running
+the DTS tools as a sharing mechanism for SchemaAnalyst's test suite would make it less worth much more quickly.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale = 0.5]{../data/graphs/line_both.pdf}
+    \caption{A direct performance comparison of the TLB and DTS tools for running SchemaAnalyst's test suite}
+    \label{lineboth}
+\end{figure}
+
+In Figure \ref{lineboth}, we notice that both TLB and DTS behave similarly when distributing the SchemaAnalyst test
+suite. Running the test suite on a single node takes longer than the most performant number of nodes---that being
+two total nodes. At two nodes, both systems perform their absolute best and only decrease in overall performance
+from there.
+
+Remember, we were limited to only comparing the test suite of the SchemaAnalyst tool and on very few nodes due to
+the lack of permissions and available resources. We would have liked to run these two systems on many more
+similar nodes to alleviate any inconsistencies, however this was just not possible for the scope of
+this final laboratory assignment.
 
 \section{Challenges}
 \label{challenges}
@@ -206,6 +321,44 @@ This section will report and analyze the data that was collected from the experi
 Various challenges were encountered while developing the Distributed Test Sharer, with many of these challenges revolving around the use of Java RMI for communication between nodes.  There were a variety of different settings and properties that I didn't originally know about, despite using this technique in a previous assignment.  These included either setting the RMI host name and security policy through the \texttt{-Djava} command line parameter, or using the \texttt{System.setProperty()} method programmatically.  Omitting these steps produced a variety of different, confusing errors, and required much troubleshooting to figure out how to fix them.  There were also problems getting the RMI to work on the computers in Alden Hall, which ultimately prevented those computers from being used in our experiments.  Originally, these problems arose from the fact that the Java RMI registry would occasionally use a random port number instead of the one specified in the source code.  This created much confusion originally, since the Java API includes various method signatures that require a port number parameter; yet it seemed as though such specification did not have the expected effect.  Ultimately, using a custom \texttt{SocketServerFactory} and adjusting the parameters for the \texttt{UnicastRemoteObject} constructor fixed those initial problems involving randomly assigned ports.  However, new problems arose with remote objects being removed from the registry after binding, perhaps due to some garbage collection issue.  These problems were not present during testing of DTS on personally owned computers, and unfortunately they could not be resolved despite significant time investment.
 
 Another challenge with DTS was getting the tests to run on a separate node without error, and specifically without needing to copy over any files to the servers.  I used a custom \texttt{URLClassLoader} to originally overcome this challenge, which is a vital component to the system.  Although this allows the JVM to access the FTP server for \texttt{class} and \texttt{jar} file, it doesn't redirect the paths used for other kinds of files.  For instance, the SchemaAnalyst test suite makes use of a \texttt{config} directory that contains various properties files.  Although I could specify the exact FTP URL for the class loader to locate this directory, the test cases would not find it when they ran on the server.  I tried to adjust the system property for the current working directory (\texttt{user.dir}), among other fixes, but could never bypass this error completely.  Ultimately, in order to get the tests to work as expected, I need to add a step to the \texttt{updateClassLoader()} method on the \texttt{CustomServers} to retrieve and store some files from the FTP server.  This was unfortunate, since a notable benefit of this system is the lack of resource overhead for the servers; but it was necessary in order to have a functional system within our time constraints.  This general issue with file dependencies further complicated running DTS on complex systems like \texttt{ant-ivy} and \texttt{tomcat}, despite the accommodations made to DTS.  The prevented DTS to be run on similar systems as TLB, and it would be one of the first areas of improvement if development on this system were to continue.
+
+In addition to the challenges Michael encountered while implementing the DTS tool, there were similar challenges
+faced while configuring, analyzing and running the existing, Test Load Balancing tool.
+
+First, while the system is on GitHub (\url{https://github.com/test-load-balancer/tlb}), it is not a working version. GitHub is initially where I found the tool, but in the
+tool repository the creators direct you to the tool website (\url{http://test-load-balancer.github.io/}). The tool website is
+filled with data and comments about the tool, however when it came time to configuring and running the tool, these
+processes were not made absolutely clear. No where on this page does it say they do not support actually running the
+clients in a distributed fashion.
+
+Also, while there is a configuration page containing documentation for all of the necessary environment variables,
+the provided examples and descriptions are not clear at describing all of the variables. Luckily, we were
+able to reach out and hear back from the creators of this tool. They were able to guide us in the correct
+direction. But even without the help of the authors, we were able to find the answer to our question
+regarding how to configure the distribution of a test suite using the TLB tool was answered in a blog
+post by one of the creators of the TLB tool. Even here though, there were only one or two sentences
+on the topic. Maybe it was made clear somewhere else, but to me, this fact was not evident.
+
+In order to run the TLB tool in a distributed fashion, we were required to use multiple nodes.
+We were able to accomplish this by creating containers---which are virtually easy-to-configure
+virtual machines with all of the necessary dependencies for running TLB. While we did run
+into one issue with Docker, that being installing Docker on a 32-bit machines, overall,
+Docker was a pretty easy-to-use system, especially for Mac OS X.
+
+As mentioned, the only issue we had with Docker directly was when trying to install it on an unsupported
+build of Windows. To combat this compatibility issue, we asked permission to have Docker
+installed on the Alden lab machines. If Docker were installed on the lab machines,
+our experiments would have been much more interesting, consistent and more detailed.
+
+The final issue that I encountered was when trying to run experiments. I knew the TLB tool had
+been working the evening before trying to run the experiments and I had not manipulated any of
+the files and the TLB system was not communicating or running the test suites. I tried a number of
+ports to no avail. Finally, I decided to try the system at home once again and everything worked
+flawlessly, therefore requiring me to haul all of the necessary machines for the experiment
+to my house.
+
+
+
 
 \section{Conclusion}
 \label{conclusion}
