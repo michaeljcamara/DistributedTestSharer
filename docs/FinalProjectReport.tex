@@ -9,8 +9,10 @@
 %
 \documentclass{article}
 
+
 % The geometry package allows for easy page formatting.
-\usepackage{geometry}
+%\usepackage{geometry}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
 \geometry{letterpaper}
 
 % Load up special logo commands.
@@ -19,14 +21,51 @@
 % Package for formatting URLs.
 \usepackage{url}
 \usepackage{verbatim}
+\usepackage{indentfirst}
 
 % Packages and definitions for graphics files.
 \usepackage{graphicx}
-\usepackage{minted}
+%\usepackage{minted}
 \usepackage{epstopdf}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \usepackage{float}
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myblue}{rgb}{0,0,1}
+\usepackage{listings}
+%Settings taken and modified from: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\linespread{0.8}\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{myblue},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{red},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
 
 %
 % Set the title, author, and date.
@@ -36,20 +75,25 @@
 \date{}
 
 \begin{document}
-
+\renewcommand{\baselinestretch}{1.5}\normalsize
 % Add the title section.
 \maketitle
 
+
 % Add an abstract.
-\abstract{This research focuses on the utilizing distributed testing
+\abstract{This research focuses on utilizing distributed testing
     to make the execution of large test suites more efficient. The key
-    trade-offs for taking a distributed approach to testing are be identified
+    trade-offs for taking a distributed approach to testing are identified
     and the impacts on using a distributed approach are analyzed. This paper
     will mainly focus on comparing two distributed test systems, Test Load
     Balancer (TLB), and our own system, Distributed Test Sharer (DTS).
 
+\renewcommand{\baselinestretch}{1.1}\normalsize
 % Add various lists on new pages.
 \tableofcontents
+\renewcommand{\baselinestretch}{1.5}\normalsize
+
+
 
 % Start the paper on a new page.
 \pagebreak
@@ -73,12 +117,14 @@ Though it is clear the distributed testing may be beneficial to use, there certa
 
 Alongside the drawbacks of distributing testing, several challenges exist with this approach as well. One of the key challenges associated with distributed testing is the concept of load sharing versus load balancing. Load sharing occurs when the tests or load are sent to several nodes to be executed without any restrictions on how the load is allocated. Load balancing is a more complex approach in which the allocation of the load is sent to nodes such that each node is doing an equivalent amount of work. This allows the load to be executed more efficiently because it prevents situations in which a particular node is doing a significantly greater amount of work than others, or a particular node is doing little to no work at all. It is quite evident that load balancer is a more favorable approach to take, but the complexity associated with it is much larger. For example, consider a situation in which a test case is dependent on another, in this case a load balancing system must not only consider the amount of load to allocate to each node, but also when certain components of the load need to be allocated. 
 
-\section{Overview of Related Work}
+\section{Overview Distributed Testing Systems}
 \label{related}
-\subsection{Existing Systems}
+\subsection{Test Load Balancer}
 \label{existing}
 
-Though distributed testing is a popular and rapidly developing topic in the software industry, not many systems that use his approach exist and work correctly. This is due to the fact that it is not only a relatively new concept, but the complexity of building a system that can run tests on a system and efficiently distribute them to remote nodes is exceptionally high. One existing system that successfully does this is named Test Load Balancer (TLB). TLB claims to support testing of every language on every platform and partitions the tests into subsets that can be executed in parallel on different physical or virtual machines. These subsets are executed in such a way that they all start at the same time and finish at almost the same time as well, therefore the overall time is takes to execute all of the tests can be divided by the number of test subsets that are generated. TLB assures that a particular node will execute only a number of tests proportional to the total number of tests divided by the number of available nodes and guarantees mutual exclusion and collective exhaustion of test execution, meaning that no test will be executed more than once and every test will be executed. The TLB system is comprised on two main components, the first of which is a server that is responsible for storing test data and the second is the balancer that partitions and orders the execution of tests. By storing test data, the TLB system will reorder the execution of tests with each run based on previous results. This is a extremely beneficial feature because tests that are known to fail will be executed earlier to avoid unnecessary downtime time resulting from failing tests being executed later. Though it is very important to note that this is only achievable by using tests that are independent of one another which is not always the case. Unfortunately, large systems very often have test cases that are dependent on other tests and systems such as these are usually examples that would benefit from using distributed testing opposed to centralized testing. Also, this method can not guarantee the order in which tests are executed due to its fail early approach to executing test, therefore tests must not only be independent of other tests but also independent of the order in which they are executed.
+Though distributed testing is a popular and rapidly developing topic in the software industry, not many systems that use his approach exist and work correctly. This is due to the fact that it is not only a relatively new concept, but the complexity of building a system that can run tests on a system and efficiently distribute them to remote nodes is exceptionally high. One existing system that successfully does this is named Test Load Balancer (TLB). TLB claims to support testing of every language on every platform and partitions the tests into subsets that can be executed in parallel on different physical or virtual machines. These subsets are executed in such a way that they all start at the same time and finish at almost the same time as well, therefore the overall time is takes to execute all of the tests can be divided by the number of test subsets that are generated. TLB assures that a particular node will execute only a number of tests proportional to the total number of tests divided by the number of available nodes and guarantees mutual exclusion and collective exhaustion of test execution, meaning that no test will be executed more than once and every test will be executed.
+
+The TLB system is comprised on two main components, the first of which is a server that is responsible for storing test data and the second is the balancer that partitions and orders the execution of tests. By storing test data, the TLB system will reorder the execution of tests with each run based on previous results. This is a extremely beneficial feature because tests that are known to fail will be executed earlier to avoid unnecessary downtime time resulting from failing tests being executed later. Though it is very important to note that this is only achievable by using tests that are independent of one another which is not always the case. Unfortunately, large systems very often have test cases that are dependent on other tests and systems such as these are usually examples that would benefit from using distributed testing opposed to centralized testing. Also, this method can not guarantee the order in which tests are executed due to its fail early approach to executing test, therefore tests must not only be independent of other tests but also independent of the order in which they are executed.
 
 In order to run TLB properly, it was necessary to utilize another system called Docker. This is a system that is used to effectively "pack up" a software system and all of its dependencies, such that it can be ran in the same way in any different environment. This was necessary, because not only was the software that was being tested executed in several different environments on a few different operating systems, but also TLB doesn't precisely have a means of distributed the tests across the network by itself. For this reason, another system must be used to do the actual execution of the tests, while TLB is responsible for deciding where and when to execute an individual test case. The remainder of this report will now focus on analyzing the the two main systems of focus, DTS and TLB, in more detail, and analyze the results of empirical analysis conducted on distributed testing through both load sharing using the DTS system and load balancing using the TLB system.
 
@@ -87,7 +133,7 @@ In order to run TLB properly, it was necessary to utilize another system called 
 In order to understand and further evaluate the trade-offs associated with distributed testing, we developed a novel system named the Distributed Test Sharer (DTS).  This system was created using the Java programming language and consists of two main classes: \texttt{Delegator} and \texttt{CustomServer}.  The relationship between these classes is illustrated in Figure \ref{dtsdiagram}, with communication facilitated by Java Remote Method Invocation (RMI) and use of an FTP server.  The following section will outline the steps performed by DTS to distribute JUnit tests located on the \texttt{Delegator} node to any number of \texttt{CustomServer} nodes, which run the tests and return the results obtained.
 
 \begin{figure}[H]
-\includegraphics[width = \textwidth]{DTS_Diagram.png}
+\includegraphics[width = 0.9\textwidth]{DTS_Diagram.png}
 \caption{Architecture of the Distributed Test Sharer (DTS).}
 \label{dtsdiagram}
 \end{figure}
@@ -235,7 +281,7 @@ node is able to complete their portion of the test in approximately 1.25 minutes
 \ref{ivybar} and \ref{ivybox}.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{../data/graphs/ivy_bar_tlb.pdf}
@@ -272,7 +318,7 @@ on more than two nodes. For both of these test suites, it is worth balancing the
 remote nodes using the TLB tool communicating with the TLBServer to \texttt{POST, PUT} and \texttt{GET} historical
 test data for a given test suite.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{../data/graphs/sa_bar_tlb.pdf}
@@ -376,31 +422,33 @@ ports to no avail. Finally, I decided to try the system at home once again and e
 flawlessly, therefore requiring me to haul all of the necessary machines for the experiment
 to my house.
 
-\section{Conclusion}
-\label{conclusion}
 
 \section{Appendix}
 \label{appendix}
-
-\subsection{Data}
-\newpage
+\subsection{TLB Data}
 \verbatiminput{../data/tlb-data.csv}
 \newpage
+\subsection{DTS Data}
 \verbatiminput{../data/dts-data.csv}
 
 \newpage
 \subsection{Representative Source Code}
-\verbatiminput{../container/Dockerfile}
-\newpage
-\inputminted{xml}{../container/tlb/tools/schemaanalyst/build.xml}
-\newpage
-\inputminted{bash}{../container/tlb/tools/schemaanalyst/run_balanced.sh}
-\inputminted{bash}{../container/tlb/tools/recipe.sh}
-\newpage
-\inputminted{xml}{../container/tlb/tools/ivy/build.xml}
+\subsubsection{\texttt{Delegator}}
+\lstinputlisting[language=Java]{../code/src/delegator/Delegator.java}
 
-% \inputminted{java}{../simple-rmi/src/Simple.java}
+\newpage
+\subsubsection{\texttt{CustomServer}}
+\lstinputlisting[language=Java]{../code/src/server/CustomServer.java}
 
+\newpage
+\subsubsection{\texttt{CustomClassLoader}}
+\lstinputlisting[language=Java]{../code/src/server/CustomClassLoader.java}
+
+\newpage
+\subsubsection{\texttt{TestAgent}}
+\lstinputlisting[language=Java]{../code/src/delegator/TestAgent.java}
+
+\newpage
 % Generate the bibliography.
 \bibliography{bibliography}
 \bibliographystyle{unsrt}
