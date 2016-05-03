@@ -138,13 +138,15 @@ The \texttt{Delegator} continues to perform load sharing, assigning test cases t
     \item OS / Version: 64-bit Windows 10
     \item Processor: 2.4 GHz Intel Core i7-4700MQ
     \item Memory: 16 GB
+    \item Startup Disk: Samsung 850 Pro SSD
 \end{itemize}
 
-\item \textbf{Michael's HP Dv7-6c95dx Notebook PC}
+\item \textbf{Herbies's HP Dv7-6c95dx Notebook PC}
 \begin{itemize}
     \item OS / Version: 64-bit Windows 10
     \item Processor: 2.20 GHz 2nd generation Intel Core i7-2670QM
     \item Memory: 8 GB
+    \item Startup Disk: Samsung 280 Pro SSD
 \end{itemize}
 
 \item \textbf{Herbie's Fujitsu lifebook t2020 (x2)}
@@ -152,6 +154,12 @@ The \texttt{Delegator} continues to perform load sharing, assigning test cases t
     \item OS / Version: 32-bit Ubuntu 14.04
     \item Processor: 1.2 GHz Intel Core 2 Duo U9400
     \item Memory: 3 GB
+\end{itemize}
+\item \textbf{Michael's Dell Inspiron}
+\begin{itemize}
+    \item OS / Version: 64-bit Windows 8.1
+    \item Processor: 2.16 GHz Intel Core Duo Celeron n2830
+    \item Memory: 4 GB
 \end{itemize}
 \end{itemize}
 
@@ -177,7 +185,7 @@ potential security reasons. To read more about the challenges faced during this 
 The way TLB is designed requires a user to start the \texttt{TLBServer} on one node and start the clients with the \texttt{TLBBalancer}
 on other nodes. Therefore, to collect the data necessary, we started the server on the 13-inch, Mid 2012 MacBook Pro
 and ran the Docker containers on two other machines as well as on the MacBook Pro. This was the setup for running three
-clients with the TLB system. For two and a single client, we removed Michael's HP Dv7-6c95dx,  which performed the
+clients with the TLB system. For two and a single client, we removed Michael's Dell Inspiron,  which performed the
 worst when running the test suites in the Docker container. Specifically, for two nodes, we used Herbie's HP Envy
 as one client node and Colton's MacBook Pro as the other client as well as the server.
 Ideally, we would have liked to only run the server on Colton's MacBook Pro and the clients on their own
@@ -196,9 +204,16 @@ there were a lot of places where we did not apply the industry-standard protocol
 and availability of machines, this is the best protocol that we could follow to ensure that the data that we collect
 was as accurate and consistent as possible.
 
-\subsection{Experimentation Protocol for TLB}
+\subsection{Experimentation Protocol for DTS}
+Similar to running TLB, there were many steps that were taken to ensure that the quality of experimentation for DTS was the highest possible. While running tests for a distributed test suite it is important to consider the fact that outside factors may have an impact on the results. Since this is the case, we listed all possible factors which could hinder a smooth analysis of the program. We then used our knowledge of these potential problems to minimize their impact. 
 \subsubsection{Running DTS in a Distributed Fashion}
+The first step in our experimentation was choosing nodes which could host our system. The computer system implemented in Alden Hall at Allegheny College was unable to run our customized system. Since this was the case we chose to gather personal computers from different group members for testing. The difference in testing between our DTS and TLB is that some computers which were viable for DTS were not viable for TLB. The computers used for DTS testing were Herbie's HP Envy, Herbie's DV7, Herbie's Fujitsu Lifebook X2, and Michael's Dell Inspiron. Since the format of our implementation has a delegator, we set aside Herbie's HP Envy solely for this purpose. This means that we had a total of 4 nodes to start running the tests on.
 
+ As mentioned previously, these computers ran different operating systems. This means it was necessary to configure the operating systems separately. The main concern was that automatic updates and background processes were double checked to be inactive during testing. After this was done, we were able to run the tests for 5 trial per number of nodes. To clarify, we ran 5 good trials for each 4,3,2,and 1 node. While doing this it is important to note that the network used for this experiment was public. Since the network was public we had to ensure that the network was not being slowed by other users. In order to combat this situation we ran the tests on the network around 5 A.M Eastern Time on a Saturday. This would most likely be the least active time for the network on a college campus. Each test from this point was run successfully while considering a few different things.
+ 
+ The first thing to consider was that data may be cached after running the program multiple times. In order to combat this we ran the program 5 times before collecting any data. Another concern was that Java's garbage collector would interfere. This being said, we discarded any data was more than 8 percent deviation from the average since it is very difficult to infer what data is being skewed by the garbage collector. The tests run on 4 nodes was run with all computers. The tests run on 3 nodes was run with Herbie's DV7 and T2020 X2 laptops. The tests run on 2 nodes was run with the T2020 lifebooks only. This was reduced to a single T2020 lifebook for the single node.
+ 
+ Similar to testing the TLB system, there were places where we did not follow industry standards of testing. We acknowledge that there may be some cases that need further explored. However,as talked about above, we did try to combat this at every possible instance. Overall, experimentation with the DTS system was a success and the results of these experiments are further analysed in the next section,
 \section{Analysis of Results}
 \label{analysis}
 
